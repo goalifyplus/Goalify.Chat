@@ -8,11 +8,11 @@ Meteor.startup(function() {
 			});
 		}
 
-		if (!RocketChat.models.Users.db.findOneById('rocket.cat')) {
+		if (!RocketChat.models.Users.db.findOneById('goly')) {
 			RocketChat.models.Users.create({
-				_id: 'rocket.cat',
-				name: 'Rocket.Cat',
-				username: 'rocket.cat',
+				_id: 'goly',
+				name: 'Goly Bot',
+				username: 'goly',
 				status: 'online',
 				statusDefault: 'online',
 				utcOffset: 0,
@@ -20,20 +20,20 @@ Meteor.startup(function() {
 				type: 'bot'
 			});
 
-			RocketChat.authz.addUserRoles('rocket.cat', 'bot');
+			RocketChat.authz.addUserRoles('goly', 'bot');
 
-			const rs = RocketChatFile.bufferToStream(new Buffer(Assets.getBinary('avatars/rocketcat.png'), 'utf8'));
+			const rs = RocketChatFile.bufferToStream(new Buffer(Assets.getBinary('avatars/goly.png'), 'utf8'));
 			const fileStore = FileUpload.getStore('Avatars');
-			fileStore.deleteByName('rocket.cat');
+			fileStore.deleteByName('goly');
 
 			const file = {
-				userId: 'rocket.cat',
+				userId: 'goly',
 				type: 'image/png'
 			};
 
-			Meteor.runAsUser('rocket.cat', () => {
+			Meteor.runAsUser('goly', () => {
 				fileStore.insert(file, rs, () => {
-					return RocketChat.models.Users.setAvatarOrigin('rocket.cat', 'local');
+					return RocketChat.models.Users.setAvatarOrigin('goly', 'local');
 				});
 			});
 		}
@@ -130,7 +130,7 @@ Meteor.startup(function() {
 		if (_.isEmpty(RocketChat.authz.getUsersInRole('admin').fetch())) {
 			const oldestUser = RocketChat.models.Users.findOne({
 				_id: {
-					$ne: 'rocket.cat'
+					$ne: 'goly'
 				}
 			}, {
 				fields: {

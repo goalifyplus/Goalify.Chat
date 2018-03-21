@@ -5,7 +5,7 @@ import toastr from 'toastr';
 
 Template.integrationsOutgoing.onCreated(function _integrationsOutgoingOnCreated() {
 	this.record = new ReactiveVar({
-		username: 'rocket.cat',
+		username: 'goly',
 		token: Random.id(24),
 		retryFailedCalls: true,
 		retryCount: 6,

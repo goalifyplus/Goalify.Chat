@@ -320,7 +320,7 @@ export class SlackImporter extends Base {
 											};
 											RocketChat.sendMessage(this.getRocketUser(message.user), msgObj, room, true);
 										} else if (message.subtype === 'bot_message' || message.subtype === 'slackbot_response') {
-											const botUser = RocketChat.models.Users.findOneById('rocket.cat', { fields: { username: 1 }});
+											const botUser = RocketChat.models.Users.findOneById('goly', { fields: { username: 1 }});
 											const botUsername = this.bots[message.bot_id] ? this.bots[message.bot_id].name : message.username;
 											const msgObj = {
 												...msgDataDefaults,
