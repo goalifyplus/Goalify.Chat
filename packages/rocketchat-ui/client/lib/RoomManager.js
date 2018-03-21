@@ -300,7 +300,7 @@ Tracker.autorun(function() {
 	if (Meteor.userId()) {
 		return RocketChat.Notifications.onUser('message', function(msg) {
 			msg.u =
-			{username: 'rocket.cat'};
+			{username: 'goly'};
 			msg.private = true;
 
 			return ChatMessage.upsert({ _id: msg._id }, msg);

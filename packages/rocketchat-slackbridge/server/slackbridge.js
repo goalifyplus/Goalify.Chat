@@ -308,7 +308,7 @@ class SlackBridge {
 				rocketMsgObj.editedAt = new Date(parseInt(slackMessage.edited.ts.split('.')[0]) * 1000);
 			}
 			if (slackMessage.subtype === 'bot_message') {
-				rocketUser = RocketChat.models.Users.findOneById('rocket.cat', { fields: { username: 1 } });
+				rocketUser = RocketChat.models.Users.findOneById('goly', { fields: { username: 1 } });
 			}
 
 			if (slackMessage.pinned_to && slackMessage.pinned_to.indexOf(slackMessage.channel) !== -1) {
@@ -1247,7 +1247,7 @@ class SlackBridge {
 	processSlackMessageDeleted(slackMessage) {
 		if (slackMessage.previous_message) {
 			const rocketChannel = this.getRocketChannel(slackMessage);
-			const rocketUser = RocketChat.models.Users.findOneById('rocket.cat', { fields: { username: 1 } });
+			const rocketUser = RocketChat.models.Users.findOneById('goly', { fields: { username: 1 } });
 
 			if (rocketChannel && rocketUser) {
 				//Find the Rocket message to delete
@@ -1301,7 +1301,7 @@ class SlackBridge {
 		const rocketChannel = this.getRocketChannel(slackMessage);
 		let rocketUser = null;
 		if (slackMessage.subtype === 'bot_message') {
-			rocketUser = RocketChat.models.Users.findOneById('rocket.cat', { fields: { username: 1 } });
+			rocketUser = RocketChat.models.Users.findOneById('goly', { fields: { username: 1 } });
 		} else {
 			rocketUser = slackMessage.user ? this.findRocketUser(slackMessage.user) || this.addRocketUser(slackMessage.user) : null;
 		}

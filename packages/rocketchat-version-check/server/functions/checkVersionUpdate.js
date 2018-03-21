@@ -36,10 +36,10 @@ export default () => {
 		RocketChat.models.Roles.findUsersInRole('admin').forEach(adminUser => {
 			const msg = {
 				msg: `*${ TAPi18n.__('Update_your_RocketChat', adminUser.language) }*\n${ TAPi18n.__('New_version_available_(s)', update.lastestVersion.version, adminUser.language) }\n${ update.lastestVersion.infoUrl }`,
-				rid: [adminUser._id, 'rocket.cat'].sort().join('')
+				rid: [adminUser._id, 'goly'].sort().join('')
 			};
 
-			Meteor.runAsUser('rocket.cat', () => Meteor.call('sendMessage', msg));
+			Meteor.runAsUser('goly', () => Meteor.call('sendMessage', msg));
 
 			RocketChat.models.Users.addBannerById(adminUser._id, {
 				id: 'versionUpdate',
