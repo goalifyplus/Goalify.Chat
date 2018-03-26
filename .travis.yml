@@ -4,6 +4,7 @@ services:
 - mongodb
 branches:
   only:
+  - goalify
   - develop
   - "/^\\d+\\.\\d+\\.\\d+(-rc\\.\\d+)?$/"
 git:
@@ -75,9 +76,9 @@ before_deploy:
 - echo ".travis/sandstorm.sh"
 deploy:
   - provider: s3
-    access_key_id: AKIAIKIA7H7D47KUHYCA
+    access_key_id: AKIAI5PUP6C3WSW46XNA
     secret_access_key: "$ACCESSKEY"
-    bucket: download.rocket.chat
+    bucket: goalify.chat
     skip_cleanup: true
     upload_dir: build
     local_dir: "$ROCKET_DEPLOY_DIR"
