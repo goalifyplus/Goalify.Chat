@@ -1,0 +1,53 @@
+image: node:8
+
+cache:
+  untracked: true
+  key: "PIPELINE-GOALIFY-CHAT-UBUNTU-V4"
+  paths:
+    - "$HOME/node_modules"
+    - "$HOME/.meteor"
+    - "$HOME/.npm"
+    - "$HOME/.node-gyp"
+    - "$HOME/build/RocketChat/Rocket.Chat/node_modules"
+    - "$HOME/build/RocketChat/Rocket.Chat/.meteor/local"
+    - "$HOME/build/RocketChat/Rocket.Chat/packages/rocketchat-livechat/.npm"
+    - "$HOME/build/RocketChat/Rocket.Chat/packages/rocketchat-livechat/.app/node_modules"
+    - "$HOME/build/RocketChat/Rocket.Chat/packages/rocketchat-livechat/.app/.meteor/local"
+
+before_script:
+  # Install meteor VM
+  - if [ ! -e "$HOME/.meteor/meteor" ]; then curl https://install.meteor.com | sed s/--progress-bar/-sL/g | /bin/sh; fi
+
+  # Install ssh-agent if not already installed, it is required by Docker.
+  # (change apk to yum if you use a CentOS-based image)
+  - apt-get update -y
+  - apt-get install -y python git openssh-client curl build-essential
+  - mkdir -p /tmp/build
+  - meteor npm install
+
+stages:
+ - build
+ - test
+ - deploy
+
+test_job:
+  stage: test
+  script:
+    - meteor npm run lint
+    - meteor npm run testunit
+    - meteor npm run stylelint
+
+build_job:
+  stage: build
+  script:
+    - meteor build --server-only --server https://demo.goalify.chat /tmp/build
+
+deploy_job:
+  stage: deploy
+  only:
+    - goalify
+    - test-gitlab-ci
+  script:
+    # install aws CLI to do S3 deploy
+    - pip install awscli --upgrade --user
+
