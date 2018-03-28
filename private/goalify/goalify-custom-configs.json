@@ -1142,9 +1142,9 @@
     "sorter": 5,
     "ts": "2018-03-05T05:44:14.618Z",
     "type": "string",
-    "value": "files.goalify.chat/nau",
+    "value": "files.goalify.chat/${subdomain}",
     "valueSource": "meteorSettingsValue",
-    "meteorSettingsValue": "files.goalify.chat/nau"
+    "meteorSettingsValue": "files.goalify.chat/${subdomain}"
   },
   {
     "_id": "FileUpload_S3_AWSAccessKeyId",
