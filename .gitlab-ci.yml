@@ -15,15 +15,12 @@ cache:
     - "$HOME/build/RocketChat/Rocket.Chat/packages/rocketchat-livechat/.app/.meteor/local"
 
 before_script:
-  # Install meteor VM
-  - if [ ! -e "$HOME/.meteor/meteor" ]; then curl https://install.meteor.com | sed s/--progress-bar/-sL/g | /bin/sh; fi
-
-  # Install ssh-agent if not already installed, it is required by Docker.
-  # (change apk to yum if you use a CentOS-based image)
+  # prepare needed software
   - apt-get update -y
   - apt-get install -y python git openssh-client curl build-essential
-  - mkdir -p /tmp/build
-  - meteor npm install
+  - npm i -g npm
+  - node -v
+  - npm -v
 
 stages:
  - test
@@ -32,15 +29,29 @@ stages:
 
 test_job:
   stage: test
+  only:
+    - develop
   script:
-    - meteor npm run lint
-    - meteor npm run testunit
-    - meteor npm run stylelint
+    - npm install
+    - npm run lint
+    - npm run testunit
+    - npm run stylelint
 
 build_job:
   stage: build
+  only:
+    - goalify
+    - test-gitlab-ci
   script:
+    # Install meteor VM
+    - if [ ! -e "$HOME/.meteor/meteor" ]; then curl https://install.meteor.com | sed s/--progress-bar/-sL/g | /bin/sh; fi
+    - meteor --version
+    - npm install
+    - mkdir -p /tmp/build
     - meteor build --allow-superuser --server-only --server https://demo.goalify.chat /tmp/build
+  artifacts:
+    paths:
+      - /tmp/build/*.gz
 
 deploy_job:
   stage: deploy
