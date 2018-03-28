@@ -26,8 +26,8 @@ before_script:
   - meteor npm install
 
 stages:
- - build
  - test
+ - build
  - deploy
 
 test_job:
@@ -40,7 +40,7 @@ test_job:
 build_job:
   stage: build
   script:
-    - meteor build --server-only --server https://demo.goalify.chat /tmp/build
+    - meteor build --allow-superuser --server-only --server https://demo.goalify.chat /tmp/build
 
 deploy_job:
   stage: deploy
