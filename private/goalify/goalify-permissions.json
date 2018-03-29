@@ -1,594 +1,596 @@
-[
-  {
-    "_id": "access-permissions",
-    "_updatedAt": "2018-03-05T04:26:20.048Z",
-    "roles": [
-      "admin"
-    ]
-  },
-  {
-    "_id": "add-oauth-service",
-    "_updatedAt": "2018-03-05T04:26:20.053Z",
-    "roles": [
-      "admin"
-    ]
-  },
-  {
-    "_id": "add-user-to-joined-room",
-    "_updatedAt": "2018-03-05T04:26:20.057Z",
-    "roles": [
-      "admin",
-      "owner",
-      "moderator"
-    ]
-  },
-  {
-    "_id": "add-user-to-any-c-room",
-    "_updatedAt": "2018-03-05T04:26:20.060Z",
-    "roles": [
-      "admin"
-    ]
-  },
-  {
-    "_id": "add-user-to-any-p-room",
-    "_updatedAt": "2018-03-05T04:26:20.063Z",
-    "roles": []
-  },
-  {
-    "_id": "archive-room",
-    "_updatedAt": "2018-03-05T04:26:20.071Z",
-    "roles": [
-      "admin",
-      "owner"
-    ]
-  },
-  {
-    "_id": "assign-admin-role",
-    "_updatedAt": "2018-03-05T04:26:20.091Z",
-    "roles": [
-      "admin"
-    ]
-  },
-  {
-    "_id": "ban-user",
-    "_updatedAt": "2018-03-05T04:26:20.094Z",
-    "roles": [
-      "admin",
-      "owner",
-      "moderator"
-    ]
-  },
-  {
-    "_id": "bulk-create-c",
-    "_updatedAt": "2018-03-05T04:26:20.097Z",
-    "roles": [
-      "admin"
-    ]
-  },
-  {
-    "_id": "bulk-register-user",
-    "_updatedAt": "2018-03-05T04:26:20.101Z",
-    "roles": [
-      "admin"
-    ]
-  },
-  {
-    "_id": "create-c",
-    "_updatedAt": "2018-03-05T04:26:20.105Z",
-    "roles": [
-      "admin",
-      "user",
-      "bot"
-    ]
-  },
-  {
-    "_id": "create-d",
-    "_updatedAt": "2018-03-05T04:26:20.120Z",
-    "roles": [
-      "admin",
-      "user",
-      "bot"
-    ]
-  },
-  {
-    "_id": "create-p",
-    "_updatedAt": "2018-03-05T04:26:20.128Z",
-    "roles": [
-      "admin",
-      "user",
-      "bot"
-    ]
-  },
-  {
-    "_id": "create-user",
-    "_updatedAt": "2018-03-05T04:26:20.139Z",
-    "roles": [
-      "admin"
-    ]
-  },
-  {
-    "_id": "clean-channel-history",
-    "_updatedAt": "2018-03-05T04:26:20.280Z",
-    "roles": [
-      "admin"
-    ]
-  },
-  {
-    "_id": "delete-c",
-    "_updatedAt": "2018-03-05T04:26:20.325Z",
-    "roles": [
-      "admin"
-    ]
-  },
-  {
-    "_id": "delete-d",
-    "_updatedAt": "2018-03-05T04:26:20.329Z",
-    "roles": [
-      "admin"
-    ]
-  },
-  {
-    "_id": "delete-message",
-    "_updatedAt": "2018-03-05T04:26:20.333Z",
-    "roles": [
-      "admin",
-      "owner",
-      "moderator"
-    ]
-  },
-  {
-    "_id": "delete-p",
-    "_updatedAt": "2018-03-05T04:26:20.336Z",
-    "roles": [
-      "admin"
-    ]
-  },
-  {
-    "_id": "delete-user",
-    "_updatedAt": "2018-03-05T04:26:20.340Z",
-    "roles": [
-      "admin"
-    ]
-  },
-  {
-    "_id": "edit-message",
-    "_updatedAt": "2018-03-05T04:26:20.343Z",
-    "roles": [
-      "admin",
-      "owner",
-      "moderator"
-    ]
-  },
-  {
-    "_id": "edit-other-user-active-status",
-    "_updatedAt": "2018-03-05T04:26:20.346Z",
-    "roles": [
-      "admin"
-    ]
-  },
-  {
-    "_id": "edit-other-user-info",
-    "_updatedAt": "2018-03-05T04:26:20.350Z",
-    "roles": [
-      "admin"
-    ]
-  },
-  {
-    "_id": "edit-other-user-password",
-    "_updatedAt": "2018-03-05T04:26:20.354Z",
-    "roles": [
-      "admin"
-    ]
-  },
-  {
-    "_id": "edit-privileged-setting",
-    "_updatedAt": "2018-03-05T04:26:20.357Z",
-    "roles": [
-      "admin"
-    ]
-  },
-  {
-    "_id": "edit-room",
-    "_updatedAt": "2018-03-05T04:26:20.361Z",
-    "roles": [
-      "admin",
-      "owner",
-      "moderator"
-    ]
-  },
-  {
-    "_id": "force-delete-message",
-    "_updatedAt": "2018-03-05T04:26:20.365Z",
-    "roles": [
-      "admin",
-      "owner"
-    ]
-  },
-  {
-    "_id": "join-without-join-code",
-    "_updatedAt": "2018-03-05T04:26:20.368Z",
-    "roles": [
-      "admin",
-      "bot"
-    ]
-  },
-  {
-    "_id": "manage-assets",
-    "_updatedAt": "2018-03-05T04:26:20.371Z",
-    "roles": [
-      "admin"
-    ]
-  },
-  {
-    "_id": "manage-emoji",
-    "_updatedAt": "2018-03-06T10:09:12.343Z",
-    "roles": [
-      "admin",
-      "moderator",
-      "owner",
-      "user"
-    ]
-  },
-  {
-    "_id": "manage-integrations",
-    "_updatedAt": "2018-03-05T04:26:20.383Z",
-    "roles": [
-      "admin"
-    ]
-  },
-  {
-    "_id": "manage-own-integrations",
-    "_updatedAt": "2018-03-05T04:26:20.386Z",
-    "roles": [
-      "admin",
-      "bot"
-    ]
-  },
-  {
-    "_id": "manage-oauth-apps",
-    "_updatedAt": "2018-03-05T04:26:20.389Z",
-    "roles": [
-      "admin"
-    ]
-  },
-  {
-    "_id": "mention-all",
-    "_updatedAt": "2018-03-05T04:26:20.392Z",
-    "roles": [
-      "admin",
-      "owner",
-      "moderator",
-      "user"
-    ]
-  },
-  {
-    "_id": "mention-here",
-    "_updatedAt": "2018-03-05T04:26:20.396Z",
-    "roles": [
-      "admin",
-      "owner",
-      "moderator",
-      "user"
-    ]
-  },
-  {
-    "_id": "mute-user",
-    "_updatedAt": "2018-03-05T04:26:20.399Z",
-    "roles": [
-      "admin",
-      "owner",
-      "moderator"
-    ]
-  },
-  {
-    "_id": "remove-user",
-    "_updatedAt": "2018-03-05T04:26:20.402Z",
-    "roles": [
-      "admin",
-      "owner",
-      "moderator"
-    ]
-  },
-  {
-    "_id": "run-import",
-    "_updatedAt": "2018-03-05T04:26:20.405Z",
-    "roles": [
-      "admin"
-    ]
-  },
-  {
-    "_id": "run-migration",
-    "_updatedAt": "2018-03-05T04:26:20.408Z",
-    "roles": [
-      "admin"
-    ]
-  },
-  {
-    "_id": "set-moderator",
-    "_updatedAt": "2018-03-05T04:26:20.411Z",
-    "roles": [
-      "admin",
-      "owner"
-    ]
-  },
-  {
-    "_id": "set-owner",
-    "_updatedAt": "2018-03-05T04:26:20.414Z",
-    "roles": [
-      "admin",
-      "owner"
-    ]
-  },
-  {
-    "_id": "send-many-messages",
-    "_updatedAt": "2018-03-05T04:26:20.418Z",
-    "roles": [
-      "admin",
-      "bot"
-    ]
-  },
-  {
-    "_id": "set-leader",
-    "_updatedAt": "2018-03-05T04:26:20.421Z",
-    "roles": [
-      "admin",
-      "owner"
-    ]
-  },
-  {
-    "_id": "unarchive-room",
-    "_updatedAt": "2018-03-05T04:26:20.424Z",
-    "roles": [
-      "admin"
-    ]
-  },
-  {
-    "_id": "view-c-room",
-    "_updatedAt": "2018-03-05T04:26:20.427Z",
-    "roles": [
-      "admin",
-      "user",
-      "bot",
-      "anonymous"
-    ]
-  },
-  {
-    "_id": "user-generate-access-token",
-    "_updatedAt": "2018-03-05T04:26:20.430Z",
-    "roles": [
-      "admin"
-    ]
-  },
-  {
-    "_id": "view-d-room",
-    "_updatedAt": "2018-03-05T04:26:20.433Z",
-    "roles": [
-      "admin",
-      "user",
-      "bot"
-    ]
-  },
-  {
-    "_id": "view-full-other-user-info",
-    "_updatedAt": "2018-03-05T04:26:20.437Z",
-    "roles": [
-      "admin"
-    ]
-  },
-  {
-    "_id": "view-history",
-    "_updatedAt": "2018-03-05T04:26:20.445Z",
-    "roles": [
-      "admin",
-      "user",
-      "anonymous"
-    ]
-  },
-  {
-    "_id": "view-joined-room",
-    "_updatedAt": "2018-03-05T04:26:20.456Z",
-    "roles": [
-      "guest",
-      "bot",
-      "anonymous"
-    ]
-  },
-  {
-    "_id": "view-join-code",
-    "_updatedAt": "2018-03-05T04:26:20.466Z",
-    "roles": [
-      "admin"
-    ]
-  },
-  {
-    "_id": "view-logs",
-    "_updatedAt": "2018-03-05T04:26:20.469Z",
-    "roles": [
-      "admin"
-    ]
-  },
-  {
-    "_id": "view-other-user-channels",
-    "_updatedAt": "2018-03-05T04:26:20.472Z",
-    "roles": [
-      "admin"
-    ]
-  },
-  {
-    "_id": "view-p-room",
-    "_updatedAt": "2018-03-05T04:26:20.477Z",
-    "roles": [
-      "admin",
-      "user",
-      "anonymous"
-    ]
-  },
-  {
-    "_id": "view-privileged-setting",
-    "_updatedAt": "2018-03-05T04:26:20.480Z",
-    "roles": [
-      "admin"
-    ]
-  },
-  {
-    "_id": "view-room-administration",
-    "_updatedAt": "2018-03-05T04:26:20.483Z",
-    "roles": [
-      "admin"
-    ]
-  },
-  {
-    "_id": "view-statistics",
-    "_updatedAt": "2018-03-05T04:26:20.486Z",
-    "roles": [
-      "admin"
-    ]
-  },
-  {
-    "_id": "view-user-administration",
-    "_updatedAt": "2018-03-05T04:26:20.489Z",
-    "roles": [
-      "admin"
-    ]
-  },
-  {
-    "_id": "preview-c-room",
-    "_updatedAt": "2018-03-05T04:26:20.493Z",
-    "roles": [
-      "admin",
-      "user",
-      "anonymous"
-    ]
-  },
-  {
-    "_id": "view-outside-room",
-    "_updatedAt": "2018-03-05T04:26:20.496Z",
-    "roles": [
-      "admin",
-      "owner",
-      "moderator",
-      "user"
-    ]
-  },
-  {
-    "_id": "auto-translate",
-    "_updatedAt": "2018-03-05T04:26:20.640Z",
-    "roles": [
-      "admin"
-    ]
-  },
-  {
-    "_id": "post-readonly",
-    "_updatedAt": "2018-03-15T10:02:59.515Z",
-    "roles": [
-      "admin",
-      "owner",
-      "moderator"
-    ]
-  },
-  {
-    "_id": "set-readonly",
-    "_updatedAt": "2018-03-15T10:02:59.588Z",
-    "roles": [
-      "admin",
-      "owner"
-    ]
-  },
-  {
-    "_id": "set-react-when-readonly",
-    "_updatedAt": "2018-03-15T10:02:59.591Z",
-    "roles": [
-      "admin",
-      "owner"
-    ]
-  },
-  {
-    "_id": "mail-messages",
-    "_updatedAt": "2018-03-15T10:02:59.595Z",
-    "roles": [
-      "admin"
-    ]
-  },
-  {
-    "_id": "manage-sounds",
-    "_updatedAt": "2018-03-15T10:02:59.657Z",
-    "roles": [
-      "admin"
-    ]
-  },
-  {
-    "_id": "view-l-room",
-    "_updatedAt": "2018-03-15T10:02:59.991Z",
-    "roles": [
-      "livechat-agent",
-      "livechat-manager",
-      "admin"
-    ]
-  },
-  {
-    "_id": "view-livechat-manager",
-    "_updatedAt": "2018-03-15T10:02:59.996Z",
-    "roles": [
-      "livechat-manager",
-      "admin"
-    ]
-  },
-  {
-    "_id": "view-livechat-rooms",
-    "_updatedAt": "2018-03-15T10:02:59.999Z",
-    "roles": [
-      "livechat-manager",
-      "admin"
-    ]
-  },
-  {
-    "_id": "close-livechat-room",
-    "_updatedAt": "2018-03-15T10:03:00.004Z",
-    "roles": [
-      "livechat-agent",
-      "livechat-manager",
-      "admin"
-    ]
-  },
-  {
-    "_id": "close-others-livechat-room",
-    "_updatedAt": "2018-03-15T10:03:00.007Z",
-    "roles": [
-      "livechat-manager",
-      "admin"
-    ]
-  },
-  {
-    "_id": "save-others-livechat-room-info",
-    "_updatedAt": "2018-03-15T10:03:00.009Z",
-    "roles": [
-      "livechat-manager"
-    ]
-  },
-  {
-    "_id": "access-mailer",
-    "_updatedAt": "2018-03-15T10:03:00.334Z",
-    "roles": [
-      "admin"
-    ]
-  },
-  {
-    "_id": "pin-message",
-    "_updatedAt": "2018-03-15T10:03:00.416Z",
-    "roles": [
-      "owner",
-      "moderator",
-      "admin",
-      "user"
-    ]
-  },
-  {
-    "_id": "snippet-message",
-    "_updatedAt": "2018-03-15T10:03:00.426Z",
-    "roles": [
-      "owner",
-      "moderator",
-      "admin"
-    ]
-  }
-]
+[{
+	"_id": "access-permissions",
+	"_updatedAt": "2018-03-05T04:26:20.048Z",
+	"roles": [
+		"admin"
+	]
+},
+{
+	"_id": "add-oauth-service",
+	"_updatedAt": "2018-03-05T04:26:20.053Z",
+	"roles": [
+		"admin"
+	]
+},
+{
+	"_id": "add-user-to-joined-room",
+	"_updatedAt": "2018-03-05T04:26:20.057Z",
+	"roles": [
+		"admin",
+		"owner",
+		"moderator"
+	]
+},
+{
+	"_id": "add-user-to-any-c-room",
+	"_updatedAt": "2018-03-05T04:26:20.060Z",
+	"roles": [
+		"admin"
+	]
+},
+{
+	"_id": "add-user-to-any-p-room",
+	"_updatedAt": "2018-03-05T04:26:20.063Z",
+	"roles": []
+},
+{
+	"_id": "archive-room",
+	"_updatedAt": "2018-03-05T04:26:20.071Z",
+	"roles": [
+		"admin",
+		"owner"
+	]
+},
+{
+	"_id": "assign-admin-role",
+	"_updatedAt": "2018-03-05T04:26:20.091Z",
+	"roles": [
+		"admin"
+	]
+},
+{
+	"_id": "ban-user",
+	"_updatedAt": "2018-03-05T04:26:20.094Z",
+	"roles": [
+		"admin",
+		"owner",
+		"moderator"
+	]
+},
+{
+	"_id": "bulk-create-c",
+	"_updatedAt": "2018-03-05T04:26:20.097Z",
+	"roles": [
+		"admin"
+	]
+},
+{
+	"_id": "bulk-register-user",
+	"_updatedAt": "2018-03-05T04:26:20.101Z",
+	"roles": [
+		"admin"
+	]
+},
+{
+	"_id": "create-c",
+	"_updatedAt": "2018-03-05T04:26:20.105Z",
+	"roles": [
+		"admin",
+		"user",
+		"bot"
+	]
+},
+{
+	"_id": "create-d",
+	"_updatedAt": "2018-03-05T04:26:20.120Z",
+	"roles": [
+		"admin",
+		"user",
+		"bot"
+	]
+},
+{
+	"_id": "create-p",
+	"_updatedAt": "2018-03-05T04:26:20.128Z",
+	"roles": [
+		"admin",
+		"user",
+		"bot"
+	]
+},
+{
+	"_id": "create-user",
+	"_updatedAt": "2018-03-05T04:26:20.139Z",
+	"roles": [
+		"admin"
+	]
+},
+{
+	"_id": "clean-channel-history",
+	"_updatedAt": "2018-03-05T04:26:20.280Z",
+	"roles": [
+		"admin"
+	]
+},
+{
+	"_id": "delete-c",
+	"_updatedAt": "2018-03-05T04:26:20.325Z",
+	"roles": [
+		"admin"
+	]
+},
+{
+	"_id": "delete-d",
+	"_updatedAt": "2018-03-05T04:26:20.329Z",
+	"roles": [
+		"admin"
+	]
+},
+{
+	"_id": "delete-message",
+	"_updatedAt": "2018-03-05T04:26:20.333Z",
+	"roles": [
+		"admin",
+		"owner",
+		"moderator"
+	]
+},
+{
+	"_id": "delete-p",
+	"_updatedAt": "2018-03-05T04:26:20.336Z",
+	"roles": [
+		"admin"
+	]
+},
+{
+	"_id": "delete-user",
+	"_updatedAt": "2018-03-05T04:26:20.340Z",
+	"roles": [
+		"admin"
+	]
+},
+{
+	"_id": "edit-message",
+	"_updatedAt": "2018-03-05T04:26:20.343Z",
+	"roles": [
+		"admin",
+		"owner",
+		"moderator"
+	]
+},
+{
+	"_id": "edit-other-user-active-status",
+	"_updatedAt": "2018-03-05T04:26:20.346Z",
+	"roles": [
+		"admin"
+	]
+},
+{
+	"_id": "edit-other-user-info",
+	"_updatedAt": "2018-03-05T04:26:20.350Z",
+	"roles": [
+		"admin"
+	]
+},
+{
+	"_id": "edit-other-user-password",
+	"_updatedAt": "2018-03-05T04:26:20.354Z",
+	"roles": [
+		"admin"
+	]
+},
+{
+	"_id": "edit-privileged-setting",
+	"_updatedAt": "2018-03-05T04:26:20.357Z",
+	"roles": [
+		"admin"
+	]
+},
+{
+	"_id": "edit-room",
+	"_updatedAt": "2018-03-05T04:26:20.361Z",
+	"roles": [
+		"admin",
+		"owner",
+		"moderator"
+	]
+},
+{
+	"_id": "force-delete-message",
+	"_updatedAt": "2018-03-05T04:26:20.365Z",
+	"roles": [
+		"admin",
+		"owner"
+	]
+},
+{
+	"_id": "join-without-join-code",
+	"_updatedAt": "2018-03-05T04:26:20.368Z",
+	"roles": [
+		"admin",
+		"bot"
+	]
+},
+{
+	"_id": "manage-assets",
+	"_updatedAt": "2018-03-05T04:26:20.371Z",
+	"roles": [
+		"admin"
+	]
+},
+{
+	"_id": "manage-emoji",
+	"_updatedAt": "2018-03-06T10:09:12.343Z",
+	"roles": [
+		"admin",
+		"moderator",
+		"owner",
+		"user"
+	]
+},
+{
+	"_id": "manage-integrations",
+	"_updatedAt": "2018-03-05T04:26:20.383Z",
+	"roles": [
+		"admin"
+	]
+},
+{
+	"_id": "manage-own-integrations",
+	"_updatedAt": "2018-03-05T04:26:20.386Z",
+	"roles": [
+		"admin",
+		"bot"
+	]
+},
+{
+	"_id": "manage-oauth-apps",
+	"_updatedAt": "2018-03-05T04:26:20.389Z",
+	"roles": [
+		"admin"
+	]
+},
+{
+	"_id": "mention-all",
+	"_updatedAt": "2018-03-05T04:26:20.392Z",
+	"roles": [
+		"admin",
+		"owner",
+		"moderator",
+		"user"
+	]
+},
+{
+	"_id": "mention-here",
+	"_updatedAt": "2018-03-05T04:26:20.396Z",
+	"roles": [
+		"admin",
+		"owner",
+		"moderator",
+		"user"
+	]
+},
+{
+	"_id": "mute-user",
+	"_updatedAt": "2018-03-05T04:26:20.399Z",
+	"roles": [
+		"admin",
+		"owner",
+		"moderator"
+	]
+},
+{
+	"_id": "remove-user",
+	"_updatedAt": "2018-03-05T04:26:20.402Z",
+	"roles": [
+		"admin",
+		"owner",
+		"moderator"
+	]
+},
+{
+	"_id": "run-import",
+	"_updatedAt": "2018-03-05T04:26:20.405Z",
+	"roles": [
+		"admin"
+	]
+},
+{
+	"_id": "run-migration",
+	"_updatedAt": "2018-03-05T04:26:20.408Z",
+	"roles": [
+		"admin"
+	]
+},
+{
+	"_id": "set-moderator",
+	"_updatedAt": "2018-03-05T04:26:20.411Z",
+	"roles": [
+		"admin",
+		"owner"
+	]
+},
+{
+	"_id": "set-owner",
+	"_updatedAt": "2018-03-05T04:26:20.414Z",
+	"roles": [
+		"admin",
+		"owner"
+	]
+},
+{
+	"_id": "send-many-messages",
+	"_updatedAt": "2018-03-05T04:26:20.418Z",
+	"roles": [
+		"admin",
+		"bot"
+	]
+},
+{
+	"_id": "set-leader",
+	"_updatedAt": "2018-03-05T04:26:20.421Z",
+	"roles": [
+		"admin",
+		"owner"
+	]
+},
+{
+	"_id": "unarchive-room",
+	"_updatedAt": "2018-03-05T04:26:20.424Z",
+	"roles": [
+		"admin"
+	]
+},
+{
+	"_id": "view-c-room",
+	"_updatedAt": "2018-03-05T04:26:20.427Z",
+	"roles": [
+		"admin",
+		"user",
+		"bot",
+		"anonymous"
+	]
+},
+{
+	"_id": "user-generate-access-token",
+	"_updatedAt": "2018-03-05T04:26:20.430Z",
+	"roles": [
+		"admin"
+	]
+},
+{
+	"_id": "view-d-room",
+	"_updatedAt": "2018-03-05T04:26:20.433Z",
+	"roles": [
+		"admin",
+		"user",
+		"bot"
+	]
+},
+{
+	"_id": "view-full-other-user-info",
+	"_updatedAt": "2018-03-05T04:26:20.437Z",
+	"roles": [
+		"admin"
+	]
+},
+{
+	"_id": "view-history",
+	"_updatedAt": "2018-03-05T04:26:20.445Z",
+	"roles": [
+		"admin",
+		"user",
+		"anonymous"
+	]
+},
+{
+	"_id": "view-joined-room",
+	"_updatedAt": "2018-03-05T04:26:20.456Z",
+	"roles": [
+		"guest",
+		"bot",
+		"anonymous"
+	]
+},
+{
+	"_id": "view-join-code",
+	"_updatedAt": "2018-03-05T04:26:20.466Z",
+	"roles": [
+		"admin"
+	]
+},
+{
+	"_id": "view-logs",
+	"_updatedAt": "2018-03-05T04:26:20.469Z",
+	"roles": [
+		"admin"
+	]
+},
+{
+	"_id": "view-other-user-channels",
+	"_updatedAt": "2018-03-05T04:26:20.472Z",
+	"roles": [
+		"admin"
+	]
+},
+{
+	"_id": "view-p-room",
+	"_updatedAt": "2018-03-05T04:26:20.477Z",
+	"roles": [
+		"admin",
+		"user",
+		"anonymous"
+	]
+},
+{
+	"_id": "view-privileged-setting",
+	"_updatedAt": "2018-03-05T04:26:20.480Z",
+	"roles": [
+		"admin"
+	]
+},
+{
+	"_id": "view-room-administration",
+	"_updatedAt": "2018-03-05T04:26:20.483Z",
+	"roles": [
+		"admin"
+	]
+},
+{
+	"_id": "view-statistics",
+	"_updatedAt": "2018-03-05T04:26:20.486Z",
+	"roles": [
+		"admin"
+	]
+},
+{
+	"_id": "view-user-administration",
+	"_updatedAt": "2018-03-05T04:26:20.489Z",
+	"roles": [
+		"admin"
+	]
+},
+{
+	"_id": "preview-c-room",
+	"_updatedAt": "2018-03-05T04:26:20.493Z",
+	"roles": [
+		"admin",
+		"user",
+		"anonymous"
+	]
+},
+{
+	"_id": "view-outside-room",
+	"_updatedAt": "2018-03-05T04:26:20.496Z",
+	"roles": [
+		"admin",
+		"owner",
+		"moderator",
+		"user"
+	]
+},
+{
+	"_id": "auto-translate",
+	"roles": [
+		"admin",
+		"owner",
+		"user"
+	],
+	"_updatedAt": "2018-03-21T05:05:39.867Z"
+},
+{
+	"_id": "post-readonly",
+	"_updatedAt": "2018-03-26T04:21:23.031Z",
+	"roles": [
+		"admin",
+		"owner",
+		"moderator"
+	]
+},
+{
+	"_id": "set-readonly",
+	"_updatedAt": "2018-03-26T04:21:23.036Z",
+	"roles": [
+		"admin",
+		"owner"
+	]
+},
+{
+	"_id": "set-react-when-readonly",
+	"_updatedAt": "2018-03-26T04:21:23.039Z",
+	"roles": [
+		"admin",
+		"owner"
+	]
+},
+{
+	"_id": "mail-messages",
+	"_updatedAt": "2018-03-26T04:21:23.043Z",
+	"roles": [
+		"admin"
+	]
+},
+{
+	"_id": "manage-sounds",
+	"_updatedAt": "2018-03-26T04:21:23.095Z",
+	"roles": [
+		"admin"
+	]
+},
+{
+	"_id": "view-l-room",
+	"_updatedAt": "2018-03-26T04:21:23.520Z",
+	"roles": [
+		"livechat-agent",
+		"livechat-manager",
+		"admin"
+	]
+},
+{
+	"_id": "view-livechat-manager",
+	"_updatedAt": "2018-03-26T04:21:23.525Z",
+	"roles": [
+		"livechat-manager",
+		"admin"
+	]
+},
+{
+	"_id": "view-livechat-rooms",
+	"_updatedAt": "2018-03-26T04:21:23.527Z",
+	"roles": [
+		"livechat-manager",
+		"admin"
+	]
+},
+{
+	"_id": "close-livechat-room",
+	"_updatedAt": "2018-03-26T04:21:23.530Z",
+	"roles": [
+		"livechat-agent",
+		"livechat-manager",
+		"admin"
+	]
+},
+{
+	"_id": "close-others-livechat-room",
+	"_updatedAt": "2018-03-26T04:21:23.534Z",
+	"roles": [
+		"livechat-manager",
+		"admin"
+	]
+},
+{
+	"_id": "save-others-livechat-room-info",
+	"_updatedAt": "2018-03-26T04:21:23.537Z",
+	"roles": [
+		"livechat-manager"
+	]
+},
+{
+	"_id": "access-mailer",
+	"_updatedAt": "2018-03-26T04:21:23.892Z",
+	"roles": [
+		"admin",
+		"leader"
+	]
+},
+{
+	"_id": "pin-message",
+	"_updatedAt": "2018-03-26T04:21:23.978Z",
+	"roles": [
+		"owner",
+		"moderator",
+		"admin",
+		"user"
+	]
+},
+{
+	"_id": "snippet-message",
+	"_updatedAt": "2018-03-26T04:21:23.988Z",
+	"roles": [
+		"owner",
+		"moderator",
+		"admin"
+	]
+}]
+

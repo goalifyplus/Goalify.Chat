@@ -1,7 +1,22 @@
 [
   {
+    "_id": "uniqueID",
+    "_updatedAt": "2018-03-26T04:21:11.082Z",
+    "blocked": false,
+    "createdAt": "2018-03-05T04:26:03.958Z",
+    "hidden": true,
+    "i18nDescription": "uniqueID_Description",
+    "i18nLabel": "uniqueID",
+    "packageValue": "2P8p8wp6qAYGqHH4J",
+    "public": true,
+    "sorter": 0,
+    "ts": "2018-03-26T04:21:11.081Z",
+    "value": "jHnDy3Bnk3226kLWw",
+    "valueSource": "packageValue"
+  },
+  {
     "_id": "Accounts_RegistrationForm",
-    "_updatedAt": "2018-03-15T10:02:28.187Z",
+    "_updatedAt": "2018-03-26T04:21:11.387Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:04.106Z",
     "group": "Accounts",
@@ -33,24 +48,24 @@
   },
   {
     "_id": "Accounts_RegistrationForm_SecretURL",
-    "_updatedAt": "2018-03-15T10:02:28.192Z",
+    "_updatedAt": "2018-03-26T04:21:11.401Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:04.111Z",
     "group": "Accounts",
     "hidden": false,
     "i18nDescription": "Accounts_RegistrationForm_SecretURL_Description",
     "i18nLabel": "Accounts_RegistrationForm_SecretURL",
-    "packageValue": "6m2RcN8TjrrhMQYay",
+    "packageValue": "2J9eFPDxMCs5rQjcE",
     "section": "Registration",
     "sorter": 27,
-    "ts": "2018-03-15T10:02:28.192Z",
+    "ts": "2018-03-26T04:21:11.401Z",
     "type": "string",
     "value": "YgDA6iDQLfnkPYCgb",
     "valueSource": "packageValue"
   },
   {
     "_id": "Accounts_Default_User_Preferences_desktopNotificationDuration",
-    "_updatedAt": "2018-03-15T10:02:28.230Z",
+    "_updatedAt": "2018-03-26T04:21:11.487Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:04.153Z",
     "group": "Accounts",
@@ -68,7 +83,7 @@
   },
   {
     "_id": "Accounts_Default_User_Preferences_audioNotifications",
-    "_updatedAt": "2018-03-15T10:02:28.236Z",
+    "_updatedAt": "2018-03-26T04:21:11.500Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:04.157Z",
     "group": "Accounts",
@@ -100,7 +115,7 @@
   },
   {
     "_id": "Accounts_Default_User_Preferences_desktopNotifications",
-    "_updatedAt": "2018-03-15T10:02:28.241Z",
+    "_updatedAt": "2018-03-26T04:21:11.511Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:04.167Z",
     "group": "Accounts",
@@ -132,7 +147,7 @@
   },
   {
     "_id": "Accounts_Default_User_Preferences_mobileNotifications",
-    "_updatedAt": "2018-03-15T10:02:28.245Z",
+    "_updatedAt": "2018-03-26T04:21:11.525Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:04.172Z",
     "group": "Accounts",
@@ -164,7 +179,7 @@
   },
   {
     "_id": "Accounts_Default_User_Preferences_hideRoles",
-    "_updatedAt": "2018-03-15T10:02:28.281Z",
+    "_updatedAt": "2018-03-26T04:21:11.607Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:04.226Z",
     "group": "Accounts",
@@ -182,7 +197,7 @@
   },
   {
     "_id": "Site_Name",
-    "_updatedAt": "2018-03-15T10:02:28.552Z",
+    "_updatedAt": "2018-03-26T04:21:12.167Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:04.527Z",
     "group": "General",
@@ -199,7 +214,7 @@
   },
   {
     "_id": "Language",
-    "_updatedAt": "2018-03-15T10:02:28.555Z",
+    "_updatedAt": "2018-03-26T04:21:12.176Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:04.531Z",
     "group": "General",
@@ -216,7 +231,7 @@
   },
   {
     "_id": "First_Channel_After_Login",
-    "_updatedAt": "2018-03-15T10:02:28.568Z",
+    "_updatedAt": "2018-03-26T04:21:12.200Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:04.544Z",
     "group": "General",
@@ -232,8 +247,117 @@
     "valueSource": "packageValue"
   },
   {
+    "_id": "Notifications_Always_Notify_Mobile",
+    "_updatedAt": "2018-03-26T04:21:12.387Z",
+    "blocked": false,
+    "createdAt": "2018-03-05T04:26:04.601Z",
+    "group": "General",
+    "hidden": false,
+    "i18nDescription": "Notifications_Always_Notify_Mobile_Description",
+    "i18nLabel": "Notifications_Always_Notify_Mobile",
+    "packageValue": false,
+    "public": true,
+    "section": "Notifications",
+    "sorter": 19,
+    "ts": "2018-03-05T04:26:04.601Z",
+    "type": "boolean",
+    "value": true,
+    "valueSource": "packageValue"
+  },
+  {
+    "_id": "Direct_Reply_Enable",
+    "_updatedAt": "2018-03-26T04:21:12.509Z",
+    "blocked": false,
+    "createdAt": "2018-03-05T04:26:04.667Z",
+    "env": true,
+    "group": "Email",
+    "hidden": false,
+    "i18nDescription": "Direct_Reply_Enable_Description",
+    "i18nLabel": "Direct_Reply_Enable",
+    "packageValue": false,
+    "section": "Direct_Reply",
+    "sorter": 6,
+    "ts": "2018-03-05T04:26:04.668Z",
+    "type": "boolean",
+    "value": true,
+    "valueSource": "packageValue"
+  },
+  {
+    "_id": "Direct_Reply_Debug",
+    "_updatedAt": "2018-03-26T04:21:12.518Z",
+    "blocked": false,
+    "createdAt": "2018-03-05T04:26:04.671Z",
+    "env": true,
+    "group": "Email",
+    "hidden": false,
+    "i18nDescription": "Direct_Reply_Debug_Description",
+    "i18nLabel": "Direct_Reply_Debug",
+    "packageValue": false,
+    "section": "Direct_Reply",
+    "sorter": 7,
+    "ts": "2018-03-05T04:26:04.672Z",
+    "type": "boolean",
+    "value": true,
+    "valueSource": "packageValue"
+  },
+  {
+    "_id": "Direct_Reply_Host",
+    "_updatedAt": "2018-03-26T04:21:12.533Z",
+    "blocked": false,
+    "createdAt": "2018-03-05T04:26:04.679Z",
+    "env": true,
+    "group": "Email",
+    "hidden": false,
+    "i18nDescription": "Direct_Reply_Host_Description",
+    "i18nLabel": "Host",
+    "packageValue": "",
+    "section": "Direct_Reply",
+    "sorter": 9,
+    "ts": "2018-03-05T04:26:04.680Z",
+    "type": "string",
+    "value": "naustud.io",
+    "valueSource": "packageValue"
+  },
+  {
+    "_id": "Direct_Reply_Username",
+    "_updatedAt": "2018-03-26T04:21:12.590Z",
+    "blocked": false,
+    "createdAt": "2018-03-05T04:26:04.721Z",
+    "env": true,
+    "group": "Email",
+    "hidden": false,
+    "i18nDescription": "Direct_Reply_Username_Description",
+    "i18nLabel": "Username",
+    "packageValue": "",
+    "placeholder": "email@domain",
+    "section": "Direct_Reply",
+    "sorter": 15,
+    "ts": "2018-03-05T04:26:04.721Z",
+    "type": "string",
+    "value": "long@naustud.io",
+    "valueSource": "packageValue"
+  },
+  {
+    "_id": "Direct_Reply_Password",
+    "_updatedAt": "2018-03-26T04:21:12.600Z",
+    "blocked": false,
+    "createdAt": "2018-03-05T04:26:04.724Z",
+    "env": true,
+    "group": "Email",
+    "hidden": false,
+    "i18nDescription": "Direct_Reply_Password_Description",
+    "i18nLabel": "Password",
+    "packageValue": "",
+    "section": "Direct_Reply",
+    "sorter": 16,
+    "ts": "2018-03-05T04:26:04.725Z",
+    "type": "password",
+    "value": "Long1610",
+    "valueSource": "packageValue"
+  },
+  {
     "_id": "SMTP_Host",
-    "_updatedAt": "2018-03-15T10:02:28.781Z",
+    "_updatedAt": "2018-03-26T04:21:12.615Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:04.733Z",
     "env": true,
@@ -251,7 +375,7 @@
   },
   {
     "_id": "SMTP_Port",
-    "_updatedAt": "2018-03-15T10:02:28.788Z",
+    "_updatedAt": "2018-03-26T04:21:12.625Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:04.737Z",
     "env": true,
@@ -269,7 +393,7 @@
   },
   {
     "_id": "SMTP_Pool",
-    "_updatedAt": "2018-03-15T10:02:28.796Z",
+    "_updatedAt": "2018-03-26T04:21:12.638Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:04.757Z",
     "env": true,
@@ -287,7 +411,7 @@
   },
   {
     "_id": "SMTP_Username",
-    "_updatedAt": "2018-03-15T10:02:28.800Z",
+    "_updatedAt": "2018-03-26T04:21:12.646Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:04.761Z",
     "env": true,
@@ -305,7 +429,7 @@
   },
   {
     "_id": "SMTP_Password",
-    "_updatedAt": "2018-03-15T10:02:28.804Z",
+    "_updatedAt": "2018-03-26T04:21:12.653Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:04.764Z",
     "env": true,
@@ -323,7 +447,7 @@
   },
   {
     "_id": "From_Email",
-    "_updatedAt": "2018-03-15T10:02:28.808Z",
+    "_updatedAt": "2018-03-26T04:21:12.661Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:04.768Z",
     "group": "Email",
@@ -341,7 +465,7 @@
   },
   {
     "_id": "Invitation_Customized",
-    "_updatedAt": "2018-03-15T10:02:28.816Z",
+    "_updatedAt": "2018-03-26T04:21:12.704Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:04.799Z",
     "group": "Email",
@@ -357,26 +481,25 @@
     "valueSource": "packageValue"
   },
   {
-    "_id": "Push_production",
-    "_updatedAt": "2018-03-15T10:02:29.083Z",
+    "_id": "Push_enable_gateway",
+    "_updatedAt": "2018-03-26T04:21:13.232Z",
     "blocked": false,
-    "createdAt": "2018-03-05T04:26:05.122Z",
-    "enableQuery": "[{\"_id\":\"Push_enable\",\"value\":true},{\"_id\":\"Push_enable_gateway\",\"value\":false}]",
+    "createdAt": "2018-03-05T04:26:05.110Z",
+    "enableQuery": "{\"_id\":\"Push_enable\",\"value\":true}",
     "group": "Push",
     "hidden": false,
-    "i18nDescription": "Push_production_Description",
-    "i18nLabel": "Push_production",
+    "i18nDescription": "Push_enable_gateway_Description",
+    "i18nLabel": "Push_enable_gateway",
     "packageValue": true,
-    "public": true,
-    "sorter": 4,
-    "ts": "2018-03-05T04:26:05.123Z",
+    "sorter": 2,
+    "ts": "2018-03-05T04:26:05.111Z",
     "type": "boolean",
     "value": false,
     "valueSource": "packageValue"
   },
   {
     "_id": "Push_apn_passphrase",
-    "_updatedAt": "2018-03-15T10:02:29.091Z",
+    "_updatedAt": "2018-03-26T04:21:13.263Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:05.130Z",
     "group": "Push",
@@ -393,7 +516,7 @@
   },
   {
     "_id": "Push_apn_key",
-    "_updatedAt": "2018-03-15T10:02:29.095Z",
+    "_updatedAt": "2018-03-26T04:21:13.271Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:05.133Z",
     "group": "Push",
@@ -411,7 +534,7 @@
   },
   {
     "_id": "Push_apn_cert",
-    "_updatedAt": "2018-03-15T10:02:29.101Z",
+    "_updatedAt": "2018-03-26T04:21:13.282Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:05.141Z",
     "group": "Push",
@@ -429,7 +552,7 @@
   },
   {
     "_id": "Push_apn_dev_passphrase",
-    "_updatedAt": "2018-03-15T10:02:29.106Z",
+    "_updatedAt": "2018-03-26T04:21:13.293Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:05.145Z",
     "group": "Push",
@@ -446,7 +569,7 @@
   },
   {
     "_id": "Push_apn_dev_key",
-    "_updatedAt": "2018-03-15T10:02:29.109Z",
+    "_updatedAt": "2018-03-26T04:21:13.298Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:05.148Z",
     "group": "Push",
@@ -464,7 +587,7 @@
   },
   {
     "_id": "Push_apn_dev_cert",
-    "_updatedAt": "2018-03-15T10:02:29.114Z",
+    "_updatedAt": "2018-03-26T04:21:13.305Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:05.152Z",
     "group": "Push",
@@ -482,7 +605,7 @@
   },
   {
     "_id": "Push_gcm_api_key",
-    "_updatedAt": "2018-03-15T10:02:29.117Z",
+    "_updatedAt": "2018-03-26T04:21:13.313Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:05.156Z",
     "group": "Push",
@@ -499,7 +622,7 @@
   },
   {
     "_id": "Push_gcm_project_number",
-    "_updatedAt": "2018-03-15T10:02:29.128Z",
+    "_updatedAt": "2018-03-26T04:21:13.320Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:05.172Z",
     "group": "Push",
@@ -517,7 +640,7 @@
   },
   {
     "_id": "Layout_Home_Body",
-    "_updatedAt": "2018-03-15T10:02:29.158Z",
+    "_updatedAt": "2018-03-26T04:21:13.379Z",
     "blocked": false,
     "code": "text/html",
     "createdAt": "2018-03-05T04:26:05.190Z",
@@ -537,7 +660,7 @@
   },
   {
     "_id": "UI_DisplayRoles",
-    "_updatedAt": "2018-03-15T10:02:29.196Z",
+    "_updatedAt": "2018-03-26T04:21:13.456Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:05.218Z",
     "group": "Layout",
@@ -555,7 +678,7 @@
   },
   {
     "_id": "UI_Click_Direct_Message",
-    "_updatedAt": "2018-03-15T10:02:29.211Z",
+    "_updatedAt": "2018-03-26T04:21:13.514Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:05.233Z",
     "group": "Layout",
@@ -573,7 +696,7 @@
   },
   {
     "_id": "Assets_logo",
-    "_updatedAt": "2018-03-15T10:02:30.394Z",
+    "_updatedAt": "2018-03-26T04:21:14.259Z",
     "asset": "logo",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:05.998Z",
@@ -611,7 +734,7 @@
   },
   {
     "_id": "Assets_favicon_ico",
-    "_updatedAt": "2018-03-15T10:02:30.400Z",
+    "_updatedAt": "2018-03-26T04:21:14.264Z",
     "asset": "favicon_ico",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:06.004Z",
@@ -644,7 +767,7 @@
   },
   {
     "_id": "Assets_favicon",
-    "_updatedAt": "2018-03-15T10:02:30.405Z",
+    "_updatedAt": "2018-03-26T04:21:14.278Z",
     "asset": "favicon",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:06.008Z",
@@ -679,7 +802,7 @@
   },
   {
     "_id": "Assets_favicon_16",
-    "_updatedAt": "2018-03-15T10:02:30.411Z",
+    "_updatedAt": "2018-03-26T04:21:14.288Z",
     "asset": "favicon_16",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:06.013Z",
@@ -700,19 +823,21 @@
     },
     "public": true,
     "sorter": 4,
-    "ts": "2018-03-05T05:44:11.395Z",
+    "ts": "2018-03-23T09:53:00.369Z",
     "type": "asset",
     "value": {
+      "url": "assets/favicon_16.png",
       "defaultUrl": "images/logo/favicon-16x16.png"
     },
     "valueSource": "meteorSettingsValue",
     "meteorSettingsValue": {
+      "url": "assets/favicon_16.png",
       "defaultUrl": "images/logo/favicon-16x16.png"
     }
   },
   {
     "_id": "Assets_favicon_32",
-    "_updatedAt": "2018-03-15T10:02:30.416Z",
+    "_updatedAt": "2018-03-26T04:21:14.303Z",
     "asset": "favicon_32",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:06.019Z",
@@ -733,19 +858,21 @@
     },
     "public": true,
     "sorter": 5,
-    "ts": "2018-03-05T05:44:11.400Z",
+    "ts": "2018-03-23T09:53:00.373Z",
     "type": "asset",
     "value": {
+      "url": "assets/favicon_32.png",
       "defaultUrl": "images/logo/favicon-32x32.png"
     },
     "valueSource": "meteorSettingsValue",
     "meteorSettingsValue": {
+      "url": "assets/favicon_32.png",
       "defaultUrl": "images/logo/favicon-32x32.png"
     }
   },
   {
     "_id": "Assets_favicon_192",
-    "_updatedAt": "2018-03-15T10:02:30.421Z",
+    "_updatedAt": "2018-03-26T04:21:14.315Z",
     "asset": "favicon_192",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:06.024Z",
@@ -766,19 +893,21 @@
     },
     "public": true,
     "sorter": 6,
-    "ts": "2018-03-05T05:44:11.456Z",
+    "ts": "2018-03-23T09:53:00.381Z",
     "type": "asset",
     "value": {
+      "url": "assets/favicon_192.png",
       "defaultUrl": "images/logo/android-chrome-192x192.png"
     },
     "valueSource": "meteorSettingsValue",
     "meteorSettingsValue": {
+      "url": "assets/favicon_192.png",
       "defaultUrl": "images/logo/android-chrome-192x192.png"
     }
   },
   {
     "_id": "Assets_favicon_512",
-    "_updatedAt": "2018-03-15T10:02:30.427Z",
+    "_updatedAt": "2018-03-26T04:21:14.321Z",
     "asset": "favicon_512",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:06.028Z",
@@ -799,19 +928,21 @@
     },
     "public": true,
     "sorter": 7,
-    "ts": "2018-03-05T05:44:11.484Z",
+    "ts": "2018-03-23T09:53:00.389Z",
     "type": "asset",
     "value": {
+      "url": "assets/favicon_512.png",
       "defaultUrl": "images/logo/512x512.png"
     },
     "valueSource": "meteorSettingsValue",
     "meteorSettingsValue": {
+      "url": "assets/favicon_512.png",
       "defaultUrl": "images/logo/512x512.png"
     }
   },
   {
     "_id": "Assets_touchicon_180",
-    "_updatedAt": "2018-03-15T10:02:30.449Z",
+    "_updatedAt": "2018-03-26T04:21:14.336Z",
     "asset": "touchicon_180",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:06.068Z",
@@ -832,19 +963,21 @@
     },
     "public": true,
     "sorter": 8,
-    "ts": "2018-03-05T05:44:11.490Z",
+    "ts": "2018-03-23T09:53:00.396Z",
     "type": "asset",
     "value": {
+      "url": "assets/touchicon_180.png",
       "defaultUrl": "images/logo/apple-touch-icon.png"
     },
     "valueSource": "meteorSettingsValue",
     "meteorSettingsValue": {
+      "url": "assets/touchicon_180.png",
       "defaultUrl": "images/logo/apple-touch-icon.png"
     }
   },
   {
     "_id": "Assets_touchicon_180_pre",
-    "_updatedAt": "2018-03-15T10:02:30.455Z",
+    "_updatedAt": "2018-03-26T04:21:14.376Z",
     "asset": "touchicon_180_pre",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:06.072Z",
@@ -865,19 +998,21 @@
     },
     "public": true,
     "sorter": 9,
-    "ts": "2018-03-05T05:44:11.496Z",
+    "ts": "2018-03-23T09:53:00.400Z",
     "type": "asset",
     "value": {
+      "url": "assets/touchicon_180_pre.png",
       "defaultUrl": "images/logo/apple-touch-icon-precomposed.png"
     },
     "valueSource": "meteorSettingsValue",
     "meteorSettingsValue": {
+      "url": "assets/touchicon_180_pre.png",
       "defaultUrl": "images/logo/apple-touch-icon-precomposed.png"
     }
   },
   {
     "_id": "Assets_tile_144",
-    "_updatedAt": "2018-03-15T10:02:30.462Z",
+    "_updatedAt": "2018-03-26T04:21:14.387Z",
     "asset": "tile_144",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:06.076Z",
@@ -898,19 +1033,21 @@
     },
     "public": true,
     "sorter": 10,
-    "ts": "2018-03-05T05:44:11.501Z",
+    "ts": "2018-03-23T09:53:00.403Z",
     "type": "asset",
     "value": {
+      "url": "assets/tile_144.png",
       "defaultUrl": "images/logo/mstile-144x144.png"
     },
     "valueSource": "meteorSettingsValue",
     "meteorSettingsValue": {
+      "url": "assets/tile_144.png",
       "defaultUrl": "images/logo/mstile-144x144.png"
     }
   },
   {
     "_id": "Assets_tile_150",
-    "_updatedAt": "2018-03-15T10:02:30.467Z",
+    "_updatedAt": "2018-03-26T04:21:14.400Z",
     "asset": "tile_150",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:06.091Z",
@@ -943,7 +1080,7 @@
   },
   {
     "_id": "Assets_tile_310_square",
-    "_updatedAt": "2018-03-15T10:02:30.473Z",
+    "_updatedAt": "2018-03-26T04:21:14.414Z",
     "asset": "tile_310_square",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:06.097Z",
@@ -964,19 +1101,21 @@
     },
     "public": true,
     "sorter": 12,
-    "ts": "2018-03-05T05:44:11.542Z",
+    "ts": "2018-03-23T09:53:00.410Z",
     "type": "asset",
     "value": {
+      "url": "assets/tile_310_square.png",
       "defaultUrl": "images/logo/mstile-310x310.png"
     },
     "valueSource": "meteorSettingsValue",
     "meteorSettingsValue": {
+      "url": "assets/tile_310_square.png",
       "defaultUrl": "images/logo/mstile-310x310.png"
     }
   },
   {
     "_id": "Assets_tile_310_wide",
-    "_updatedAt": "2018-03-15T10:02:30.479Z",
+    "_updatedAt": "2018-03-26T04:21:14.425Z",
     "asset": "tile_310_wide",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:06.101Z",
@@ -1009,7 +1148,7 @@
   },
   {
     "_id": "Assets_safari_pinned",
-    "_updatedAt": "2018-03-15T10:02:30.484Z",
+    "_updatedAt": "2018-03-26T04:21:14.436Z",
     "asset": "safari_pinned",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:06.105Z",
@@ -1030,19 +1169,21 @@
     },
     "public": true,
     "sorter": 14,
-    "ts": "2018-03-05T05:44:11.556Z",
+    "ts": "2018-03-23T09:53:00.418Z",
     "type": "asset",
     "value": {
+      "url": "assets/safari_pinned.svg",
       "defaultUrl": "images/logo/safari-pinned-tab.svg"
     },
     "valueSource": "meteorSettingsValue",
     "meteorSettingsValue": {
+      "url": "assets/safari_pinned.svg",
       "defaultUrl": "images/logo/safari-pinned-tab.svg"
     }
   },
   {
     "_id": "css",
-    "_updatedAt": "2018-03-15T10:02:32.349Z",
+    "_updatedAt": "2018-03-26T04:21:15.232Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:06.833Z",
     "hidden": false,
@@ -1056,8 +1197,47 @@
     "meteorSettingsValue": ".content-background-color{background-color:#fff}.color-content-background-color{color:#fff}.primary-background-color{background-color:#04436a}.global-font-family{font-family:-apple-system,BlinkMacSystemFont,Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI','Segoe UI Emoji','Segoe UI Symbol','Meiryo UI'}.color-primary-font-color{color:#444}.color-primary-action-color{color:#13679a}.background-primary-action-color{background-color:#13679a}.secondary-background-color{background-color:#f4f4f4}.border-secondary-background-color{border-color:#f4f4f4}.secondary-font-color{color:#a0a0a0}.border-component-color{border-color:#eaeaea}.background-component-color{background-color:#eaeaea}.color-component-color{color:#eaeaea}.success-color{color:#4dff4d}.pending-color{color:#fcb316}.pending-background{background-color:#fffdf9}.pending-border{border-color:#fee4ad}.error-color{color:#bc2031}.background-error-color{background-color:#bc2031}.color-info-font-color{color:#a0a0a0}.background-info-font-color{background-color:#a0a0a0}.background-attention-color{background-color:#9c27b0}.tertiary-background-color{background-color:#eaeaea}.border-tertiary-background-color{border-color:#eaeaea}.color-tertiary-font-color{color:rgba(255,255,255,0.6)}.error-background{background-color:#f6cbd0}.error-border{border-color:#eb8a95}.color-error-contrast{color:#fff}.background-transparent-darkest{background-color:rgba(17,12,12,0.5)}.background-transparent-darker{background-color:rgba(0,0,0,0.15)}.background-transparent-darker-hover:hover{background-color:rgba(0,0,0,0.15)}.background-transparent-darker-before::before{background-color:rgba(0,0,0,0.15)}.background-transparent-dark{background-color:rgba(0,0,0,0.05)}.background-transparent-dark-hover:hover{background-color:rgba(0,0,0,0.05)}.border-transparent-dark{border-color:rgba(0,0,0,0.05)}.background-transparent-light{background-color:rgba(255,255,255,0.1)}.border-transparent-lighter{border-color:rgba(255,255,255,0.3)}.background-transparent-lightest{background-color:rgba(255,255,255,0.6)}.color-primary-action-contrast{color:#fff}*{-webkit-overflow-scrolling:touch}*::-webkit-scrollbar{height:8px;width:8px;background:rgba(0,0,0,0.05)}*::-webkit-scrollbar-thumb{background-color:rgba(0,0,0,0.15);-webkit-border-radius:50px}*::-webkit-scrollbar-corner{background-color:rgba(0,0,0,0.05)}.filter-item:hover{border-color:#a0a0a0}.filter-item.active{border-color:#04436a}.page-container tr:hover td{background-color:#fff}.burger i{background-color:#444}input,select,textarea{color:#444;background-color:transparent;border-color:#e6e6e6;border-style:solid}input::-webkit-input-placeholder,select::-webkit-input-placeholder,textarea::-webkit-input-placeholder{color:#737373}input:-ms-input-placeholder,select:-ms-input-placeholder,textarea:-ms-input-placeholder{color:#737373}input::placeholder,select::placeholder,textarea::placeholder{color:#737373}input[disabled],select[disabled],textarea[disabled]{background-color:#e6e6e6}.disabled label,[disabled] label{color:#737373}.-autocomplete-container{background-color:#e6e6e6}.-autocomplete-item.selected{background-color:#ccc}.rc-old input[type=\"button\"],.rc-old input[type=\"submit\"]{color:#444;background:#e6e6e6;border-color:#e6e6e6}.toolbar-search__input:focus{border-color:rgba(255,255,255,0.5)}.toolbar-search__input::-webkit-input-placeholder{color:rgba(255,255,255,0.3)}.toolbar-search__input:-ms-input-placeholder{color:rgba(255,255,255,0.3)}.toolbar-search__input::placeholder{color:rgba(255,255,255,0.3)}.toolbar-search__buttons i:hover{color:rgba(255,255,255,0.5)}.input-line.setting-changed>label{color:#02acec}input:-webkit-autofill{color:#444 !important;background-color:transparent !important}.input.radio label::before{border-color:#919191;background-color:#fff}.input.radio label::after{background-color:#444}.input.checkbox.toggle input:checked+label::before{background-color:#444}.input.checkbox.toggle input:disabled+label::before{background-color:#c3c3c3 !important}.input.checkbox.toggle label::before{background-color:#919191}.input.checkbox.toggle label::after{background-color:#fff}.input.checkbox.toggle label:hover::before{background-color:#777}.message a i,.flex-tab a i,.message a[class^=\"icon-\"],.flex-tab a[class^=\"icon-\"]{color:#444}.message a i:hover,.flex-tab a i:hover,.message a[class^=\"icon-\"]:hover,.flex-tab a[class^=\"icon-\"]:hover{color:#2b2b2b}.error{border-color:#bc2031}.page-list a:not(.rc-button),.page-settings a:not(.rc-button){color:#444}.page-list a:not(.rc-button):hover,.page-settings a:not(.rc-button):hover{color:#13679a}.admin-table-row{background-color:rgba(255,255,255,0.1)}.admin-table-row:nth-of-type(even){background-color:rgba(255,255,255,0.6)}.new-logs{background:#fff}.avatar-suggestion-item .question-mark::before{color:#a0a0a0}.full-page a,.page-loading a{color:rgba(255,255,255,0.6)}.full-page a:hover,.page-loading a:hover{color:#fff}#login-card .input-text input:-webkit-autofill{-webkit-box-shadow:0 0 0 20px #fff inset}.toggle-favorite{color:#eaeaea}.upload-progress-progress{background-color:#fff}.messages-container .edit-room-title{color:#a0a0a0}.messages-container .edit-room-title:hover{color:#444}.messages-container .footer{background:#fff}.message-form .message-buttons{color:#848484;background-color:#f4f4f4}.message-form .message-buttons:hover{color:#4f4f4f;background-color:#f8f8f8}.message-form .message-buttons:hover{background-color:#fdfdfd}.message-form .message-form-text.editing{background-color:#fff5df}.message.editing{background-color:#fff5df}.rc-old .popup-item.selected{color:#fff;background-color:#13679a}.messages-box.selectable .selected{background-color:#89defe}.message.new-day::before{background-color:#fff}.message.new-day::after{border-color:#eaeaea}.message .message-dropdown,.message .options-menu{color:#656565}.message .message-dropdown ul li:hover,.message .options-menu ul li:hover{background-color:#eaeaea}.message .is-bot,.message .role-tag{color:#fff}.message a{color:#13679a}.message a:hover{color:#0d496d}.message .mention-link.mention-link-me{color:#fff}.message .mention-link.mention-link-all{color:#fff}.message .highlight-text{background-color:#89defe}.side-nav .arrow::before,.side-nav .arrow::after{background-color:rgba(255,255,255,0.6)}.side-nav li.active{background-color:rgba(255,255,255,0.1) !important}.side-nav i.status-offline{color:rgba(255,255,255,0.3) !important}.side-nav i{color:rgba(255,255,255,0.3)}.side-nav .opt i:hover{color:rgba(255,255,255,0.6)}.side-nav .has-alert .name{color:#fff}.side-nav .unread{color:#4dff4d;border:1px solid #4dff4d}.side-nav .unread.unread-mention{background-color:#4dff4d;color:#000}.side-nav .button{color:rgba(255,255,255,0.6);background-color:#0c5582}.side-nav .button:hover{color:rgba(255,255,255,0.76);background-color:#07334e}.side-nav .options button{color:rgba(255,255,255,0.6);background-color:#04436a}.side-nav .options button:hover{color:rgba(255,255,255,0.76);background-color:#022840}.sidebar-item__last-message a:not(.mention-link){color:#13679a}.sidebar-item__last-message a:not(.mention-link):hover{color:#0d496d}.message-popup.search-results-list{background-color:#044b76}.message-popup.search-results-list .popup-item.selected{background-color:rgba(0,0,0,0.15)}.flex-tab .message.new-day::before{background-color:#f4f4f4}.flex-tab .channel-settings .buttons .button{color:#848484;background-color:#f4f4f4}.flex-tab .channel-settings .buttons .button:hover{color:#4f4f4f;background-color:#f8f8f8}.flex-tab .channel-settings .input.checkbox.toggle input:checked+label::before{background-color:#04436a}.flex-tab-bar .tab-button:hover{background-color:#f4f4f4}.flex-tab-bar .tab-button.active{background-color:#f4f4f4;border-right-color:#02acec}.flex-tab-bar .tab-button.attention{animation-duration:1000ms;animation-name:blink;animation-iteration-count:infinite;animation-direction:alternate}.flex-tab-bar .counter{background:#a0a0a0;color:white}i.status-online{color:#4dff4d}.status-bg-online{background-color:#4dff4d}.account-box .status-online .thumb::after,.account-box .status.online::after,.popup-user-status-online,.status-online::after,.user-image.status-online .avatar::after{background-color:#4dff4d;border-color:#1aff1a}.account-box .status-offline .thumb::after,.account-box .status.offline::after{background-color:rgba(255,255,255,0.3)}i.status-away{color:#fcb316}.status-bg-away{background-color:#fcb316}.account-box .status-away .thumb::after,.account-box .status.away::after,.popup-user-status-away,.status-pending::after,.user-image.status-away .avatar::after{background-color:#fcb316;border-color:#dc9703}i.status-busy{color:#bc2031}.status-bg-busy{background-color:#bc2031}.account-box .status-busy .thumb::after,.account-box .status.busy::after,.popup-user-status-busy,.status-busy::after,.user-image.status-busy .avatar::after{background-color:#bc2031;border-color:#901926}i.status-offline{color:rgba(0,0,0,0.15)}.status-bg-offline{background-color:rgba(0,0,0,0.15)}.popup-user-status-offline,.status-offline::after,.user-image.status-offline .avatar::after{background-color:rgba(0,0,0,0.15);border-color:rgba(0,0,0,0.15)}.actionLinks li .action-link{color:#fff;background-color:#13679a}.actionLinks li .action-link:hover{color:#fff;background-color:#0b3e5c}.button{color:#444;background-color:#cecece}.button:hover{color:#292929;background-color:#e1e1e1}.button.primary{color:#fff;background-color:#13679a}.button.primary:hover{color:#fff;background-color:#0b3e5c}.button.primary[disabled]{background-color:#89a9bd}.button.secondary{color:#444;background-color:#ddd}.button.secondary:hover{color:#292929;background-color:#ebebeb}.button.secondary[disabled]{background-color:#fff}.button.tertiary{color:#fff;background-color:#02acec}.button.tertiary:hover{color:#fff;background-color:#01678e}.button.tertiary[disabled]{background-color:#a7d1e0}.button.danger{color:#fff;background-color:#bc2031}.button.danger:hover{color:#fff;background-color:#71131d}.button.danger[disabled]{background-color:#c9acaf}.alert-warning{color:#916302;background-color:#fffdf9}.alert-link{color:#13679a}.alert-link:hover{color:#0d496d}label.required::after{color:#bc2031}.main-content .loading-animation>.bounce,.flex-tab .loading-animation>.bounce{background-color:#444}.loading-animation.loading-animation--primary>.bounce{background-color:#444}@keyframes blink{from{color:#02acec}to{opacity:inherit}}.range-slider-range::-webkit-slider-thumb{background-color:#04436a}.range-slider-range::-webkit-slider-thumb:hover{background-color:#00b300}.range-slider-range:active::-webkit-slider-thumb{background-color:#1aff1a}.range-slider-range::-moz-range-thumb{background-color:#04436a}.range-slider-range::-moz-range-thumb:hover{background-color:#00b300}.range-slider-range:active::-moz-range-thumb{background-color:#1aff1a}.range-slider-value{color:#fff;background-color:#04436a}.range-slider-value::after{border-top-color:transparent;border-right-color:#04436a;border-bottom-color:transparent}.range-slider-range::-moz-range-track{background-color:#eaeaea}"
   },
   {
+    "_id": "GoogleAnalytics_enabled",
+    "_updatedAt": "2018-03-26T04:21:16.175Z",
+    "blocked": false,
+    "createdAt": "2018-03-05T04:26:07.363Z",
+    "group": "Analytics",
+    "hidden": false,
+    "i18nDescription": "GoogleAnalytics_enabled_Description",
+    "i18nLabel": "Enable",
+    "packageValue": false,
+    "public": true,
+    "section": "Analytics_Google",
+    "sorter": 7,
+    "ts": "2018-03-25T15:34:46.753Z",
+    "type": "boolean",
+    "value": true,
+    "valueSource": "meteorSettingsValue",
+    "meteorSettingsValue": true
+  },
+  {
+    "_id": "GoogleAnalytics_ID",
+    "_updatedAt": "2018-03-26T04:21:16.185Z",
+    "blocked": false,
+    "createdAt": "2018-03-05T04:26:07.367Z",
+    "enableQuery": "{\"_id\":\"GoogleAnalytics_enabled\",\"value\":true}",
+    "group": "Analytics",
+    "hidden": false,
+    "i18nDescription": "GoogleAnalytics_ID_Description",
+    "i18nLabel": "Analytics_Google_id",
+    "packageValue": "",
+    "public": true,
+    "section": "Analytics_Google",
+    "sorter": 8,
+    "ts": "2018-03-25T15:34:46.772Z",
+    "type": "string",
+    "value": "101392746",
+    "valueSource": "meteorSettingsValue",
+    "meteorSettingsValue": "101392746"
+  },
+  {
     "_id": "FileUpload_MaxFileSize",
-    "_updatedAt": "2018-03-15T10:02:39.464Z",
+    "_updatedAt": "2018-03-26T04:21:17.786Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:11.446Z",
     "group": "FileUpload",
@@ -1075,25 +1255,25 @@
   },
   {
     "_id": "FileUpload_MediaTypeWhiteList",
-    "_updatedAt": "2018-03-16T04:57:49.461Z",
+    "_updatedAt": "2018-03-26T04:21:17.794Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:11.454Z",
     "group": "FileUpload",
     "hidden": false,
     "i18nDescription": "FileUpload_MediaTypeWhiteListDescription",
     "i18nLabel": "FileUpload_MediaTypeWhiteList",
-    "packageValue": "image,pdf,text/plain,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "packageValue": "image/*,audio/*,video/*,application/zip,application/x-rar-compressed,application/pdf,text/plain,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document",
     "public": true,
     "sorter": 2,
-    "ts": "2018-03-05T05:44:14.513Z",
+    "ts": "2018-03-23T09:53:10.225Z",
     "type": "string",
-    "value": "image,plain,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/postscript,application/psd,application/x-photoshop,image/vnd.adobe.photoshop",
+    "value": "",
     "valueSource": "meteorSettingsValue",
-    "meteorSettingsValue": "image,/pdf,text/plain,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    "meteorSettingsValue": ""
   },
   {
     "_id": "FileUpload_Storage_Type",
-    "_updatedAt": "2018-03-15T10:02:39.492Z",
+    "_updatedAt": "2018-03-26T04:21:17.806Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:11.505Z",
     "group": "FileUpload",
@@ -1129,7 +1309,7 @@
   },
   {
     "_id": "FileUpload_S3_Bucket",
-    "_updatedAt": "2018-03-15T10:02:39.502Z",
+    "_updatedAt": "2018-03-26T04:21:17.811Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:11.514Z",
     "enableQuery": "{\"_id\":\"FileUpload_Storage_Type\",\"value\":\"AmazonS3\"}",
@@ -1142,13 +1322,13 @@
     "sorter": 5,
     "ts": "2018-03-05T05:44:14.618Z",
     "type": "string",
-    "value": "files.goalify.chat/${subdomain}",
+    "value": "files.goalify.chat/nau",
     "valueSource": "meteorSettingsValue",
-    "meteorSettingsValue": "files.goalify.chat/${subdomain}"
+    "meteorSettingsValue": "files.goalify.chat/nau"
   },
   {
     "_id": "FileUpload_S3_AWSAccessKeyId",
-    "_updatedAt": "2018-03-15T10:02:39.531Z",
+    "_updatedAt": "2018-03-26T04:21:17.825Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:11.549Z",
     "enableQuery": "{\"_id\":\"FileUpload_Storage_Type\",\"value\":\"AmazonS3\"}",
@@ -1167,7 +1347,7 @@
   },
   {
     "_id": "FileUpload_S3_AWSSecretAccessKey",
-    "_updatedAt": "2018-03-15T10:02:39.550Z",
+    "_updatedAt": "2018-03-26T04:21:17.832Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:11.555Z",
     "enableQuery": "{\"_id\":\"FileUpload_Storage_Type\",\"value\":\"AmazonS3\"}",
@@ -1186,7 +1366,7 @@
   },
   {
     "_id": "FileUpload_S3_Region",
-    "_updatedAt": "2018-03-15T10:02:39.572Z",
+    "_updatedAt": "2018-03-26T04:21:17.855Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:11.586Z",
     "enableQuery": "{\"_id\":\"FileUpload_Storage_Type\",\"value\":\"AmazonS3\"}",
@@ -1205,7 +1385,7 @@
   },
   {
     "_id": "InternalHubot_Username",
-    "_updatedAt": "2018-03-15T10:02:47.111Z",
+    "_updatedAt": "2018-03-26T04:21:19.813Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:14.746Z",
     "group": "InternalHubot",
@@ -1223,7 +1403,7 @@
   },
   {
     "_id": "InternalHubot_EnableForDirectMessages",
-    "_updatedAt": "2018-03-15T10:02:47.183Z",
+    "_updatedAt": "2018-03-26T04:21:19.846Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:14.764Z",
     "group": "InternalHubot",
@@ -1240,7 +1420,7 @@
   },
   {
     "_id": "InternalHubot_EnableForPrivateGroups",
-    "_updatedAt": "2018-03-15T10:02:47.195Z",
+    "_updatedAt": "2018-03-26T04:21:19.856Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:14.784Z",
     "group": "InternalHubot",
@@ -1256,8 +1436,46 @@
     "meteorSettingsValue": true
   },
   {
+    "_id": "AutoTranslate_Enabled",
+    "_updatedAt": "2018-03-26T04:21:22.922Z",
+    "blocked": false,
+    "createdAt": "2018-03-05T04:26:20.632Z",
+    "group": "Message",
+    "hidden": false,
+    "i18nDescription": "AutoTranslate_Enabled_Description",
+    "i18nLabel": "AutoTranslate_Enabled",
+    "packageValue": false,
+    "public": true,
+    "section": "AutoTranslate",
+    "sorter": 50,
+    "ts": "2018-03-23T09:53:29.375Z",
+    "type": "boolean",
+    "value": true,
+    "valueSource": "meteorSettingsValue",
+    "meteorSettingsValue": true
+  },
+  {
+    "_id": "AutoTranslate_GoogleAPIKey",
+    "_updatedAt": "2018-03-26T04:21:22.930Z",
+    "blocked": false,
+    "createdAt": "2018-03-05T04:26:20.636Z",
+    "enableQuery": "{\"_id\":\"AutoTranslate_Enabled\",\"value\":true}",
+    "group": "Message",
+    "hidden": false,
+    "i18nDescription": "AutoTranslate_GoogleAPIKey_Description",
+    "i18nLabel": "AutoTranslate_GoogleAPIKey",
+    "packageValue": "",
+    "section": "AutoTranslate",
+    "sorter": 51,
+    "ts": "2018-03-23T09:53:29.387Z",
+    "type": "string",
+    "value": "AIzaSyCShP-rMl0P2PDm6-HP3v2Lk83AS7D-Nhw",
+    "valueSource": "meteorSettingsValue",
+    "meteorSettingsValue": "AIzaSyCShP-rMl0P2PDm6-HP3v2Lk83AS7D-Nhw"
+  },
+  {
     "_id": "Livechat_enabled",
-    "_updatedAt": "2018-03-15T10:03:00.020Z",
+    "_updatedAt": "2018-03-26T04:21:23.546Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:21.274Z",
     "group": "Livechat",
@@ -1275,7 +1493,7 @@
   },
   {
     "_id": "Livechat_title",
-    "_updatedAt": "2018-03-15T10:03:00.026Z",
+    "_updatedAt": "2018-03-26T04:21:23.551Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:21.278Z",
     "group": "Livechat",
@@ -1293,7 +1511,7 @@
   },
   {
     "_id": "Livechat_title_color",
-    "_updatedAt": "2018-03-15T10:03:00.031Z",
+    "_updatedAt": "2018-03-26T04:21:23.557Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:21.282Z",
     "group": "Livechat",
@@ -1311,7 +1529,7 @@
   },
   {
     "_id": "Livechat_guest_count",
-    "_updatedAt": "2018-03-15T10:03:00.113Z",
+    "_updatedAt": "2018-03-26T04:21:23.650Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:21.385Z",
     "group": "Livechat",
@@ -1328,7 +1546,7 @@
   },
   {
     "_id": "Livechat_Room_Count",
-    "_updatedAt": "2018-03-15T10:03:00.119Z",
+    "_updatedAt": "2018-03-26T04:21:23.656Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:21.388Z",
     "group": "Livechat",
@@ -1345,7 +1563,7 @@
   },
   {
     "_id": "Livechat_agent_leave_action",
-    "_updatedAt": "2018-03-15T10:03:00.129Z",
+    "_updatedAt": "2018-03-26T04:21:23.663Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:21.392Z",
     "group": "Livechat",
@@ -1376,7 +1594,7 @@
   },
   {
     "_id": "Livechat_enable_office_hours",
-    "_updatedAt": "2018-03-15T10:03:00.206Z",
+    "_updatedAt": "2018-03-26T04:21:23.773Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:21.505Z",
     "group": "Livechat",
@@ -1394,7 +1612,7 @@
   },
   {
     "_id": "Livechat_enable_transcript",
-    "_updatedAt": "2018-03-15T10:03:00.217Z",
+    "_updatedAt": "2018-03-26T04:21:23.785Z",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:21.543Z",
     "group": "Livechat",
@@ -1412,7 +1630,7 @@
   },
   {
     "_id": "Livestream_enabled",
-    "_updatedAt": "2018-03-15T10:03:00.329Z",
+    "_updatedAt": "2018-03-26T04:21:23.887Z",
     "alert": "This feature is currently in beta! Please report bugs to github.com/RocketChat/Rocket.Chat/issues",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:21.743Z",
@@ -1431,7 +1649,7 @@
   },
   {
     "_id": "Jitsi_Enabled",
-    "_updatedAt": "2018-03-15T10:03:00.531Z",
+    "_updatedAt": "2018-03-26T04:21:24.079Z",
     "alert": "This Feature is currently in beta! Please report bugs to github.com/RocketChat/Rocket.Chat/issues",
     "blocked": false,
     "createdAt": "2018-03-05T04:26:22.079Z",
@@ -1482,6 +1700,24 @@
     "ts": "2018-03-05T08:23:26.141Z",
     "type": "string",
     "value": "https://api.goalify.plus",
+    "valueSource": "packageValue"
+  },
+  {
+    "_id": "Accounts_OAuth_Custom-Goalify-token_path",
+    "_updatedAt": "2018-03-20T05:14:44.815Z",
+    "blocked": false,
+    "createdAt": "2018-03-05T08:23:26.145Z",
+    "group": "OAuth",
+    "hidden": false,
+    "i18nDescription": "Accounts_OAuth_Custom-Goalify-token_path_Description",
+    "i18nLabel": "Accounts_OAuth_Custom_Token_Path",
+    "packageValue": "/oauth/token",
+    "persistent": true,
+    "section": "Custom OAuth: Goalify",
+    "sorter": 61,
+    "ts": "2018-03-05T08:23:26.147Z",
+    "type": "string",
+    "value": "/internal-oauth/token",
     "valueSource": "packageValue"
   },
   {
@@ -1536,7 +1772,7 @@
   },
   {
     "_id": "Accounts_OAuth_Custom-Goalify-authorize_path",
-    "_updatedAt": "2018-03-05T08:29:22.885Z",
+    "_updatedAt": "2018-03-20T05:14:45.007Z",
     "blocked": false,
     "createdAt": "2018-03-05T08:23:26.171Z",
     "group": "OAuth",
@@ -1549,7 +1785,7 @@
     "sorter": 65,
     "ts": "2018-03-05T08:23:26.174Z",
     "type": "string",
-    "value": "/oauth/request/authorize",
+    "value": "/internal-oauth/request/authorize",
     "valueSource": "packageValue"
   },
   {
