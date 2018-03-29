@@ -21,6 +21,7 @@ before_script:
   - npm i -g npm
   - node -v
   - npm -v
+  - export METEOR_ALLOW_SUPERUSER=true
 
 stages:
  - test
@@ -48,7 +49,7 @@ build_job:
     - meteor --version
     - npm install
     - mkdir -p /tmp/build
-    - meteor build --allow-superuser --server-only --server https://demo.goalify.chat /tmp/build
+    - meteor build --server-only --server https://demo.goalify.chat /tmp/build
   artifacts:
     paths:
       - /tmp/build/*.gz
