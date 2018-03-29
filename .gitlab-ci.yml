@@ -47,7 +47,7 @@ build_job:
     # Install meteor VM
     - if [ ! -e "$HOME/.meteor/meteor" ]; then curl https://install.meteor.com | sed s/--progress-bar/-sL/g | /bin/sh; fi
     - meteor --version
-    - npm install
+    - meteor npm install
     - mkdir -p /tmp/build
     - meteor build --server-only --server https://demo.goalify.chat /tmp/build
   artifacts:
