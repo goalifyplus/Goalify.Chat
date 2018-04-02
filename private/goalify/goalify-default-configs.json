@@ -7833,9 +7833,9 @@
 	"sorter": 1,
 	"ts": "2018-03-15T10:02:47.111Z",
 	"type": "string",
-	"value": "gola",
+	"value": "goly",
 	"valueSource": "meteorSettingsValue",
-	"meteorSettingsValue": "gola"
+	"meteorSettingsValue": "goly"
 },
 {
 	"_id": "InternalHubot_ScriptsToLoad",
