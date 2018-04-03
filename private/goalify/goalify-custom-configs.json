@@ -265,6 +265,63 @@
     "valueSource": "packageValue"
   },
   {
+	"_id": "Email_Header",
+	"_updatedAt": "2018-03-26T04:21:12.484Z",
+	"blocked": false,
+	"code": "text/html",
+	"createdAt": "2018-03-05T04:26:04.651Z",
+	"group": "Email",
+	"hidden": false,
+	"i18nDescription": "Email_Header_Description",
+	"i18nLabel": "Header",
+	"multiline": true,
+	"packageValue": "\u003chtml\u003e\u003ctable border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"100%\" bgcolor=\"#f3f3f3\" style=\"color:#4a4a4a;font-family: Helvetica,Arial,sans-serif;font-size:14px;line-height:20px;border-collapse:collapse;border-spacing:0;margin:0 auto\"\u003e\u003ctr\u003e\u003ctd style=\"padding:1em\"\u003e\u003ctable border=\"0\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\" width=\"100%\" style=\"width:100%;margin:0 auto;max-width:800px\"\u003e\u003ctr\u003e\u003ctd bgcolor=\"#ffffff\" style=\"background-color:#ffffff; border: 1px solid #DDD; font-size: 10pt; font-family: Helvetica,Arial,sans-serif;\"\u003e\u003ctable width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"\u003e\u003ctr\u003e\u003ctd style=\"background-color: #04436a;\"\u003e\u003ch1 style=\"font-family: Helvetica,Arial,sans-serif; padding: 0 1em; margin: 0; line-height: 70px; color: #FFF;\"\u003e[Site_Name]\u003c/h1\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style=\"padding: 1em; font-size: 10pt; font-family: Helvetica,Arial,sans-serif;\"\u003e",
+	"section": "Header_and_Footer",
+	"sorter": 3,
+	"ts": "2018-03-05T04:26:04.651Z",
+	"type": "code",
+	"value": "<div class=\"container-fluid\" style=\"box-sizing:border-box;padding-left:3.5%;padding-right:3.5%;max-width:768px;margin-top:auto;margin-bottom:auto;margin-right:auto;margin-left:auto;background-color:#f9fafc;\" >\r\n   <img class=\"header-email__image\" src=\"https:\/\/api.goalify.plus\/images\/email\/logo-email.png\" alt=\"\" style=\"box-sizing:border-box;max-width:60px;height:auto;padding-top:25px;padding-bottom:25px;padding-right:0;padding-left:0;\" \/>",
+	"valueSource": "packageValue"
+	},
+	{
+		"_id": "Email_Footer",
+		"_updatedAt": "2018-03-26T04:21:12.491Z",
+		"blocked": false,
+		"code": "text/html",
+		"createdAt": "2018-03-05T04:26:04.655Z",
+		"group": "Email",
+		"hidden": false,
+		"i18nDescription": "Email_Footer_Description",
+		"i18nLabel": "Footer",
+		"multiline": true,
+		"packageValue": "\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"100%\" style=\"font-family: Helvetica,Arial,sans-serif; max-width: 800px; margin: 0 auto; padding: 1.5em; text-align: center; font-size: 8pt; color: #999;\"\u003ePowered by \u003ca href=\"https://rocket.chat\" target=\"_blank\"\u003eRocket.Chat\u003c/a\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/html\u003e",
+		"section": "Header_and_Footer",
+		"sorter": 4,
+		"ts": "2018-03-05T04:26:04.656Z",
+		"type": "code",
+		"value": "<div class=\"footer-email\" style=\"box-sizing:border-box;padding-top:30px;padding-bottom:30px;padding-right:0;padding-left:0;text-align:center;color:#7b7b7b;\" >\r\n  <h2 class=\"footer-email__title\" style=\"box-sizing:border-box;font-size:25px;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;font-weight:400;\" >Stay in touch<\/h2>\r\n  <div class=\"footer-email__image\" style=\"box-sizing:border-box;margin-top:15px;margin-bottom:0;margin-right:auto;margin-left:auto;width:270px;\" >\r\n    <a href=\"https:\/\/www.facebook.com\/goalify.plus\" target=\"_blank\" style=\"box-sizing:border-box;\" ><img src=\"https:\/\/api.goalify.plus\/images\/email\/facebook-blog.png\" alt=\"facebook\" style=\"box-sizing:border-box;padding-top:0;padding-bottom:0;padding-right:4px;padding-left:4px;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;width:20%;height:auto;\" ><\/a><a href=\"https:\/\/www.linkedin.com\/in\/goalify-jsc-746788141\/\" target=\"_blank\" style=\"box-sizing:border-box;\" ><img src=\"https:\/\/api.goalify.plus\/images\/email\/linkedin-blog.png\" alt=\"linkedin\" style=\"box-sizing:border-box;padding-top:0;padding-bottom:0;padding-right:4px;padding-left:4px;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;width:20%;height:auto;\" ><\/a><a href=\"https:\/\/twitter.com\/Goalifyplus\" target=\"_blank\" style=\"box-sizing:border-box;\" ><img src=\"https:\/\/api.goalify.plus\/images\/email\/twitter-blog.png\" alt=\"twitter\" style=\"box-sizing:border-box;padding-top:0;padding-bottom:0;padding-right:4px;padding-left:4px;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;width:20%;height:auto;\" ><\/a><a href=\"https:\/\/plus.google.com\/u\/2\/101182105500279444058\" target=\"_blank\" style=\"box-sizing:border-box;\" ><img src=\"https:\/\/api.goalify.plus\/images\/email\/google-blog.png\" alt=\"gmail\" style=\"box-sizing:border-box;padding-top:0;padding-bottom:0;padding-right:4px;padding-left:4px;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;width:20%;height:auto;\" ><\/a>\r\n  <\/div>\r\n  <p class=\"footer__copyright\" style=\"box-sizing:border-box;font-size:14px;margin-top:10px;margin-bottom:0;margin-right:0;margin-left:0;color:#7b7b7b;\" >194 Hai Ba Trung Street, Da Kao Ward, District 1, Ho Chi Minh City<\/p>\r\n  <p class=\"footer__copyright\" style=\"box-sizing:border-box;font-size:14px;margin-top:10px;margin-bottom:0;margin-right:0;margin-left:0;color:#7b7b7b;\" >GOALIFY &copy; 2017. <a href=\"https:\/\/goalify.plus\/privacy\/\" style=\"box-sizing:border-box;color:blue;font-size:14px;text-decoration:none;\" >Privacy Policy<\/a><\/p>\r\n<\/div>\r\n<\/div>",
+		"valueSource": "packageValue"
+	},
+	{
+		"_id": "Email_Footer_Direct_Reply",
+		"_updatedAt": "2018-03-26T04:21:12.498Z",
+		"blocked": false,
+		"code": "text/html",
+		"createdAt": "2018-03-05T04:26:04.660Z",
+		"group": "Email",
+		"hidden": false,
+		"i18nDescription": "Email_Footer_Direct_Reply_Description",
+		"i18nLabel": "Footer_Direct_Reply",
+		"multiline": true,
+		"packageValue": "\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"100%\" style=\"font-family: Helvetica,Arial,sans-serif; max-width: 800px; margin: 0 auto; padding: 1.5em; text-align: center; font-size: 8pt; color: #999;\"\u003eYou can directly reply to this email.\u003cbr\u003eDo not modify previous emails in the thread.\u003cbr\u003ePowered by \u003ca href=\"https://rocket.chat\" target=\"_blank\"\u003eRocket.Chat\u003c/a\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/html\u003e",
+		"section": "Header_and_Footer",
+		"sorter": 5,
+		"ts": "2018-03-05T04:26:04.660Z",
+		"type": "code",
+		"value": "<div class=\"footer-email\" style=\"box-sizing:border-box;padding-top:30px;padding-bottom:30px;padding-right:0;padding-left:0;text-align:center;color:#7b7b7b;\" >\r\n  <h2 class=\"footer-email__title\" style=\"box-sizing:border-box;font-size:25px;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;font-weight:400;\" >Stay in touch<\/h2>\r\n  <div class=\"footer-email__image\" style=\"box-sizing:border-box;margin-top:15px;margin-bottom:0;margin-right:auto;margin-left:auto;width:270px;\" >\r\n    <a href=\"https:\/\/www.facebook.com\/goalify.plus\" target=\"_blank\" style=\"box-sizing:border-box;\" ><img src=\"https:\/\/api.goalify.plus\/images\/email\/facebook-blog.png\" alt=\"facebook\" style=\"box-sizing:border-box;padding-top:0;padding-bottom:0;padding-right:4px;padding-left:4px;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;width:20%;height:auto;\" ><\/a><a href=\"https:\/\/www.linkedin.com\/in\/goalify-jsc-746788141\/\" target=\"_blank\" style=\"box-sizing:border-box;\" ><img src=\"https:\/\/api.goalify.plus\/images\/email\/linkedin-blog.png\" alt=\"linkedin\" style=\"box-sizing:border-box;padding-top:0;padding-bottom:0;padding-right:4px;padding-left:4px;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;width:20%;height:auto;\" ><\/a><a href=\"https:\/\/twitter.com\/Goalifyplus\" target=\"_blank\" style=\"box-sizing:border-box;\" ><img src=\"https:\/\/api.goalify.plus\/images\/email\/twitter-blog.png\" alt=\"twitter\" style=\"box-sizing:border-box;padding-top:0;padding-bottom:0;padding-right:4px;padding-left:4px;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;width:20%;height:auto;\" ><\/a><a href=\"https:\/\/plus.google.com\/u\/2\/101182105500279444058\" target=\"_blank\" style=\"box-sizing:border-box;\" ><img src=\"https:\/\/api.goalify.plus\/images\/email\/google-blog.png\" alt=\"gmail\" style=\"box-sizing:border-box;padding-top:0;padding-bottom:0;padding-right:4px;padding-left:4px;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;width:20%;height:auto;\" ><\/a>\r\n  <\/div>\r\n  <p class=\"footer__copyright\" style=\"box-sizing:border-box;font-size:14px;margin-top:10px;margin-bottom:0;margin-right:0;margin-left:0;color:#7b7b7b;\" >194 Hai Ba Trung Street, Da Kao Ward, District 1, Ho Chi Minh City<\/p>\r\n  <p class=\"footer__copyright\" style=\"box-sizing:border-box;font-size:14px;margin-top:10px;margin-bottom:0;margin-right:0;margin-left:0;color:#7b7b7b;\" >GOALIFY &copy; 2017. <a href=\"https:\/\/goalify.plus\/privacy\/\" style=\"box-sizing:border-box;color:blue;font-size:14px;text-decoration:none;\" >Privacy Policy<\/a><\/p>\r\n<\/div>\r\n<\/div>",
+		"valueSource": "packageValue"
+	},
+  {
     "_id": "Direct_Reply_Enable",
     "_updatedAt": "2018-03-26T04:21:12.509Z",
     "blocked": false,
@@ -355,6 +412,34 @@
     "value": "Long1610",
     "valueSource": "packageValue"
   },
+  {
+	"_id": "SMTP_Protocol",
+	"_updatedAt": "2018-03-26T04:21:12.605Z",
+	"blocked": false,
+	"createdAt": "2018-03-05T04:26:04.728Z",
+	"env": true,
+	"group": "Email",
+	"hidden": false,
+	"i18nDescription": "SMTP_Protocol_Description",
+	"i18nLabel": "Protocol",
+	"packageValue": "smtp",
+	"section": "SMTP",
+	"sorter": 17,
+	"ts": "2018-03-05T04:26:04.729Z",
+	"type": "select",
+	"value": "smtps",
+	"valueSource": "packageValue",
+	"values": [
+		{
+			"key": "smtp",
+			"i18nLabel": "smtp"
+		},
+		{
+			"key": "smtps",
+			"i18nLabel": "smtps"
+		}
+	]
+},
   {
     "_id": "SMTP_Host",
     "_updatedAt": "2018-03-26T04:21:12.615Z",
