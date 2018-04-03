@@ -268,7 +268,7 @@ class HubotScripts {
 				// delete require.cache[require.resolve(path+scriptFile)];
 				const fn = Npm.require(path + scriptFile);
 				const config = {
-					weatherCity: RocketChat.settings.get('InternalHubot_WeatherCity') || ''
+					location: RocketChat.settings.get('InternalHubot_Location') || ''
 				};
 				if (typeof fn === 'function') {
 					fn(robot, config);
@@ -313,7 +313,8 @@ Meteor.startup(function() {
 		'InternalHubot_Username',
 		'InternalHubot_Enabled',
 		'InternalHubot_ScriptsToLoad',
-		'InternalHubot_PathToLoadCustomScripts'
+		'InternalHubot_PathToLoadCustomScripts',
+		'InternalHubot_Location'
 	]).observe({
 		changed() {
 			return init();
