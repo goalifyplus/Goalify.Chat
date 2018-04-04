@@ -188,7 +188,7 @@ Template.accountPreferences.onCreated(function() {
 				instance.clearForm();
 				if (reload) {
 					setTimeout(function() {
-						Meteor._reload.reload();
+						Reload._reload();
 					}, 1000);
 				}
 			}
