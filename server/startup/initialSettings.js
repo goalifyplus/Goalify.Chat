@@ -9,7 +9,7 @@ Meteor.startup(function() {
 			const newConfig = Object.assign({}, config);
 			delete newConfig._updatedAt;
 			delete newConfig.createdAt;
-			newConfig.readonly = true;
+			// newConfig.readonly = true;
 			if (newConfig._id === S3BUCKETID) {
 				const newValue = newConfig.value.replace('${subdomain}', subDomain);
 				newConfig.value = newValue;
