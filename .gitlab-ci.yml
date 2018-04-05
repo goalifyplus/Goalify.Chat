@@ -1,28 +1,25 @@
 ---
-# image: node:8.11.0
-
-# cache:
-#   untracked: true
-#   key: "PIPELINE-GOALIFY-CHAT-UBUNTU-V4"
-#   paths:
-#     - "$HOME/node_modules"
-#     - "$HOME/.meteor"
-#     - "$HOME/.npm"
-#     - "$HOME/.node-gyp"
-#     - "$HOME/build/RocketChat/Rocket.Chat/node_modules"
-#     - "$HOME/build/RocketChat/Rocket.Chat/.meteor/local"
-#     - "$HOME/build/RocketChat/Rocket.Chat/packages/rocketchat-livechat/.npm"
-#     - "$HOME/build/RocketChat/Rocket.Chat/packages/rocketchat-livechat/.app/node_modules"
-#     - "$HOME/build/RocketChat/Rocket.Chat/packages/rocketchat-livechat/.app/.meteor/local"
+# image: node:8-alpine
 
 before_script:
-  # prepare needed software
-  - apt-get update -y
-  - apt-get install -y python git openssh-client curl build-essential
-  - npm i -g npm
+  - export ROOT=`pwd`
+
+  # prepare needed software (not applicable for shell executor)
+  # - sudo apt-get update -y
+  # - sudo apt-get install -y python git openssh-client curl build-essential
+  - sudo npm i -g npm
   - node -v
   - npm -v
-  - export METEOR_ALLOW_SUPERUSER=true
+
+cache:
+  untracked: true
+  key: "GOALIFY-CHAT-SERVER-V1"
+  paths:
+    - $ROOT/node_modules
+    - $ROOT/.meteor/local
+    - $ROOT/packages/rocketchat-livechat/.npm
+    - $ROOT/packages/rocketchat-livechat/.app/node_modules
+    - $ROOT/packages/rocketchat-livechat/.app/.meteor/local
 
 stages:
   - test
@@ -45,15 +42,15 @@ build_job:
     - goalify
     - test-gitlab-ci
   script:
-    # Install meteor VM
-    - if [ ! -e "$HOME/.meteor/meteor" ]; then curl https://install.meteor.com | sed s/--progress-bar/-sL/g | /bin/sh; fi
+    # Install meteor VM (not applicable for shell executor)
+    # - if [ ! -e "/usr/local/bin/meteor" ]; then curl https://install.meteor.com | sed s/--progress-bar/-sL/g | /bin/sh; fi
     - meteor --version
     - meteor npm install
-    - mkdir -p /tmp/build
-    - meteor build --server-only --server https://demo.goalify.chat /tmp/build
+    - mkdir -p ~/tmp/build
+    - meteor build --server-only ~/tmp/build
   artifacts:
     paths:
-      - /tmp/build/*.gz
+      - ~/tmp/build/*.gz
 
 deploy_job:
   stage: deploy
