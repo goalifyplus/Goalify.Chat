@@ -1,18 +1,19 @@
-image: node:8.11.0
+---
+# image: node:8.11.0
 
-cache:
-  untracked: true
-  key: "PIPELINE-GOALIFY-CHAT-UBUNTU-V4"
-  paths:
-    - "$HOME/node_modules"
-    - "$HOME/.meteor"
-    - "$HOME/.npm"
-    - "$HOME/.node-gyp"
-    - "$HOME/build/RocketChat/Rocket.Chat/node_modules"
-    - "$HOME/build/RocketChat/Rocket.Chat/.meteor/local"
-    - "$HOME/build/RocketChat/Rocket.Chat/packages/rocketchat-livechat/.npm"
-    - "$HOME/build/RocketChat/Rocket.Chat/packages/rocketchat-livechat/.app/node_modules"
-    - "$HOME/build/RocketChat/Rocket.Chat/packages/rocketchat-livechat/.app/.meteor/local"
+# cache:
+#   untracked: true
+#   key: "PIPELINE-GOALIFY-CHAT-UBUNTU-V4"
+#   paths:
+#     - "$HOME/node_modules"
+#     - "$HOME/.meteor"
+#     - "$HOME/.npm"
+#     - "$HOME/.node-gyp"
+#     - "$HOME/build/RocketChat/Rocket.Chat/node_modules"
+#     - "$HOME/build/RocketChat/Rocket.Chat/.meteor/local"
+#     - "$HOME/build/RocketChat/Rocket.Chat/packages/rocketchat-livechat/.npm"
+#     - "$HOME/build/RocketChat/Rocket.Chat/packages/rocketchat-livechat/.app/node_modules"
+#     - "$HOME/build/RocketChat/Rocket.Chat/packages/rocketchat-livechat/.app/.meteor/local"
 
 before_script:
   # prepare needed software
@@ -24,9 +25,9 @@ before_script:
   - export METEOR_ALLOW_SUPERUSER=true
 
 stages:
- - test
- - build
- - deploy
+  - test
+  - build
+  - deploy
 
 test_job:
   stage: test
@@ -62,4 +63,3 @@ deploy_job:
   script:
     # install aws CLI to do S3 deploy
     - pip install awscli --upgrade --user
-
