@@ -4,6 +4,7 @@ services:
 - mongodb
 branches:
   only:
+  - goalify
   - develop
   - "/^\\d+\\.\\d+\\.\\d+(-rc\\.\\d+)?$/"
 git:
@@ -54,7 +55,7 @@ before_script:
 - meteor npm run lint
 - meteor npm run testunit
 - meteor npm run stylelint
-- travis_retry meteor build --headless /tmp/build
+- travis_wait 50 meteor build --server-only --server https://demo.goalify.chat /tmp/build
 - mkdir /tmp/build-test
 - tar -xf /tmp/build/Rocket.Chat.tar.gz -C /tmp/build-test/
 - cd /tmp/build-test/bundle/programs/server
@@ -75,9 +76,9 @@ before_deploy:
 - echo ".travis/sandstorm.sh"
 deploy:
   - provider: s3
-    access_key_id: AKIAIKIA7H7D47KUHYCA
+    access_key_id: AKIAI5PUP6C3WSW46XNA
     secret_access_key: "$ACCESSKEY"
-    bucket: download.rocket.chat
+    bucket: goalify.chat
     skip_cleanup: true
     upload_dir: build
     local_dir: "$ROCKET_DEPLOY_DIR"

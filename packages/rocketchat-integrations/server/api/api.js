@@ -123,7 +123,7 @@ function createIntegration(options, user) {
 					options.data.channel_name = `#${ options.data.channel_name }`;
 				}
 				return Meteor.call('addOutgoingIntegration', {
-					username: 'rocket.cat',
+					username: 'goly',
 					urls: [options.target_url],
 					name: options.name,
 					channel: options.data.channel_name,
@@ -134,7 +134,7 @@ function createIntegration(options, user) {
 					options.data.username = `@${ options.data.username }`;
 				}
 				return Meteor.call('addOutgoingIntegration', {
-					username: 'rocket.cat',
+					username: 'goly',
 					urls: [options.target_url],
 					name: options.name,
 					channel: options.data.username,
@@ -185,6 +185,9 @@ function executeIntegrationRest() {
 			return RocketChat.API.v1.failure(e.message);
 		}
 
+		this.request.setEncoding('utf8');
+		const content_raw = this.request.read();
+
 		const request = {
 			url: {
 				hash: this.request._parsedUrl.hash,
@@ -196,7 +199,7 @@ function executeIntegrationRest() {
 			url_raw: this.request.url,
 			url_params: this.urlParams,
 			content: this.bodyParams,
-			content_raw: this.request._readableState && this.request._readableState.buffer && this.request._readableState.buffer.toString(),
+			content_raw,
 			headers: this.request.headers,
 			user: {
 				_id: this.user._id,
@@ -282,7 +285,7 @@ function integrationSampleRest() {
 				channel_name: 'general',
 				timestamp: new Date,
 				user_id: Random.id(),
-				user_name: 'rocket.cat',
+				user_name: 'goly',
 				text: 'Sample text 1',
 				trigger_word: 'Sample'
 			}, {
@@ -291,7 +294,7 @@ function integrationSampleRest() {
 				channel_name: 'general',
 				timestamp: new Date,
 				user_id: Random.id(),
-				user_name: 'rocket.cat',
+				user_name: 'goly',
 				text: 'Sample text 2',
 				trigger_word: 'Sample'
 			}, {
@@ -300,7 +303,7 @@ function integrationSampleRest() {
 				channel_name: 'general',
 				timestamp: new Date,
 				user_id: Random.id(),
-				user_name: 'rocket.cat',
+				user_name: 'goly',
 				text: 'Sample text 3',
 				trigger_word: 'Sample'
 			}

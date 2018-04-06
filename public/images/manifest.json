@@ -1,5 +1,5 @@
 {
-	"name": "Rocket.Chat",
+	"name": "Goalify.Chat",
 	"icons": [
 		{
 			"src": "assets\/favicon_192.png",
@@ -12,6 +12,6 @@
 			"type": "image\/png"
 		}
 	],
-	"start_url": "https:\/\/rocket.chat\/home",
+	"start_url": "https:\/\/goalify.chat",
 	"display": "standalone"
 }

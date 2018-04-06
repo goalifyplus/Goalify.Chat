@@ -49,7 +49,7 @@ class ErrorHandler {
 	trackError(message, stack) {
 		if (this.reporting && this.rid && this.lastError !== message) {
 			this.lastError = message;
-			const user = RocketChat.models.Users.findOneById('rocket.cat');
+			const user = RocketChat.models.Users.findOneById('goly');
 
 			if (stack) {
 				message = `${ message }\n\`\`\`\n${ stack }\n\`\`\``;

@@ -163,8 +163,8 @@ Template.messagePopupConfig.helpers({
 					const user = Meteor.user();
 					if (!RocketChat.authz.hasAllPermission('view-outside-room')) {
 						const usernames = RocketChat.models.Subscriptions.find({$or :[{'name': exp}, { fname: exp}]}).fetch().map(({name}) =>name);
-						items.push(...
-							RocketChat.models.Users.find({username:{$in:usernames}}, {fields:{
+						items.push(
+							...RocketChat.models.Users.find({username:{$in:usernames}}, {fields:{
 								username: 1,
 								name: 1,
 								status: 1

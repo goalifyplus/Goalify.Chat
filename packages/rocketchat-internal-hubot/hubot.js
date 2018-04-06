@@ -13,16 +13,18 @@ const DEBUG = false;
 
 let InternalHubot = {};
 
-const sendHelper = Meteor.bindEnvironment((robot, envelope, strings, map) =>{
+const sendHelper = Meteor.bindEnvironment((robot, envelope, strings, map) => {
 	while (strings.length > 0) {
 		const string = strings.shift();
-		if (typeof(string) === 'function') {
+		if (typeof string === 'function') {
 			string();
 		} else {
 			try {
 				map(string);
 			} catch (err) {
-				if (DEBUG) { console.error(`Hubot error: ${ err }`); }
+				if (DEBUG) {
+					console.error(`Hubot error: ${ err }`);
+				}
 				robot.logger.error(`RocketChat send error: ${ err }`);
 			}
 		}
@@ -38,7 +40,9 @@ Hubot.Robot.prototype.loadAdapter = () => {}; // disable
 // grrrr, Meteor.bindEnvironment doesn't preserve `this` apparently
 const bind = function(f) {
 	const g = Meteor.bindEnvironment((self, ...args) => f.apply(self, args));
-	return function(...args) { return g(this, ...Array.from(args)); };
+	return function(...args) {
+		return g(this, ...Array.from(args));
+	};
 };
 
 class Robot extends Hubot.Robot {
@@ -51,16 +55,32 @@ class Robot extends Hubot.Robot {
 		this.topic = bind(this.topic);
 		this.error = bind(this.error);
 		this.catchAll = bind(this.catchAll);
-		this.user = Meteor.users.findOne({username: this.name}, {fields: {username: 1}});
+		this.user = Meteor.users.findOne({ username: this.name }, { fields: { username: 1 } });
 	}
-	loadAdapter() { return false; }
-	hear(regex, callback) { return super.hear(regex, Meteor.bindEnvironment(callback)); }
-	respond(regex, callback) { return super.respond(regex, Meteor.bindEnvironment(callback)); }
-	enter(callback) { return super.enter(Meteor.bindEnvironment(callback)); }
-	leave(callback) { return super.leave(Meteor.bindEnvironment(callback)); }
-	topic(callback) { return super.topic(Meteor.bindEnvironment(callback)); }
-	error(callback) { return super.error(Meteor.bindEnvironment(callback)); }
-	catchAll(callback) { return super.catchAll(Meteor.bindEnvironment(callback)); }
+	loadAdapter() {
+		return false;
+	}
+	hear(regex, callback) {
+		return super.hear(regex, Meteor.bindEnvironment(callback));
+	}
+	respond(regex, callback) {
+		return super.respond(regex, Meteor.bindEnvironment(callback));
+	}
+	enter(callback) {
+		return super.enter(Meteor.bindEnvironment(callback));
+	}
+	leave(callback) {
+		return super.leave(Meteor.bindEnvironment(callback));
+	}
+	topic(callback) {
+		return super.topic(Meteor.bindEnvironment(callback));
+	}
+	error(callback) {
+		return super.error(Meteor.bindEnvironment(callback));
+	}
+	catchAll(callback) {
+		return super.catchAll(Meteor.bindEnvironment(callback));
+	}
 }
 
 class RocketChatAdapter extends Hubot.Adapter {
@@ -71,11 +91,22 @@ class RocketChatAdapter extends Hubot.Adapter {
 	//
 	// Returns nothing.
 	send(envelope, ...strings) {
-		if (DEBUG) { console.log('ROCKETCHATADAPTER -> send'.blue); }
-		// console.log envelope, strings
+		if (DEBUG) {
+			console.log('ROCKETCHATADAPTER -> send'.blue);
+		}
 		return sendHelper(this.robot, envelope, strings, string => {
-			if (DEBUG) { console.log(`send ${ envelope.room }: ${ string } (${ envelope.user.id })`); }
-			return RocketChat.sendMessage(InternalHubot.user, { msg: string }, { _id: envelope.room });
+			if (DEBUG) {
+				console.log(`send ${ envelope.room }: ${ string } (${ envelope.user.id })`);
+			}
+			let message = {};
+			if (typeof string === 'string') {
+				message = {
+					msg: string
+				};
+			} else {
+				message = string;
+			}
+			return RocketChat.sendMessage(InternalHubot.user, message, { _id: envelope.room });
 		});
 	}
 
@@ -86,24 +117,33 @@ class RocketChatAdapter extends Hubot.Adapter {
 	//
 	// Returns nothing.
 	emote(envelope, ...strings) {
-		if (DEBUG) { console.log('ROCKETCHATADAPTER -> emote'.blue); }
+		if (DEBUG) {
+			console.log('ROCKETCHATADAPTER -> emote'.blue);
+		}
 		return sendHelper(this.robot, envelope, strings, string => {
-			if (DEBUG) { console.log(`emote ${ envelope.rid }: ${ string } (${ envelope.u.username })`); }
-			if (envelope.message.private) { return this.priv(envelope, `*** ${ string } ***`); }
+			if (DEBUG) {
+				console.log(`emote ${ envelope.rid }: ${ string } (${ envelope.u.username })`);
+			}
+			if (envelope.message.private) {
+				return this.priv(envelope, `*** ${ string } ***`);
+			}
 			return Meteor.call('sendMessage', {
 				msg: string,
 				rid: envelope.rid,
 				action: true
-			}
-			);
+			});
 		});
 	}
 
 	// Priv: our extension -- send a PM to user
 	priv(envelope, ...strings) {
-		if (DEBUG) { console.log('ROCKETCHATADAPTER -> priv'.blue); }
+		if (DEBUG) {
+			console.log('ROCKETCHATADAPTER -> priv'.blue);
+		}
 		return sendHelper(this.robot, envelope, strings, function(string) {
-			if (DEBUG) { console.log(`priv ${ envelope.room }: ${ string } (${ envelope.user.id })`); }
+			if (DEBUG) {
+				console.log(`priv ${ envelope.room }: ${ string } (${ envelope.user.id })`);
+			}
 			return Meteor.call('sendMessage', {
 				u: {
 					username: RocketChat.settings.get('InternalHubot_Username')
@@ -123,11 +163,13 @@ class RocketChatAdapter extends Hubot.Adapter {
 	//
 	// Returns nothing.
 	reply(envelope, ...strings) {
-		if (DEBUG) { console.log('ROCKETCHATADAPTER -> reply'.blue); }
+		if (DEBUG) {
+			console.log('ROCKETCHATADAPTER -> reply'.blue);
+		}
 		if (envelope.message.private) {
 			return this.priv(envelope, ...strings);
 		} else {
-			return this.send(envelope, ...strings.map(str => `${ envelope.user.name }: ${ str }`));
+			return this.send(envelope, ...strings.map(str => `${ str }`));
 		}
 	}
 
@@ -138,7 +180,9 @@ class RocketChatAdapter extends Hubot.Adapter {
 	//
 	// Returns nothing.
 	topic(/*envelope, ...strings*/) {
-		if (DEBUG) { return console.log('ROCKETCHATADAPTER -> topic'.blue); }
+		if (DEBUG) {
+			return console.log('ROCKETCHATADAPTER -> topic'.blue);
+		}
 	}
 
 	// Public: Raw method for playing a sound in the chat source. Extend this.
@@ -148,14 +192,18 @@ class RocketChatAdapter extends Hubot.Adapter {
 	//
 	// Returns nothing
 	play(/*envelope, ...strings*/) {
-		if (DEBUG) { return console.log('ROCKETCHATADAPTER -> play'.blue); }
+		if (DEBUG) {
+			return console.log('ROCKETCHATADAPTER -> play'.blue);
+		}
 	}
 
 	// Public: Raw method for invoking the bot to run. Extend this.
 	//
 	// Returns nothing.
 	run() {
-		if (DEBUG) { console.log('ROCKETCHATADAPTER -> run'.blue); }
+		if (DEBUG) {
+			console.log('ROCKETCHATADAPTER -> run'.blue);
+		}
 		this.robot.emit('connected');
 		return this.robot.brain.mergeData({});
 	}
@@ -165,12 +213,16 @@ class RocketChatAdapter extends Hubot.Adapter {
 	//
 	// Returns nothing.
 	close() {
-		if (DEBUG) { return console.log('ROCKETCHATADAPTER -> close'.blue); }
+		if (DEBUG) {
+			return console.log('ROCKETCHATADAPTER -> close'.blue);
+		}
 	}
 }
 
-const InternalHubotReceiver = (message) => {
-	if (DEBUG) { console.log(message); }
+const InternalHubotReceiver = message => {
+	if (DEBUG) {
+		console.log(message);
+	}
 	if (message.u.username !== InternalHubot.name) {
 		const room = RocketChat.models.Rooms.findOneById(message.rid);
 		const enabledForC = RocketChat.settings.get('InternalHubot_EnableForChannels');
@@ -179,11 +231,11 @@ const InternalHubotReceiver = (message) => {
 		const subscribedToP = RocketChat.models.Subscriptions.findOneByRoomIdAndUserId(room._id, InternalHubot.user._id);
 
 		if (
-			(room.t === 'c' && enabledForC)
-			|| (room.t === 'd' && enabledForD)
-			|| (room.t === 'p' && enabledForP && subscribedToP)
+			(room.t === 'c' && enabledForC) ||
+			(room.t === 'd' && enabledForD) ||
+			(room.t === 'p' && enabledForP && subscribedToP)
 		) {
-			const InternalHubotUser = new Hubot.User(message.u.username, {room: message.rid});
+			const InternalHubotUser = new Hubot.User(message.u.username, { room: message.rid });
 			const InternalHubotTextMessage = new Hubot.TextMessage(InternalHubotUser, message.msg, message._id);
 			InternalHubot.adapter.receive(InternalHubotTextMessage);
 		}
@@ -193,11 +245,13 @@ const InternalHubotReceiver = (message) => {
 
 class HubotScripts {
 	constructor(robot) {
-		const modulesToLoad = [
-			'hubot-help/src/help.coffee'
-		];
+		const modulesToLoad = ['hubot-help/src/help.coffee'];
 		const customPath = RocketChat.settings.get('InternalHubot_PathToLoadCustomScripts');
-		HubotScripts.load(`${ __meteor_bootstrap__.serverDir }/npm/node_modules/meteor/rocketchat_internal-hubot/node_modules/`, modulesToLoad, robot);
+		HubotScripts.load(
+			`${ __meteor_bootstrap__.serverDir }/npm/node_modules/meteor/rocketchat_internal-hubot/node_modules/`,
+			modulesToLoad,
+			robot
+		);
 		HubotScripts.load(customPath, RocketChat.settings.get('InternalHubot_ScriptsToLoad').split(',') || [], robot);
 	}
 
@@ -213,10 +267,13 @@ class HubotScripts {
 				}
 				// delete require.cache[require.resolve(path+scriptFile)];
 				const fn = Npm.require(path + scriptFile);
-				if (typeof(fn) === 'function') {
-					fn(robot);
+				const config = {
+					location: RocketChat.settings.get('InternalHubot_Location') || ''
+				};
+				if (typeof fn === 'function') {
+					fn(robot, config);
 				} else {
-					fn.default(robot);
+					fn.default(robot, config);
 				}
 				robot.parseHelp(path + scriptFile);
 				console.log(`Loaded ${ scriptFile }`.green);
@@ -228,23 +285,37 @@ class HubotScripts {
 	}
 }
 
-const init = _.debounce(Meteor.bindEnvironment(() => {
-	if (RocketChat.settings.get('InternalHubot_Enabled')) {
-		InternalHubot = new Robot(null, null, false, RocketChat.settings.get('InternalHubot_Username'));
-		InternalHubot.alias = 'bot';
-		InternalHubot.adapter = new RocketChatAdapter(InternalHubot);
-		new HubotScripts(InternalHubot);
-		InternalHubot.run();
-		return RocketChat.callbacks.add('afterSaveMessage', InternalHubotReceiver, RocketChat.callbacks.priority.LOW, 'InternalHubot');
-	} else {
-		InternalHubot = {};
-		return RocketChat.callbacks.remove('afterSaveMessage', 'InternalHubot');
-	}
-}), 1000);
+const init = _.debounce(
+	Meteor.bindEnvironment(() => {
+		if (RocketChat.settings.get('InternalHubot_Enabled')) {
+			InternalHubot = new Robot(null, null, false, RocketChat.settings.get('InternalHubot_Username'));
+			InternalHubot.alias = 'bot';
+			InternalHubot.adapter = new RocketChatAdapter(InternalHubot);
+			new HubotScripts(InternalHubot);
+			InternalHubot.run();
+			return RocketChat.callbacks.add(
+				'afterSaveMessage',
+				InternalHubotReceiver,
+				RocketChat.callbacks.priority.LOW,
+				'InternalHubot'
+			);
+		} else {
+			InternalHubot = {};
+			return RocketChat.callbacks.remove('afterSaveMessage', 'InternalHubot');
+		}
+	}),
+	1000
+);
 
 Meteor.startup(function() {
 	init();
-	RocketChat.models.Settings.findByIds([ 'InternalHubot_Username', 'InternalHubot_Enabled', 'InternalHubot_ScriptsToLoad', 'InternalHubot_PathToLoadCustomScripts']).observe({
+	RocketChat.models.Settings.findByIds([
+		'InternalHubot_Username',
+		'InternalHubot_Enabled',
+		'InternalHubot_ScriptsToLoad',
+		'InternalHubot_PathToLoadCustomScripts',
+		'InternalHubot_Location'
+	]).observe({
 		changed() {
 			return init();
 		}
