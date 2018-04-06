@@ -1,9 +1,11 @@
 ---
 # image: node:8-alpine
+# NOTE: this script is specifically authored for runner at naudb 196 server
+# EXECUTOR: shell
 
 before_script:
   - export ROOT=`pwd`
-
+  - export OUTPUT=/home/gitlab-runner/tmp/build/
   # prepare needed software (not applicable for shell executor)
   # - sudo apt-get update -y
   # - sudo apt-get install -y python git openssh-client curl build-essential
@@ -15,6 +17,8 @@ cache:
   untracked: true
   key: "GOALIFY-CHAT-SERVER-V1"
   paths:
+    - echo $ROOT
+    - export ROOT=`pwd`
     - $ROOT/node_modules
     - $ROOT/.meteor/local
     - $ROOT/packages/rocketchat-livechat/.npm
@@ -23,10 +27,9 @@ cache:
 
 stages:
   - test
-  - build
   - deploy
 
-test_job:
+test:
   stage: test
   only:
     - develop
@@ -36,27 +39,24 @@ test_job:
     - npm run testunit
     - npm run stylelint
 
-build_job:
-  stage: build
+build_deploy:
+  # variables: AWS_ACCESS_KEY_ID & AWS_SECRET_ACCESS_KEY set in gitlab CI settings
+  stage: deploy
   only:
-    - goalify
+    - master
     - test-gitlab-ci
   script:
     # Install meteor VM (not applicable for shell executor)
     # - if [ ! -e "/usr/local/bin/meteor" ]; then curl https://install.meteor.com | sed s/--progress-bar/-sL/g | /bin/sh; fi
+    # install aws CLI to do S3 deploy
+    - pip install awscli --upgrade --user
     - meteor --version
     - meteor npm install
     - mkdir -p ~/tmp/build
     - meteor build --server-only ~/tmp/build
+    - cd /home/gitlab-runner/tmp/build/
+    - mv Goalify.Chat.tar.gz goalify-chat-server.tar.gz
+    - aws s3 cp *.gz s3://goalify.chat/downloads/beta/
   artifacts:
     paths:
-      - ~/tmp/build/*.gz
-
-deploy_job:
-  stage: deploy
-  only:
-    - goalify
-    - test-gitlab-ci
-  script:
-    # install aws CLI to do S3 deploy
-    - pip install awscli --upgrade --user
+      - /home/gitlab-runner/tmp/build/*.gz
