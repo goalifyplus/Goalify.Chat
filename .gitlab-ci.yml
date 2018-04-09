@@ -1,0 +1,62 @@
+---
+# image: node:8
+# NOTE: this script is specifically authored for runner at naudb 196 server
+# EXECUTOR: shell
+
+before_script:
+  - export ROOT=`pwd`
+  - export OUTPUT=$ROOT/build/
+  # This flag is a MUST to fix out-of-memory issue when building in docker / gitlab ci
+  - export TOOL_NODE_FLAGS="--max-old-space-size=3063"
+  # prepare needed software (not applicable for shell executor)
+  # - sudo apt-get update -y
+  # - sudo apt-get install -y python git openssh-client curl build-essential
+  # - sudo npm i -g npm
+  - node -v
+  - npm -v
+
+cache:
+  untracked: true
+  key: "GOALIFY-CHAT-SERVER-V1"
+  paths:
+    - node_modules
+    - .meteor/local
+    - packages/rocketchat-livechat/.npm
+    - packages/rocketchat-livechat/.app/node_modules
+    - packages/rocketchat-livechat/.app/.meteor/local
+
+stages:
+  - test
+  - build
+
+test:
+  stage: test
+  only:
+    - develop
+    - goalify
+  script:
+    - npm install
+    - npm run lint
+    - npm run testunit
+    - npm run stylelint
+
+build:
+  # variables: AWS_ACCESS_KEY_ID & AWS_SECRET_ACCESS_KEY set in gitlab CI settings
+  stage: build
+  only:
+    - master
+  script:
+    # Install meteor VM (not applicable for shell executor)
+    # - if [ ! -e "/usr/local/bin/meteor" ]; then curl https://install.meteor.com | sed s/--progress-bar/-sL/g | /bin/sh; fi
+    # install aws CLI to do S3 deploy
+    - pip install awscli --upgrade --user
+    - meteor --version
+    - meteor npm install
+    - mkdir -p $OUTPUT
+    - meteor build --server-only $OUTPUT
+    - cd $OUTPUT
+    - mv Goalify.Chat.tar.gz goalify-chat-server.tar.gz
+    - aws s3 cp *.gz s3://goalify.chat/downloads/beta/
+  artifacts:
+    paths:
+      - build/*.gz
