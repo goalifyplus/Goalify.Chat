@@ -6,6 +6,7 @@
 before_script:
   - export ROOT=`pwd`
   - export OUTPUT=/home/gitlab-runner/tmp/build/
+  - export TOOL_NODE_FLAGS="--max-old-space-size=3063"
   # prepare needed software (not applicable for shell executor)
   # - sudo apt-get update -y
   # - sudo apt-get install -y python git openssh-client curl build-essential
