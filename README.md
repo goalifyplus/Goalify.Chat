@@ -1,8 +1,8 @@
-![Goalify.Chat logo](https://raw.githubusercontent.com/goalifyplus/Goalify.Chat/goalify/public/images/logo/icon.svg)
+![Goalify.Chat logo](https://raw.githubusercontent.com/goalifyplus/Goalify.Chat/goalify/public/images/logo/mstile-144x144.png)
 
-# The Ultimate Open Source WebChat Platform
+# Goalify Chat platform, based on the open source Rocket.Chat
 
-[![Build Status](https://img.shields.io/travis/goalifyplus/Goalify.Chat/goalify.svg)](https://travis-ci.org/goalifyplus/Goalify.Chat)
+[![pipeline status](https://gitlab.com/goalify/chat/Goalify.Chat/badges/goalify/pipeline.svg)](https://gitlab.com/goalify/chat/Goalify.Chat/commits/goalify)
 [![Project Dependencies](https://david-dm.org/RocketChat/Rocket.Chat.svg)](https://david-dm.org/RocketChat/Rocket.Chat)
 [![Codacy Badge](https://api.codacy.com/project/badge/grade/8580571ba024426d9649e9ab389bd5dd)](https://www.codacy.com/app/RocketChat/Rocket-Chat)
 [![Coverage Status](https://coveralls.io/repos/RocketChat/Rocket.Chat/badge.svg)](https://coveralls.io/r/RocketChat/Rocket.Chat)

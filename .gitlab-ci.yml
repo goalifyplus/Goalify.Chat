@@ -1,11 +1,12 @@
 ---
-# image: node:8-alpine
+# image: node:8
 # NOTE: this script is specifically authored for runner at naudb 196 server
 # EXECUTOR: shell
 
 before_script:
   - export ROOT=`pwd`
-  - export OUTPUT=/home/gitlab-runner/tmp/build/
+  - export OUTPUT=$ROOT/build/
+  # This flag is a MUST to fix out-of-memory issue when building in docker / gitlab ci
   - export TOOL_NODE_FLAGS="--max-old-space-size=3063"
   # prepare needed software (not applicable for shell executor)
   # - sudo apt-get update -y
@@ -18,34 +19,32 @@ cache:
   untracked: true
   key: "GOALIFY-CHAT-SERVER-V1"
   paths:
-    - echo $ROOT
-    - export ROOT=`pwd`
-    - $ROOT/node_modules
-    - $ROOT/.meteor/local
-    - $ROOT/packages/rocketchat-livechat/.npm
-    - $ROOT/packages/rocketchat-livechat/.app/node_modules
-    - $ROOT/packages/rocketchat-livechat/.app/.meteor/local
+    - node_modules
+    - .meteor/local
+    - packages/rocketchat-livechat/.npm
+    - packages/rocketchat-livechat/.app/node_modules
+    - packages/rocketchat-livechat/.app/.meteor/local
 
 stages:
   - test
-  - deploy
+  - build
 
 test:
   stage: test
   only:
     - develop
+    - goalify
   script:
     - npm install
     - npm run lint
     - npm run testunit
     - npm run stylelint
 
-build_deploy:
+build:
   # variables: AWS_ACCESS_KEY_ID & AWS_SECRET_ACCESS_KEY set in gitlab CI settings
-  stage: deploy
+  stage: build
   only:
     - master
-    - test-gitlab-ci
   script:
     # Install meteor VM (not applicable for shell executor)
     # - if [ ! -e "/usr/local/bin/meteor" ]; then curl https://install.meteor.com | sed s/--progress-bar/-sL/g | /bin/sh; fi
@@ -53,11 +52,11 @@ build_deploy:
     - pip install awscli --upgrade --user
     - meteor --version
     - meteor npm install
-    - mkdir -p ~/tmp/build
-    - meteor build --server-only ~/tmp/build
-    - cd /home/gitlab-runner/tmp/build/
+    - mkdir -p $OUTPUT
+    - meteor build --server-only $OUTPUT
+    - cd $OUTPUT
     - mv Goalify.Chat.tar.gz goalify-chat-server.tar.gz
     - aws s3 cp *.gz s3://goalify.chat/downloads/beta/
   artifacts:
     paths:
-      - /home/gitlab-runner/tmp/build/*.gz
+      - build/*.gz
