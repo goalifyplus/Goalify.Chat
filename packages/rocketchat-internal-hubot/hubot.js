@@ -268,7 +268,9 @@ class HubotScripts {
 				// delete require.cache[require.resolve(path+scriptFile)];
 				const fn = Npm.require(path + scriptFile);
 				const config = {
-					location: RocketChat.settings.get('InternalHubot_Location') || ''
+					location: RocketChat.settings.get('InternalHubot_Location') || '',
+					goalifyAPIGateway: RocketChat.settings.get('InternalHubot_GoalifyAPIGateWay') || '',
+					goalifyAPIToken: RocketChat.settings.get('InternalHubot_GoalifyAPIToken') || ''
 				};
 				if (typeof fn === 'function') {
 					fn(robot, config);
@@ -314,7 +316,9 @@ Meteor.startup(function() {
 		'InternalHubot_Enabled',
 		'InternalHubot_ScriptsToLoad',
 		'InternalHubot_PathToLoadCustomScripts',
-		'InternalHubot_Location'
+		'InternalHubot_Location',
+		'InternalHubot_GoalifyAPIGateWay',
+		'InternalHubot_GoalifyAPIToken'
 	]).observe({
 		changed() {
 			return init();
