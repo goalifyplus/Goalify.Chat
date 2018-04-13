@@ -2,7 +2,7 @@ const goalifyConfig = Assets.getText('goalify/goalify-custom-configs.json');
 const goalifyPermission = Assets.getText('goalify/goalify-permissions.json');
 
 const S3BUCKETID = 'FileUpload_S3_Bucket';
-const subDomain = 'nau';
+const subDomain = process.env.SUBDOMAIN || 'newcompany';
 
 Meteor.startup(function() {
 	Meteor.defer(function() {
