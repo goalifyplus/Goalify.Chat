@@ -4,7 +4,7 @@
 echo IMPORTANT: Map domain to this VPS instance first
 
 # Get user inputs for some customizable variables
-read -p "Domain: " DOMAIN
+read -p "Subdomain: " SUBDOMAIN
 
 # Update server to latest packages
 sudo apt update && sudo apt upgrade -y
@@ -79,7 +79,8 @@ User=goalifychat
 Group=goalifychat
 Environment=MONGO_OPLOG_URL=mongodb://localhost:27017/local?replicaSet=rs0
 Environment=MONGO_URL=mongodb://localhost:27017/goalifychat?replicaSet=rs0
-Environment=ROOT_URL=https://$DOMAIN
+Environment=ROOT_URL=https://$SUBDOMAIN.goalify.chat
+Environment=SUBDOMAIN=$SUBDOMAIN
 Environment=PORT=3000
 Environment=ADMIN_USERNAME=admin
 Environment=ADMIN_PASS=supersecret
@@ -109,7 +110,7 @@ server {
 
 	index index.html index.htm;
 
-	server_name $DOMAIN;
+	server_name $SUBDOMAIN.goalify.chat;
 
 	location / {
 		proxy_redirect     off;

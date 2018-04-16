@@ -12,6 +12,8 @@ RocketChat.settings.addGroup('InternalHubot', function() {
 	this.add('InternalHubot_EnableForDirectMessages', false, { type: 'boolean' });
 	this.add('InternalHubot_EnableForPrivateGroups', false, { type: 'boolean' });
 	this.add('InternalHubot_Location', 'Ho Chi Minh', { type: 'string' });
+	this.add('InternalHubot_GoalifyAPIGateWay', 'https://api.dev.goalify.plus', { type: 'string' });
+	this.add('InternalHubot_GoalifyAPIToken', '', { type: 'string' });
 	// this.add('InternalHubot_reload', 'reloadInternalHubot', {
 	// 	type: 'action',
 	// 	actionText: 'reload'
