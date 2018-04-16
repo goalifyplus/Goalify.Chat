@@ -3,7 +3,7 @@ Meteor.startup(function() {
 
 	RocketChat.settings.add('Livechat_enabled', false, { type: 'boolean', group: 'Livechat', public: true });
 
-	RocketChat.settings.add('Livechat_title', 'Rocket.Chat', { type: 'string', group: 'Livechat', public: true });
+	RocketChat.settings.add('Livechat_title', 'Goalify.Chat', { type: 'string', group: 'Livechat', public: true });
 	RocketChat.settings.add('Livechat_title_color', '#C1272D', { type: 'color', group: 'Livechat', public: true });
 
 	RocketChat.settings.add('Livechat_display_offline_form', true, {
