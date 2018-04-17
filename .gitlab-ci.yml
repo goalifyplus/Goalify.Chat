@@ -16,14 +16,12 @@ before_script:
   - npm -v
 
 cache:
-  untracked: true
-  key: "GOALIFY-CHAT-SERVER-V1"
+  untracked: false
+  key: "GOALIFY-CHAT-SERVER-V2"
   paths:
     - node_modules
-    - .meteor/local
     - packages/rocketchat-livechat/.npm
     - packages/rocketchat-livechat/.app/node_modules
-    - packages/rocketchat-livechat/.app/.meteor/local
 
 stages:
   - test
@@ -46,6 +44,8 @@ build:
   only:
     - master
   script:
+    # Remove previous build
+    - rm -r $OUTPUT
     # Install meteor VM (not applicable for shell executor)
     # - if [ ! -e "/usr/local/bin/meteor" ]; then curl https://install.meteor.com | sed s/--progress-bar/-sL/g | /bin/sh; fi
     # install aws CLI to do S3 deploy
