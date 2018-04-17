@@ -1,20 +1,5 @@
 [
   {
-    "_id": "uniqueID",
-    "_updatedAt": "2018-03-26T04:21:11.082Z",
-    "blocked": false,
-    "createdAt": "2018-03-05T04:26:03.958Z",
-    "hidden": true,
-    "i18nDescription": "uniqueID_Description",
-    "i18nLabel": "uniqueID",
-    "packageValue": "2P8p8wp6qAYGqHH4J",
-    "public": true,
-    "sorter": 0,
-    "ts": "2018-03-26T04:21:11.081Z",
-    "value": "jHnDy3Bnk3226kLWw",
-    "valueSource": "packageValue"
-  },
-  {
     "_id": "Accounts_RegistrationForm",
     "_updatedAt": "2018-03-26T04:21:11.387Z",
     "blocked": false,
@@ -420,6 +405,7 @@
 	"env": true,
 	"group": "Email",
 	"hidden": false,
+	"readonly": true,
 	"i18nDescription": "SMTP_Protocol_Description",
 	"i18nLabel": "Protocol",
 	"packageValue": "smtp",
@@ -448,6 +434,7 @@
     "env": true,
     "group": "Email",
     "hidden": false,
+    "readonly": true,
     "i18nDescription": "SMTP_Host_Description",
     "i18nLabel": "Host",
     "packageValue": "",
@@ -466,6 +453,7 @@
     "env": true,
     "group": "Email",
     "hidden": false,
+    "readonly": true,
     "i18nDescription": "SMTP_Port_Description",
     "i18nLabel": "Port",
     "packageValue": "",
@@ -484,6 +472,7 @@
     "env": true,
     "group": "Email",
     "hidden": false,
+    "readonly": true,
     "i18nDescription": "SMTP_Pool_Description",
     "i18nLabel": "Pool",
     "packageValue": true,
@@ -502,6 +491,7 @@
     "env": true,
     "group": "Email",
     "hidden": false,
+    "readonly": true,
     "i18nDescription": "SMTP_Username_Description",
     "i18nLabel": "Username",
     "packageValue": "",
@@ -520,6 +510,7 @@
     "env": true,
     "group": "Email",
     "hidden": false,
+    "readonly": true,
     "i18nDescription": "SMTP_Password_Description",
     "i18nLabel": "Password",
     "packageValue": "",
@@ -537,6 +528,7 @@
     "createdAt": "2018-03-05T04:26:04.768Z",
     "group": "Email",
     "hidden": false,
+    "readonly": true,
     "i18nDescription": "From_Email_Description",
     "i18nLabel": "From_Email",
     "packageValue": "",
@@ -740,7 +732,7 @@
     "sorter": 1,
     "ts": "2018-03-05T04:26:05.190Z",
     "type": "code",
-    "value": "<p>Welcome to Goalify.Chat!</p>\n<p>The Goalify.Chat desktops apps for Windows, macOS and Linux are available to download <a title=\"Rocket.Chat desktop apps\" href=\"https://rocket.chat/download\" target=\"_blank\" rel=\"noopener\">here</a>.</p><p>The native mobile app, Rocket.Chat+,\n  for Android and iOS is available from <a title=\"Rocket.Chat+ on Google Play\" href=\"https://play.google.com/store/apps/details?id=chat.rocket.android\" target=\"_blank\" rel=\"noopener\">Google Play</a> and the <a title=\"Rocket.Chat+ on the App Store\" href=\"https://itunes.apple.com/app/rocket-chat/id1148741252\" target=\"_blank\" rel=\"noopener\">App Store</a>.</p>\n<p>For further help, please consult the <a title=\"Rocket.Chat Documentation\" href=\"https://rocket.chat/docs/\" target=\"_blank\" rel=\"noopener\">documentation</a>.</p>\n<p>If you're an admin, feel free to change this content via <strong>Administration</strong> -> <strong>Layout</strong> -> <strong>Home Body</strong>. Or clicking <a title=\"Home Body Layout\" href=\"/admin/Layout\">here</a>.</p>",
+    "value": "<p>Welcome to Goalify.Chat!</p>\n<p>The Goalify.Chat desktops apps as well as mobile apps for iOs and Android are available to download <a title=\"Goalify.Chat apps\" href=\"https://goalify.chat\" target=\"_blank\" rel=\"noopener\">here</a>.</p>\n<p>For further help, please consult the <a title=\"Goalify Chat Documentation\" href=\"https://docs.goalify.chat\" target=\"_blank\" rel=\"noopener\">documentation</a>.</p>\n<p>If you're an admin, feel free to change this content via <strong>Administration</strong> -> <strong>Layout</strong> -> <strong>Home Body</strong>. Or clicking <a title=\"Home Body Layout\" href=\"/admin/Layout\">here</a>.</p>",
     "valueSource": "packageValue"
   },
   {
@@ -798,6 +790,7 @@
     },
     "group": "Assets",
     "hidden": false,
+    "readonly": true,
     "i18nDescription": "Assets_logo_Description",
     "i18nLabel": "logo (svg, png, jpg)",
     "packageValue": {
@@ -808,12 +801,10 @@
     "ts": "2018-03-12T05:47:11.566Z",
     "type": "asset",
     "value": {
-      "url": "assets/logo.svg",
       "defaultUrl": "images/logo/logo.svg"
     },
     "valueSource": "meteorSettingsValue",
     "meteorSettingsValue": {
-      "url": "assets/logo.svg",
       "defaultUrl": "images/logo/logo.svg"
     }
   },
@@ -833,6 +824,7 @@
     },
     "group": "Assets",
     "hidden": false,
+    "readonly": true,
     "i18nDescription": "Assets_favicon_ico_Description",
     "i18nLabel": "favicon (ico)",
     "packageValue": {
@@ -866,6 +858,7 @@
     },
     "group": "Assets",
     "hidden": false,
+    "readonly": true,
     "i18nDescription": "Assets_favicon_Description",
     "i18nLabel": "favicon (svg)",
     "packageValue": {
@@ -876,12 +869,10 @@
     "ts": "2018-03-12T05:47:11.582Z",
     "type": "asset",
     "value": {
-      "url": "assets/favicon.svg",
       "defaultUrl": "images/logo/icon.svg"
     },
     "valueSource": "meteorSettingsValue",
     "meteorSettingsValue": {
-      "url": "assets/favicon.svg",
       "defaultUrl": "images/logo/icon.svg"
     }
   },
@@ -901,6 +892,7 @@
     },
     "group": "Assets",
     "hidden": false,
+    "readonly": true,
     "i18nDescription": "Assets_favicon_16_Description",
     "i18nLabel": "favicon 16x16 (png)",
     "packageValue": {
@@ -911,12 +903,10 @@
     "ts": "2018-03-23T09:53:00.369Z",
     "type": "asset",
     "value": {
-      "url": "assets/favicon_16.png",
       "defaultUrl": "images/logo/favicon-16x16.png"
     },
     "valueSource": "meteorSettingsValue",
     "meteorSettingsValue": {
-      "url": "assets/favicon_16.png",
       "defaultUrl": "images/logo/favicon-16x16.png"
     }
   },
@@ -936,6 +926,7 @@
     },
     "group": "Assets",
     "hidden": false,
+    "readonly": true,
     "i18nDescription": "Assets_favicon_32_Description",
     "i18nLabel": "favicon 32x32 (png)",
     "packageValue": {
@@ -946,12 +937,10 @@
     "ts": "2018-03-23T09:53:00.373Z",
     "type": "asset",
     "value": {
-      "url": "assets/favicon_32.png",
       "defaultUrl": "images/logo/favicon-32x32.png"
     },
     "valueSource": "meteorSettingsValue",
     "meteorSettingsValue": {
-      "url": "assets/favicon_32.png",
       "defaultUrl": "images/logo/favicon-32x32.png"
     }
   },
@@ -971,6 +960,7 @@
     },
     "group": "Assets",
     "hidden": false,
+    "readonly": true,
     "i18nDescription": "Assets_favicon_192_Description",
     "i18nLabel": "android-chrome 192x192 (png)",
     "packageValue": {
@@ -981,12 +971,10 @@
     "ts": "2018-03-23T09:53:00.381Z",
     "type": "asset",
     "value": {
-      "url": "assets/favicon_192.png",
       "defaultUrl": "images/logo/android-chrome-192x192.png"
     },
     "valueSource": "meteorSettingsValue",
     "meteorSettingsValue": {
-      "url": "assets/favicon_192.png",
       "defaultUrl": "images/logo/android-chrome-192x192.png"
     }
   },
@@ -1006,6 +994,7 @@
     },
     "group": "Assets",
     "hidden": false,
+    "readonly": true,
     "i18nDescription": "Assets_favicon_512_Description",
     "i18nLabel": "android-chrome 512x512 (png)",
     "packageValue": {
@@ -1016,12 +1005,10 @@
     "ts": "2018-03-23T09:53:00.389Z",
     "type": "asset",
     "value": {
-      "url": "assets/favicon_512.png",
       "defaultUrl": "images/logo/512x512.png"
     },
     "valueSource": "meteorSettingsValue",
     "meteorSettingsValue": {
-      "url": "assets/favicon_512.png",
       "defaultUrl": "images/logo/512x512.png"
     }
   },
@@ -1041,6 +1028,7 @@
     },
     "group": "Assets",
     "hidden": false,
+    "readonly": true,
     "i18nDescription": "Assets_touchicon_180_Description",
     "i18nLabel": "apple-touch-icon 180x180 (png)",
     "packageValue": {
@@ -1051,12 +1039,10 @@
     "ts": "2018-03-23T09:53:00.396Z",
     "type": "asset",
     "value": {
-      "url": "assets/touchicon_180.png",
       "defaultUrl": "images/logo/apple-touch-icon.png"
     },
     "valueSource": "meteorSettingsValue",
     "meteorSettingsValue": {
-      "url": "assets/touchicon_180.png",
       "defaultUrl": "images/logo/apple-touch-icon.png"
     }
   },
@@ -1076,6 +1062,7 @@
     },
     "group": "Assets",
     "hidden": false,
+    "readonly": true,
     "i18nDescription": "Assets_touchicon_180_pre_Description",
     "i18nLabel": "apple-touch-icon-precomposed 180x180 (png)",
     "packageValue": {
@@ -1086,12 +1073,10 @@
     "ts": "2018-03-23T09:53:00.400Z",
     "type": "asset",
     "value": {
-      "url": "assets/touchicon_180_pre.png",
       "defaultUrl": "images/logo/apple-touch-icon-precomposed.png"
     },
     "valueSource": "meteorSettingsValue",
     "meteorSettingsValue": {
-      "url": "assets/touchicon_180_pre.png",
       "defaultUrl": "images/logo/apple-touch-icon-precomposed.png"
     }
   },
@@ -1111,6 +1096,7 @@
     },
     "group": "Assets",
     "hidden": false,
+    "readonly": true,
     "i18nDescription": "Assets_tile_144_Description",
     "i18nLabel": "mstile 144x144 (png)",
     "packageValue": {
@@ -1121,12 +1107,10 @@
     "ts": "2018-03-23T09:53:00.403Z",
     "type": "asset",
     "value": {
-      "url": "assets/tile_144.png",
       "defaultUrl": "images/logo/mstile-144x144.png"
     },
     "valueSource": "meteorSettingsValue",
     "meteorSettingsValue": {
-      "url": "assets/tile_144.png",
       "defaultUrl": "images/logo/mstile-144x144.png"
     }
   },
@@ -1146,6 +1130,7 @@
     },
     "group": "Assets",
     "hidden": false,
+    "readonly": true,
     "i18nDescription": "Assets_tile_150_Description",
     "i18nLabel": "mstile 150x150 (png)",
     "packageValue": {
@@ -1179,6 +1164,7 @@
     },
     "group": "Assets",
     "hidden": false,
+    "readonly": true,
     "i18nDescription": "Assets_tile_310_square_Description",
     "i18nLabel": "mstile 310x310 (png)",
     "packageValue": {
@@ -1189,12 +1175,10 @@
     "ts": "2018-03-23T09:53:00.410Z",
     "type": "asset",
     "value": {
-      "url": "assets/tile_310_square.png",
       "defaultUrl": "images/logo/mstile-310x310.png"
     },
     "valueSource": "meteorSettingsValue",
     "meteorSettingsValue": {
-      "url": "assets/tile_310_square.png",
       "defaultUrl": "images/logo/mstile-310x310.png"
     }
   },
@@ -1214,6 +1198,7 @@
     },
     "group": "Assets",
     "hidden": false,
+    "readonly": true,
     "i18nDescription": "Assets_tile_310_wide_Description",
     "i18nLabel": "mstile 310x150 (png)",
     "packageValue": {
@@ -1247,6 +1232,7 @@
     },
     "group": "Assets",
     "hidden": false,
+    "readonly": true,
     "i18nDescription": "Assets_safari_pinned_Description",
     "i18nLabel": "safari pinned tab (svg)",
     "packageValue": {
@@ -1257,12 +1243,10 @@
     "ts": "2018-03-23T09:53:00.418Z",
     "type": "asset",
     "value": {
-      "url": "assets/safari_pinned.svg",
       "defaultUrl": "images/logo/safari-pinned-tab.svg"
     },
     "valueSource": "meteorSettingsValue",
     "meteorSettingsValue": {
-      "url": "assets/safari_pinned.svg",
       "defaultUrl": "images/logo/safari-pinned-tab.svg"
     }
   },
@@ -1288,6 +1272,7 @@
     "createdAt": "2018-03-05T04:26:07.363Z",
     "group": "Analytics",
     "hidden": false,
+    "readonly": true,
     "i18nDescription": "GoogleAnalytics_enabled_Description",
     "i18nLabel": "Enable",
     "packageValue": false,
@@ -1308,6 +1293,7 @@
     "enableQuery": "{\"_id\":\"GoogleAnalytics_enabled\",\"value\":true}",
     "group": "Analytics",
     "hidden": false,
+    "readonly": true,
     "i18nDescription": "GoogleAnalytics_ID_Description",
     "i18nLabel": "Analytics_Google_id",
     "packageValue": "",
@@ -1316,9 +1302,28 @@
     "sorter": 8,
     "ts": "2018-03-25T15:34:46.772Z",
     "type": "string",
-    "value": "101392746",
+    "value": "UA-101392746-3",
     "valueSource": "meteorSettingsValue",
-    "meteorSettingsValue": "101392746"
+    "meteorSettingsValue": "UA-101392746-3"
+  },
+  {
+  	"_id": "FileUpload_Enabled",
+  	"_updatedAt": "2018-03-26T04:21:17.778Z",
+  	"blocked": false,
+  	"createdAt": "2018-03-05T04:26:11.419Z",
+  	"group": "FileUpload",
+  	"hidden": false,
+  	"readonly": true,
+  	"i18nDescription": "FileUpload_Enabled_Description",
+  	"i18nLabel": "FileUpload_Enabled",
+  	"packageValue": true,
+  	"public": true,
+  	"sorter": 0,
+  	"ts": "2018-03-05T05:44:14.501Z",
+  	"type": "boolean",
+  	"value": true,
+  	"valueSource": "meteorSettingsValue",
+  	"meteorSettingsValue": true
   },
   {
     "_id": "FileUpload_MaxFileSize",
@@ -1327,6 +1332,7 @@
     "createdAt": "2018-03-05T04:26:11.446Z",
     "group": "FileUpload",
     "hidden": false,
+    "readonly": true,
     "i18nDescription": "FileUpload_MaxFileSize_Description",
     "i18nLabel": "FileUpload_MaxFileSize",
     "packageValue": 2097152,
@@ -1334,9 +1340,9 @@
     "sorter": 1,
     "ts": "2018-03-05T05:44:14.508Z",
     "type": "int",
-    "value": 26214400,
+    "value": 5242880,
     "valueSource": "meteorSettingsValue",
-    "meteorSettingsValue": 26214400
+    "meteorSettingsValue": 5242880
   },
   {
     "_id": "FileUpload_MediaTypeWhiteList",
@@ -1345,6 +1351,7 @@
     "createdAt": "2018-03-05T04:26:11.454Z",
     "group": "FileUpload",
     "hidden": false,
+    "readonly": true,
     "i18nDescription": "FileUpload_MediaTypeWhiteListDescription",
     "i18nLabel": "FileUpload_MediaTypeWhiteList",
     "packageValue": "image/*,audio/*,video/*,application/zip,application/x-rar-compressed,application/pdf,text/plain,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document",
@@ -1352,9 +1359,9 @@
     "sorter": 2,
     "ts": "2018-03-23T09:53:10.225Z",
     "type": "string",
-    "value": "",
+    "value": "image/*,audio/*,video/*,application/zip,application/x-rar-compressed,application/pdf,text/plain,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document",
     "valueSource": "meteorSettingsValue",
-    "meteorSettingsValue": ""
+    "meteorSettingsValue": "image/*,audio/*,video/*,application/zip,application/x-rar-compressed,application/pdf,text/plain,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
   },
   {
     "_id": "FileUpload_Storage_Type",
@@ -1363,6 +1370,7 @@
     "createdAt": "2018-03-05T04:26:11.505Z",
     "group": "FileUpload",
     "hidden": false,
+    "readonly": true,
     "i18nDescription": "FileUpload_Storage_Type_Description",
     "i18nLabel": "FileUpload_Storage_Type",
     "packageValue": "GridFS",
@@ -1400,6 +1408,7 @@
     "enableQuery": "{\"_id\":\"FileUpload_Storage_Type\",\"value\":\"AmazonS3\"}",
     "group": "FileUpload",
     "hidden": false,
+    "readonly": true,
     "i18nDescription": "FileUpload_S3_Bucket_Description",
     "i18nLabel": "FileUpload_S3_Bucket",
     "packageValue": "",
@@ -1407,9 +1416,9 @@
     "sorter": 5,
     "ts": "2018-03-05T05:44:14.618Z",
     "type": "string",
-    "value": "files.goalify.chat/nau",
+    "value": "files.goalify.chat/${subdomain}",
     "valueSource": "meteorSettingsValue",
-    "meteorSettingsValue": "files.goalify.chat/nau"
+    "meteorSettingsValue": "files.goalify.chat/${subdomain}"
   },
   {
     "_id": "FileUpload_S3_AWSAccessKeyId",
@@ -1419,6 +1428,7 @@
     "enableQuery": "{\"_id\":\"FileUpload_Storage_Type\",\"value\":\"AmazonS3\"}",
     "group": "FileUpload",
     "hidden": false,
+    "readonly": true,
     "i18nDescription": "FileUpload_S3_AWSAccessKeyId_Description",
     "i18nLabel": "FileUpload_S3_AWSAccessKeyId",
     "packageValue": "",
@@ -1438,6 +1448,7 @@
     "enableQuery": "{\"_id\":\"FileUpload_Storage_Type\",\"value\":\"AmazonS3\"}",
     "group": "FileUpload",
     "hidden": false,
+    "readonly": true,
     "i18nDescription": "FileUpload_S3_AWSSecretAccessKey_Description",
     "i18nLabel": "FileUpload_S3_AWSSecretAccessKey",
     "packageValue": "",
@@ -1457,6 +1468,7 @@
     "enableQuery": "{\"_id\":\"FileUpload_Storage_Type\",\"value\":\"AmazonS3\"}",
     "group": "FileUpload",
     "hidden": false,
+    "readonly": true,
     "i18nDescription": "FileUpload_S3_Region_Description",
     "i18nLabel": "FileUpload_S3_Region",
     "packageValue": "",
