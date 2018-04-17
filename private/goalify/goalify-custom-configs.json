@@ -1,20 +1,5 @@
 [
   {
-    "_id": "uniqueID",
-    "_updatedAt": "2018-03-26T04:21:11.082Z",
-    "blocked": false,
-    "createdAt": "2018-03-05T04:26:03.958Z",
-    "hidden": true,
-    "i18nDescription": "uniqueID_Description",
-    "i18nLabel": "uniqueID",
-    "packageValue": "2P8p8wp6qAYGqHH4J",
-    "public": true,
-    "sorter": 0,
-    "ts": "2018-03-26T04:21:11.081Z",
-    "value": "jHnDy3Bnk3226kLWw",
-    "valueSource": "packageValue"
-  },
-  {
     "_id": "Accounts_RegistrationForm",
     "_updatedAt": "2018-03-26T04:21:11.387Z",
     "blocked": false,
