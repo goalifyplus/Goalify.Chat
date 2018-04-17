@@ -198,23 +198,6 @@
     "valueSource": "packageValue"
   },
   {
-    "_id": "Language",
-    "_updatedAt": "2018-03-26T04:21:12.176Z",
-    "blocked": false,
-    "createdAt": "2018-03-05T04:26:04.531Z",
-    "group": "General",
-    "hidden": false,
-    "i18nDescription": "Language_Description",
-    "i18nLabel": "Language",
-    "packageValue": "",
-    "public": true,
-    "sorter": 2,
-    "ts": "2018-03-05T04:26:04.532Z",
-    "type": "language",
-    "value": "vi",
-    "valueSource": "packageValue"
-  },
-  {
     "_id": "First_Channel_After_Login",
     "_updatedAt": "2018-03-26T04:21:12.200Z",
     "blocked": false,
