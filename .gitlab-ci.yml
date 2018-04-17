@@ -20,8 +20,6 @@ cache:
   key: "GOALIFY-CHAT-SERVER-V2"
   paths:
     - node_modules
-    - packages/rocketchat-livechat/.npm
-    - packages/rocketchat-livechat/.app/node_modules
 
 stages:
   - test
@@ -44,8 +42,6 @@ build:
   only:
     - master
   script:
-    # Remove previous build
-    - rm -r $OUTPUT
     # Install meteor VM (not applicable for shell executor)
     # - if [ ! -e "/usr/local/bin/meteor" ]; then curl https://install.meteor.com | sed s/--progress-bar/-sL/g | /bin/sh; fi
     # install aws CLI to do S3 deploy
@@ -57,6 +53,9 @@ build:
     - cd $OUTPUT
     - mv Goalify.Chat.tar.gz goalify-chat-server.tar.gz
     - aws s3 cp *.gz s3://goalify.chat/downloads/beta/
+    # Remove output
+    - cd ..
+    - rm -r $OUTPUT
   artifacts:
     paths:
       - build/*.gz
