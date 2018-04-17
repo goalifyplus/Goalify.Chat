@@ -783,6 +783,7 @@
     },
     "group": "Assets",
     "hidden": false,
+    "readonly": true,
     "i18nDescription": "Assets_logo_Description",
     "i18nLabel": "logo (svg, png, jpg)",
     "packageValue": {
@@ -793,12 +794,10 @@
     "ts": "2018-03-12T05:47:11.566Z",
     "type": "asset",
     "value": {
-      "url": "assets/logo.svg",
       "defaultUrl": "images/logo/logo.svg"
     },
     "valueSource": "meteorSettingsValue",
     "meteorSettingsValue": {
-      "url": "assets/logo.svg",
       "defaultUrl": "images/logo/logo.svg"
     }
   },
@@ -818,6 +817,7 @@
     },
     "group": "Assets",
     "hidden": false,
+    "readonly": true,
     "i18nDescription": "Assets_favicon_ico_Description",
     "i18nLabel": "favicon (ico)",
     "packageValue": {
@@ -851,6 +851,7 @@
     },
     "group": "Assets",
     "hidden": false,
+    "readonly": true,
     "i18nDescription": "Assets_favicon_Description",
     "i18nLabel": "favicon (svg)",
     "packageValue": {
@@ -861,12 +862,10 @@
     "ts": "2018-03-12T05:47:11.582Z",
     "type": "asset",
     "value": {
-      "url": "assets/favicon.svg",
       "defaultUrl": "images/logo/icon.svg"
     },
     "valueSource": "meteorSettingsValue",
     "meteorSettingsValue": {
-      "url": "assets/favicon.svg",
       "defaultUrl": "images/logo/icon.svg"
     }
   },
@@ -886,6 +885,7 @@
     },
     "group": "Assets",
     "hidden": false,
+    "readonly": true,
     "i18nDescription": "Assets_favicon_16_Description",
     "i18nLabel": "favicon 16x16 (png)",
     "packageValue": {
@@ -896,12 +896,10 @@
     "ts": "2018-03-23T09:53:00.369Z",
     "type": "asset",
     "value": {
-      "url": "assets/favicon_16.png",
       "defaultUrl": "images/logo/favicon-16x16.png"
     },
     "valueSource": "meteorSettingsValue",
     "meteorSettingsValue": {
-      "url": "assets/favicon_16.png",
       "defaultUrl": "images/logo/favicon-16x16.png"
     }
   },
@@ -921,6 +919,7 @@
     },
     "group": "Assets",
     "hidden": false,
+    "readonly": true,
     "i18nDescription": "Assets_favicon_32_Description",
     "i18nLabel": "favicon 32x32 (png)",
     "packageValue": {
@@ -931,12 +930,10 @@
     "ts": "2018-03-23T09:53:00.373Z",
     "type": "asset",
     "value": {
-      "url": "assets/favicon_32.png",
       "defaultUrl": "images/logo/favicon-32x32.png"
     },
     "valueSource": "meteorSettingsValue",
     "meteorSettingsValue": {
-      "url": "assets/favicon_32.png",
       "defaultUrl": "images/logo/favicon-32x32.png"
     }
   },
@@ -956,6 +953,7 @@
     },
     "group": "Assets",
     "hidden": false,
+    "readonly": true,
     "i18nDescription": "Assets_favicon_192_Description",
     "i18nLabel": "android-chrome 192x192 (png)",
     "packageValue": {
@@ -966,12 +964,10 @@
     "ts": "2018-03-23T09:53:00.381Z",
     "type": "asset",
     "value": {
-      "url": "assets/favicon_192.png",
       "defaultUrl": "images/logo/android-chrome-192x192.png"
     },
     "valueSource": "meteorSettingsValue",
     "meteorSettingsValue": {
-      "url": "assets/favicon_192.png",
       "defaultUrl": "images/logo/android-chrome-192x192.png"
     }
   },
@@ -991,6 +987,7 @@
     },
     "group": "Assets",
     "hidden": false,
+    "readonly": true,
     "i18nDescription": "Assets_favicon_512_Description",
     "i18nLabel": "android-chrome 512x512 (png)",
     "packageValue": {
@@ -1001,12 +998,10 @@
     "ts": "2018-03-23T09:53:00.389Z",
     "type": "asset",
     "value": {
-      "url": "assets/favicon_512.png",
       "defaultUrl": "images/logo/512x512.png"
     },
     "valueSource": "meteorSettingsValue",
     "meteorSettingsValue": {
-      "url": "assets/favicon_512.png",
       "defaultUrl": "images/logo/512x512.png"
     }
   },
@@ -1026,6 +1021,7 @@
     },
     "group": "Assets",
     "hidden": false,
+    "readonly": true,
     "i18nDescription": "Assets_touchicon_180_Description",
     "i18nLabel": "apple-touch-icon 180x180 (png)",
     "packageValue": {
@@ -1036,12 +1032,10 @@
     "ts": "2018-03-23T09:53:00.396Z",
     "type": "asset",
     "value": {
-      "url": "assets/touchicon_180.png",
       "defaultUrl": "images/logo/apple-touch-icon.png"
     },
     "valueSource": "meteorSettingsValue",
     "meteorSettingsValue": {
-      "url": "assets/touchicon_180.png",
       "defaultUrl": "images/logo/apple-touch-icon.png"
     }
   },
@@ -1061,6 +1055,7 @@
     },
     "group": "Assets",
     "hidden": false,
+    "readonly": true,
     "i18nDescription": "Assets_touchicon_180_pre_Description",
     "i18nLabel": "apple-touch-icon-precomposed 180x180 (png)",
     "packageValue": {
@@ -1071,12 +1066,10 @@
     "ts": "2018-03-23T09:53:00.400Z",
     "type": "asset",
     "value": {
-      "url": "assets/touchicon_180_pre.png",
       "defaultUrl": "images/logo/apple-touch-icon-precomposed.png"
     },
     "valueSource": "meteorSettingsValue",
     "meteorSettingsValue": {
-      "url": "assets/touchicon_180_pre.png",
       "defaultUrl": "images/logo/apple-touch-icon-precomposed.png"
     }
   },
@@ -1096,6 +1089,7 @@
     },
     "group": "Assets",
     "hidden": false,
+    "readonly": true,
     "i18nDescription": "Assets_tile_144_Description",
     "i18nLabel": "mstile 144x144 (png)",
     "packageValue": {
@@ -1106,12 +1100,10 @@
     "ts": "2018-03-23T09:53:00.403Z",
     "type": "asset",
     "value": {
-      "url": "assets/tile_144.png",
       "defaultUrl": "images/logo/mstile-144x144.png"
     },
     "valueSource": "meteorSettingsValue",
     "meteorSettingsValue": {
-      "url": "assets/tile_144.png",
       "defaultUrl": "images/logo/mstile-144x144.png"
     }
   },
@@ -1131,6 +1123,7 @@
     },
     "group": "Assets",
     "hidden": false,
+    "readonly": true,
     "i18nDescription": "Assets_tile_150_Description",
     "i18nLabel": "mstile 150x150 (png)",
     "packageValue": {
@@ -1164,6 +1157,7 @@
     },
     "group": "Assets",
     "hidden": false,
+    "readonly": true,
     "i18nDescription": "Assets_tile_310_square_Description",
     "i18nLabel": "mstile 310x310 (png)",
     "packageValue": {
@@ -1174,12 +1168,10 @@
     "ts": "2018-03-23T09:53:00.410Z",
     "type": "asset",
     "value": {
-      "url": "assets/tile_310_square.png",
       "defaultUrl": "images/logo/mstile-310x310.png"
     },
     "valueSource": "meteorSettingsValue",
     "meteorSettingsValue": {
-      "url": "assets/tile_310_square.png",
       "defaultUrl": "images/logo/mstile-310x310.png"
     }
   },
@@ -1199,6 +1191,7 @@
     },
     "group": "Assets",
     "hidden": false,
+    "readonly": true,
     "i18nDescription": "Assets_tile_310_wide_Description",
     "i18nLabel": "mstile 310x150 (png)",
     "packageValue": {
@@ -1232,6 +1225,7 @@
     },
     "group": "Assets",
     "hidden": false,
+    "readonly": true,
     "i18nDescription": "Assets_safari_pinned_Description",
     "i18nLabel": "safari pinned tab (svg)",
     "packageValue": {
@@ -1242,12 +1236,10 @@
     "ts": "2018-03-23T09:53:00.418Z",
     "type": "asset",
     "value": {
-      "url": "assets/safari_pinned.svg",
       "defaultUrl": "images/logo/safari-pinned-tab.svg"
     },
     "valueSource": "meteorSettingsValue",
     "meteorSettingsValue": {
-      "url": "assets/safari_pinned.svg",
       "defaultUrl": "images/logo/safari-pinned-tab.svg"
     }
   },
