@@ -8,8 +8,9 @@ Meteor.startup(function() {
 	Meteor.defer(function() {
 		JSON.parse(goalifyConfig).forEach(config => {
 			const cf = RocketChat.models.Settings.findOne({ _id: config._id });
-			if (!cf || cf.packageValue === cf.value) {
+			if (!cf || !cf.isNewValue) {
 				const newConfig = Object.assign({}, config);
+				newConfig.isNewValue = true;
 				delete newConfig._updatedAt;
 				delete newConfig.createdAt;
 				// newConfig.readonly = true;
