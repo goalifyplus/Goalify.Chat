@@ -1,4 +1,10 @@
-const settings = require('./goalify-default-configs.json');
+/**
+ * This script only need to run once to reduce to only settings that were changed from packageValue
+ * Note: Need to update the ${subdomain} token again, for e.g. at FileUpload_S3_Bucket
+ *
+ */
+
+const settings = require('./goalify-all-configs.json');
 const fs = require('fs');
 
 const customSettings = [];
