@@ -96,7 +96,7 @@ const markdownButtons = [
 		condition: () => RocketChat.Markdown && RocketChat.settings.get('Markdown_Parser') === 'marked'
 	},
 	{
-		label: 'italic',
+		label: 'italics',
 		icon: 'italic',
 		pattern: '_{{text}}_',
 		command: 'i',
