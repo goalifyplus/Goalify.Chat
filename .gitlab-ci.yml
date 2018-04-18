@@ -41,6 +41,9 @@ build:
   stage: build
   only:
     - master
+  before_script:
+    # Remove previous output
+    - rm -rf $OUTPUT || true
   script:
     # Install meteor VM (not applicable for shell executor)
     # - if [ ! -e "/usr/local/bin/meteor" ]; then curl https://install.meteor.com | sed s/--progress-bar/-sL/g | /bin/sh; fi
@@ -53,9 +56,6 @@ build:
     - cd $OUTPUT
     - mv Goalify.Chat.tar.gz goalify-chat-server.tar.gz
     - aws s3 cp *.gz s3://goalify.chat/downloads/beta/
-    # Remove output
-    - cd ..
-    - rm -r $OUTPUT
   artifacts:
     paths:
       - build/*.gz
