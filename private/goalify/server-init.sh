@@ -25,6 +25,11 @@ sudo add-apt-repository -y ppa:certbot/certbot
 # Install needed software
 sudo apt update && sudo apt install -y python-certbot-nginx mongodb-org nodejs
 
+# Install this package to allow switching Node version
+sudo npm install --global n
+
+# Install stable version of Node for Meteor & Goalify Chat
+sudo n 8.9.3
 
 # Enable replication for mongodb for better concurrency
 echo "replication:" | sudo tee -a /etc/mongod.conf
@@ -43,7 +48,7 @@ sudo systemctl enable mongod
 sudo useradd goalifychat
 
 
-RC_VERSION=".63.0-develop"
+# RC_VERSION=".63.0-develop"
 # OR
 # RC_VERSION="latest"
 
@@ -60,7 +65,7 @@ set -x \
  && sudo chown -R goalifychat:goalifychat /app
 
 # Create systemd service file for rocketchat server
-NODE_PATH=`which node`
+NODE_PATH=`n bin 8.9.3`
 APP_PATH="/app/bundle"
 
 cat > goalifychat.service <<EOF
@@ -142,3 +147,4 @@ echo "Note: Remember to enable HTTP2 at /etc/nginx/sites-available/default"
 
 echo "Goalifychat server system initialization complete!"
 
+echo "Next steps: initialize Replica Set for MongoDB and start the services."

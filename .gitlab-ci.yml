@@ -16,14 +16,10 @@ before_script:
   - npm -v
 
 cache:
-  untracked: true
-  key: "GOALIFY-CHAT-SERVER-V1"
+  untracked: false
+  key: "GOALIFY-CHAT-SERVER-V2"
   paths:
     - node_modules
-    - .meteor/local
-    - packages/rocketchat-livechat/.npm
-    - packages/rocketchat-livechat/.app/node_modules
-    - packages/rocketchat-livechat/.app/.meteor/local
 
 stages:
   - test
@@ -45,6 +41,9 @@ build:
   stage: build
   only:
     - master
+  before_script:
+    # Remove previous output
+    - rm -rf $OUTPUT || true
   script:
     # Install meteor VM (not applicable for shell executor)
     # - if [ ! -e "/usr/local/bin/meteor" ]; then curl https://install.meteor.com | sed s/--progress-bar/-sL/g | /bin/sh; fi
