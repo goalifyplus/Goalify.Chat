@@ -31,8 +31,6 @@ const extendedViewOption = user => {
 };
 
 const toolbarButtons = user => {
-	console.log('t', t);
-
 	return [
 		{
 			name: t('Search'),
