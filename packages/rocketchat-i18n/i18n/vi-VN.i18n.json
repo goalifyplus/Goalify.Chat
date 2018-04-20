@@ -949,7 +949,7 @@
   "Integrations_Outgoing_Type_RoomLeft": "Phòng Người dùng Còn lại",
   "Integrations_Outgoing_Type_SendMessage": "Tin nhắn đã gửi",
   "Integrations_Outgoing_Type_UserCreated": "Người dùng đã tạo",
-  "InternalHubot": "Hubot nội bộ",
+  "InternalHubot": "Chatbot nội bộ",
   "InternalHubot_PathToLoadCustomScripts": "Thư mục chứa các tập script",
   "InternalHubot_reload": "Tải lại các tập lệnh",
   "InternalHubot_ScriptsToLoad": "Các script để nạp",
