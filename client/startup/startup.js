@@ -17,7 +17,7 @@ if (window.DISABLE_ANIMATION) {
 Meteor.startup(function() {
 	TimeSync.loggingEnabled = false;
 
-	const userHasPreferences = (user) => {
+	const userHasPreferences = user => {
 		if (!user) {
 			return false;
 		}
@@ -39,6 +39,7 @@ Meteor.startup(function() {
 	window.lastMessageWindowHistory = {};
 
 	TAPi18n.conf.i18n_files_route = Meteor._relativeToSiteRootUrl('/tap-i18n');
+	TAPi18n.conf.supported_languages = ['en', 'vi'];
 
 	const defaultAppLanguage = function() {
 		let lng = window.navigator.userLanguage || window.navigator.language || 'en';
@@ -85,7 +86,7 @@ Meteor.startup(function() {
 		language = language.toLowerCase();
 		if (language !== 'en') {
 			Meteor.call('loadLocale', language, (err, localeFn) => {
-				Function(localeFn).call({moment});
+				Function(localeFn).call({ moment });
 				moment.locale(language);
 			});
 		}
