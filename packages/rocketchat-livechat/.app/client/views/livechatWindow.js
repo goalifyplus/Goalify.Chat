@@ -39,7 +39,10 @@ Template.livechatWindow.helpers({
 		return {
 			offlineMessage: Livechat.offlineMessage.replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1<br>$2'),
 			offlineSuccessMessage: Livechat.offlineSuccessMessage,
-			offlineUnavailableMessage: Livechat.offlineUnavailableMessage.replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1<br>$2'),
+			offlineUnavailableMessage: Livechat.offlineUnavailableMessage.replace(
+				/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g,
+				'$1<br>$2'
+			),
 			displayOfflineForm: Livechat.displayOfflineForm
 		};
 	},
@@ -64,14 +67,15 @@ Template.livechatWindow.events({
 	},
 	'click .sound'(event) {
 		event.stopPropagation();
-		Session.set({sound: !Session.get('sound')});
+		Session.set({ sound: !Session.get('sound') });
 	}
 });
 
 Template.livechatWindow.onCreated(function() {
-	Session.set({sound: true});
+	Session.set({ sound: true });
 
 	TAPi18n.conf.i18n_files_route = Meteor._relativeToSiteRootUrl('/tap-i18n');
+	TAPi18n.conf.supported_languages = ['en', 'vi'];
 
 	const availableLanguages = TAPi18n.getLanguages();
 
@@ -140,7 +144,7 @@ Template.livechatWindow.onCreated(function() {
 			Triggers.setTriggers(result.triggers);
 			Triggers.init();
 
-			result.departments.forEach((department) => {
+			result.departments.forEach(department => {
 				Department.insert(department);
 			});
 			Livechat.allowSwitchingDepartments = result.allowSwitchingDepartments;
