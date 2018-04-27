@@ -27,9 +27,8 @@ stages:
 
 test:
   stage: test
-  only:
-    - develop
-    - goalify
+  except:
+    - master
   script:
     - npm install
     - npm run lint

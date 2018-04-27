@@ -11,14 +11,14 @@ const viewModeIcon = {
 	condensed: 'list-alt'
 };
 
-const extendedViewOption = user => {
+const extendedViewOption = (user) => {
 	if (RocketChat.settings.get('Store_Last_Message')) {
 		return {
 			icon: viewModeIcon.extended,
 			name: t('Extended'),
 			modifier: RocketChat.getUserPreference(user, 'sidebarViewMode') === 'extended' ? 'bold' : null,
 			action: () => {
-				Meteor.call('saveUserPreferences', { sidebarViewMode: 'extended' }, function(error) {
+				Meteor.call('saveUserPreferences', {sidebarViewMode: 'extended'}, function(error) {
 					if (error) {
 						return handleError(error);
 					}
@@ -30,218 +30,179 @@ const extendedViewOption = user => {
 	return;
 };
 
-const toolbarButtons = user => {
-	return [
-		{
-			name: t('Search'),
-			icon: 'magnifier',
-			action: () => {
-				const toolbarEl = $('.toolbar');
-				toolbarEl.css('display', 'block');
-				toolbarEl.find('.rc-input__element').focus();
-			}
-		},
-		{
-			name: t('Directory'),
-			icon: 'globe',
-			action: () => {
-				menu.close();
-				FlowRouter.go('directory');
-			}
-		},
-		{
-			name: t('View_mode'),
-			icon: () =>
-				RocketChat.getUserPreference(user, 'sidebarViewMode')
-					? viewModeIcon[RocketChat.getUserPreference(user, 'sidebarViewMode')]
-					: viewModeIcon.condensed,
-			action: e => {
-				const hideAvatarSetting = RocketChat.getUserPreference(user, 'sidebarHideAvatar');
-				const config = {
-					columns: [
-						{
-							groups: [
-								{
-									items: [
-										extendedViewOption(user),
-										{
-											icon: viewModeIcon.medium,
-											name: t('Medium'),
-											modifier: RocketChat.getUserPreference(user, 'sidebarViewMode') === 'medium' ? 'bold' : null,
-											action: () => {
-												Meteor.call('saveUserPreferences', { sidebarViewMode: 'medium' }, function(error) {
-													if (error) {
-														return handleError(error);
-													}
-												});
-											}
-										},
-										{
-											icon: viewModeIcon.condensed,
-											name: t('Condensed'),
-											modifier: RocketChat.getUserPreference(user, 'sidebarViewMode') === 'condensed' ? 'bold' : null,
-											action: () => {
-												Meteor.call('saveUserPreferences', { sidebarViewMode: 'condensed' }, function(error) {
-													if (error) {
-														return handleError(error);
-													}
-												});
-											}
-										}
-									]
-								},
-								{
-									items: [
-										{
-											icon: 'user-rounded',
-											name: hideAvatarSetting ? t('Show_Avatars') : t('Hide_Avatars'),
-											action: () => {
-												Meteor.call('saveUserPreferences', { sidebarHideAvatar: !hideAvatarSetting }, function(error) {
-													if (error) {
-														return handleError(error);
-													}
-												});
-											}
-										}
-									]
-								}
-							]
-						}
-					],
-					mousePosition: () => ({
-						x: e.currentTarget.getBoundingClientRect().left,
-						y: e.currentTarget.getBoundingClientRect().bottom + 50
-					}),
-					customCSSProperties: () => ({
-						top: `${ e.currentTarget.getBoundingClientRect().bottom + 10 }px`,
-						left: `${ e.currentTarget.getBoundingClientRect().left - 10 }px`
-					})
-				};
 
-				popover.open(config);
-			}
-		},
-		{
-			name: t('Sort'),
-			icon: 'sort',
-			action: e => {
-				const options = [];
-				const config = {
-					template: 'sortlist',
-					mousePosition: () => ({
-						x: e.currentTarget.getBoundingClientRect().left,
-						y: e.currentTarget.getBoundingClientRect().bottom + 50
-					}),
-					customCSSProperties: () => ({
-						top: `${ e.currentTarget.getBoundingClientRect().bottom + 10 }px`,
-						left: `${ e.currentTarget.getBoundingClientRect().left - 10 }px`
-					}),
-					data: {
-						// value: instance.form[key].get(),
-						options
+const toolbarButtons = (user) => {
+	return [{
+		name: t('Search'),
+		icon: 'magnifier',
+		action: () => {
+			const toolbarEl = $('.toolbar');
+			toolbarEl.css('display', 'block');
+			toolbarEl.find('.rc-input__element').focus();
+		}
+	},
+	{
+		name: t('Directory'),
+		icon: 'globe',
+		action: () => {
+			menu.close();
+			FlowRouter.go('directory');
+		}
+	},
+	{
+		name: t('View_mode'),
+		icon: () => RocketChat.getUserPreference(user, 'sidebarViewMode') ? viewModeIcon[RocketChat.getUserPreference(user, 'sidebarViewMode')] : viewModeIcon.condensed,
+		action: (e) => {
+			const hideAvatarSetting = RocketChat.getUserPreference(user, 'sidebarHideAvatar');
+			const config = {
+				columns: [
+					{
+						groups: [
+							{
+								items: [
+									extendedViewOption(user),
+									{
+										icon: viewModeIcon.medium,
+										name: t('Medium'),
+										modifier: RocketChat.getUserPreference(user, 'sidebarViewMode') === 'medium' ? 'bold' : null,
+										action: () => {
+											Meteor.call('saveUserPreferences', {sidebarViewMode: 'medium'}, function(error) {
+												if (error) {
+													return handleError(error);
+												}
+											});
+										}
+									},
+									{
+										icon: viewModeIcon.condensed,
+										name: t('Condensed'),
+										modifier: RocketChat.getUserPreference(user, 'sidebarViewMode') === 'condensed' ? 'bold' : null,
+										action: () => {
+											Meteor.call('saveUserPreferences', {sidebarViewMode: 'condensed'}, function(error) {
+												if (error) {
+													return handleError(error);
+												}
+											});
+										}
+									}
+								]
+							},
+							{
+								items: [
+									{
+										icon: 'user-rounded',
+										name: hideAvatarSetting ? t('Show_Avatars') : t('Hide_Avatars'),
+										action: () => {
+											Meteor.call('saveUserPreferences', {sidebarHideAvatar: !hideAvatarSetting}, function(error) {
+												if (error) {
+													return handleError(error);
+												}
+											});
+										}
+									}
+								]
+							}
+						]
+					}
+				],
+				currentTarget: e.currentTarget,
+				offsetVertical: e.currentTarget.clientHeight + 10
+			};
+
+			popover.open(config);
+		}
+	},
+	{
+		name: t('Sort'),
+		icon: 'sort',
+		action: (e) => {
+			const options = [];
+			const config = {
+				template: 'sortlist',
+				currentTarget: e.currentTarget,
+				data: {
+					options
+				},
+				offsetVertical: e.currentTarget.clientHeight + 10
+			};
+			popover.open(config);
+		}
+	},
+	{
+		name: t('Create_A_New_Channel'),
+		icon: 'edit-rounded',
+		condition: () => RocketChat.authz.hasAtLeastOnePermission(['create-c', 'create-p']),
+		action: () => {
+			menu.close();
+			FlowRouter.go('create-channel');
+		}
+	},
+	{
+		name: t('Options'),
+		icon: 'menu',
+		condition: () => AccountBox.getItems().length || RocketChat.authz.hasAtLeastOnePermission(['view-statistics', 'view-room-administration', 'view-user-administration', 'view-privileged-setting', 'manage-emoji' ]),
+		action: (e) => {
+			let adminOption;
+			if (RocketChat.authz.hasAtLeastOnePermission(['view-statistics', 'view-room-administration', 'view-user-administration', 'view-privileged-setting', 'manage-emoji' ])) {
+				adminOption = {
+					icon: 'customize',
+					name: t('Administration'),
+					type: 'open',
+					id: 'administration',
+					action: () => {
+						SideNav.setFlex('adminFlex');
+						SideNav.openFlex();
+						FlowRouter.go('admin-info');
+						popover.close();
 					}
 				};
-				popover.open(config);
 			}
-		},
-		{
-			name: t('Create_A_New_Channel'),
-			icon: 'edit-rounded',
-			condition: () => RocketChat.authz.hasAtLeastOnePermission(['create-c', 'create-p']),
-			action: () => {
-				menu.close();
-				FlowRouter.go('create-channel');
-			}
-		},
-		{
-			name: t('Options'),
-			icon: 'menu',
-			condition: () =>
-				AccountBox.getItems().length ||
-				RocketChat.authz.hasAtLeastOnePermission([
-					'view-statistics',
-					'view-room-administration',
-					'view-user-administration',
-					'view-privileged-setting'
-				]),
-			action: e => {
-				let adminOption;
-				if (
-					RocketChat.authz.hasAtLeastOnePermission([
-						'view-statistics',
-						'view-room-administration',
-						'view-user-administration',
-						'view-privileged-setting'
-					])
-				) {
-					adminOption = {
-						icon: 'customize',
-						name: t('Administration'),
-						type: 'open',
-						id: 'administration',
-						action: () => {
-							SideNav.setFlex('adminFlex');
-							SideNav.openFlex();
-							FlowRouter.go('admin-info');
-							popover.close();
-						}
-					};
-				}
 
-				const config = {
-					popoverClass: 'sidebar-header',
-					columns: [
-						{
-							groups: [
-								{
-									items: AccountBox.getItems()
-										.map(item => {
-											let action;
+			const config = {
+				popoverClass: 'sidebar-header',
+				columns: [
+					{
+						groups: [
+							{
+								items: AccountBox.getItems().map(item => {
+									let action;
 
-											if (item.href) {
-												action = () => {
-													FlowRouter.go(item.href);
-													popover.close();
-												};
-											}
+									if (item.href) {
+										action = () => {
+											FlowRouter.go(item.href);
+											popover.close();
+										};
+									}
 
-											if (item.sideNav) {
-												action = () => {
-													SideNav.setFlex(item.sideNav);
-													SideNav.openFlex();
-													popover.close();
-												};
-											}
+									if (item.sideNav) {
+										action = () => {
+											SideNav.setFlex(item.sideNav);
+											SideNav.openFlex();
+											popover.close();
+										};
+									}
 
-											return {
-												icon: item.icon,
-												name: t(item.name),
-												type: 'open',
-												id: item.name,
-												href: item.href,
-												sideNav: item.sideNav,
-												action
-											};
-										})
-										.concat([adminOption])
-								}
-							]
-						}
-					],
-					mousePosition: () => ({
-						x: e.currentTarget.getBoundingClientRect().left,
-						y: e.currentTarget.getBoundingClientRect().bottom + 50
-					}),
-					customCSSProperties: () => ({
-						top: `${ e.currentTarget.getBoundingClientRect().bottom + 10 }px`,
-						left: `${ e.currentTarget.getBoundingClientRect().left - 10 }px`
-					})
-				};
+									return {
+										icon: item.icon,
+										name: t(item.name),
+										type: 'open',
+										id: item.name,
+										href: item.href,
+										sideNav: item.sideNav,
+										action
+									};
+								}).concat([adminOption])
+							}
+						]
+					}
+				],
+				currentTarget: e.currentTarget,
+				offsetVertical: e.currentTarget.clientHeight + 10
+			};
 
-				popover.open(config);
-			}
+			popover.open(config);
 		}
-	];
+	}];
 };
 Template.sidebarHeader.helpers({
 	myUserInfo() {
@@ -343,14 +304,8 @@ Template.sidebarHeader.events({
 						]
 					}
 				],
-				mousePosition: () => ({
-					x: e.currentTarget.getBoundingClientRect().left,
-					y: e.currentTarget.getBoundingClientRect().bottom + 50
-				}),
-				customCSSProperties: () => ({
-					top: `${ e.currentTarget.getBoundingClientRect().bottom + 10 }px`,
-					left: `${ e.currentTarget.getBoundingClientRect().left - 10 }px`
-				})
+				currentTarget: e.currentTarget,
+				offsetVertical: e.currentTarget.clientHeight + 10
 			};
 
 			popover.open(config);
