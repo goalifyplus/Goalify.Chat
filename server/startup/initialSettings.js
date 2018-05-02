@@ -2,7 +2,9 @@ const goalifyConfig = Assets.getText('goalify/goalify-custom-configs.json');
 const goalifyPermission = Assets.getText('goalify/goalify-permissions.json');
 
 const S3BUCKETID = 'FileUpload_S3_Bucket';
+const SITENAMEID = 'Site_Name';
 const subDomain = process.env.SUBDOMAIN || 'newcompany';
+const siteName = process.env.SITE_NAME || 'Goalify Chat';
 
 Meteor.startup(function() {
 	Meteor.defer(function() {
@@ -20,6 +22,12 @@ Meteor.startup(function() {
 					const newMeteorSettingsValue = newConfig.meteorSettingsValue.replace('${subdomain}', subDomain);
 					newConfig.meteorSettingsValue = newMeteorSettingsValue;
 				}
+
+				if (newConfig._id === SITENAMEID) {
+					const newValue = newConfig.value.replace('${sitename}', siteName);
+					newConfig.value = newValue;
+				}
+
 				RocketChat.models.Settings.upsert({ _id: newConfig._id }, newConfig, err => {
 					if (err) {
 						console.log(err);

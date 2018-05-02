@@ -194,7 +194,7 @@
 		"sorter": 1,
 		"ts": "2018-03-05T04:26:04.528Z",
 		"type": "string",
-		"value": "Goalify Chat",
+		"value": "${sitename}",
 		"valueSource": "packageValue"
 	},
 	{
