@@ -3,18 +3,6 @@
 # NOTE: this script is specifically authored for runner at naudb 196 server
 # EXECUTOR: shell
 
-before_script:
-  - export ROOT=`pwd`
-  - export OUTPUT=$ROOT/build/
-  # This flag is a MUST to fix out-of-memory issue when building in docker / gitlab ci
-  - export TOOL_NODE_FLAGS="--max-old-space-size=3063"
-  # prepare needed software (not applicable for shell executor)
-  # - sudo apt-get update -y
-  # - sudo apt-get install -y python git openssh-client curl build-essential
-  # - sudo npm i -g npm
-  - node -v
-  - npm -v
-
 cache:
   untracked: false
   key: "GOALIFY-CHAT-SERVER-V2"
@@ -29,6 +17,9 @@ test:
   stage: test
   except:
     - master
+  before_script:
+    - node -v
+    - npm -v
   script:
     - npm install
     - npm run lint
@@ -41,6 +32,16 @@ build:
   only:
     - master
   before_script:
+    - export ROOT=`pwd`
+    - export OUTPUT=$ROOT/build/
+    # This flag is a MUST to fix out-of-memory issue when building in docker / gitlab ci
+    - export TOOL_NODE_FLAGS="--max-old-space-size=3063"
+    # prepare needed software (not applicable for shell executor)
+    # - sudo apt-get update -y
+    # - sudo apt-get install -y python git openssh-client curl build-essential
+    # - sudo npm i -g npm
+    - node -v
+    - npm -v
     # Remove previous output
     - rm -rf $OUTPUT || true
   script:
