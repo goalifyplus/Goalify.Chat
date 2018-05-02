@@ -5,6 +5,7 @@ echo IMPORTANT: Map domain to this VPS instance first
 
 # Get user inputs for some customizable variables
 read -p "Subdomain: " SUBDOMAIN
+read -p "Site name: " SITE_NAME
 
 # Update server to latest packages
 sudo apt update && sudo apt upgrade -y
@@ -86,10 +87,11 @@ Environment=MONGO_OPLOG_URL=mongodb://localhost:27017/local?replicaSet=rs0
 Environment=MONGO_URL=mongodb://localhost:27017/goalifychat?replicaSet=rs0
 Environment=ROOT_URL=https://$SUBDOMAIN.goalify.chat
 Environment=SUBDOMAIN=$SUBDOMAIN
+Environment=SITE_NAME=$SITE_NAME
 Environment=PORT=3000
 Environment=ADMIN_USERNAME=admin
 Environment=ADMIN_PASS=supersecret
-Environment=ADMIN_EMAIL=thanh@goalify.plus
+Environment=ADMIN_EMAIL=admin@goalify.plus
 
 [Install]
 WantedBy=multi-user.target
