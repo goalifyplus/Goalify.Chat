@@ -17,7 +17,7 @@ if (window.DISABLE_ANIMATION) {
 Meteor.startup(function() {
 	TimeSync.loggingEnabled = false;
 
-	const userHasPreferences = (user) => {
+	const userHasPreferences = user => {
 		if (!user) {
 			return false;
 		}
@@ -39,6 +39,7 @@ Meteor.startup(function() {
 	window.lastMessageWindowHistory = {};
 
 	TAPi18n.conf.i18n_files_route = Meteor._relativeToSiteRootUrl('/tap-i18n');
+	TAPi18n.conf.supported_languages = ['en', 'vi'];
 
 	const defaultAppLanguage = function() {
 		let lng = window.navigator.userLanguage || window.navigator.language || 'en';
@@ -85,23 +86,23 @@ Meteor.startup(function() {
 		language = language.toLowerCase();
 		if (language !== 'en') {
 			Meteor.call('loadLocale', language, (err, localeFn) => {
-				Function(localeFn).call({moment});
+				Function(localeFn).call({ moment });
 				moment.locale(language);
 			});
 		}
 	};
 
-	const defaultIdleTimeLimit = 300000;
+	const defaultIdleTimeLimit = 300;
 
 	Meteor.subscribe('userData', function() {
 		const user = Meteor.user();
 		const userLanguage = user && user.language ? user.language : window.defaultUserLanguage();
 
 		if (!userHasPreferences(user)) {
-			UserPresence.awayTime = defaultIdleTimeLimit;
+			UserPresence.awayTime = defaultIdleTimeLimit * 1000;
 			UserPresence.start();
 		} else {
-			UserPresence.awayTime = user.settings.preferences.idleTimeLimit || defaultIdleTimeLimit;
+			UserPresence.awayTime = (user.settings.preferences.idleTimeLimit || defaultIdleTimeLimit) * 1000;
 
 			if (user.settings.preferences.hasOwnProperty('enableAutoAway')) {
 				user.settings.preferences.enableAutoAway && UserPresence.start();
