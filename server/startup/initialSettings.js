@@ -55,3 +55,7 @@ Meteor.startup(function() {
 		});
 	});
 });
+
+RocketChat.settings.addGroup('General', function() {
+	this.add('Account_Status', 'beta', { type: 'string', hidden: true });
+});
