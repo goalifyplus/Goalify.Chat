@@ -1,11 +1,29 @@
 #!/bin/bash
 # NOTE: The commands here only applicable for Ubuntu 16.04 Xenial, do not use it for other distros
 
-echo IMPORTANT: Map domain to this VPS instance first
+while true; do
+    read -p "IMPORTANT: Have you mapped domain to this VPS instance first? (y|n)" yn
+    case $yn in
+        [Yy]* ) break;;
+        [Nn]* ) exit;;
+        * ) echo "Please answer (y)es or (n)o.";;
+    esac
+done
 
-# Get user inputs for some customizable variables
-read -p "Subdomain: " SUBDOMAIN
-read -p "Site name: " SITE_NAME
+while true; do
+    read -p "IMPORTANT: Have you export GITLAB_TOKEN and GITLAB_PASS env? (y|n)" yn
+    case $yn in
+        [Yy]* ) break;;
+        [Nn]* ) exit;;
+        * ) echo "Please answer (y)es or (n)o.";;
+    esac
+done
+
+SUBDOMAIN=public
+SITE_NAME="Goalify Chat"
+ADMIN_USER=admin
+ADMIN_PASS=supersecret
+ADMIN_EMAIL=admin@goalify.chat
 
 # Update server to latest packages
 sudo apt update && sudo apt upgrade -y
@@ -58,16 +76,18 @@ sudo useradd goalifychat
 set -x \
  && curl -SLf "https://s3-ap-southeast-1.amazonaws.com/goalify.chat/downloads/beta/goalify-chat-server.tar.gz" -o goalify.chat.tgz \
  && sudo mkdir -p /app \
- && sudo tar -zxf goalify.chat.tgz -C /app \
+ && sudo chown -R `whoami` /app
+ && tar -zxf goalify.chat.tgz -C /app \
  && rm goalify.chat.tgz \
  && cd /app/bundle/programs/server \
- && sudo npm install \
- && sudo npm cache clear --force \
- && sudo chown -R goalifychat:goalifychat /app
+ && npm install \
+ && npm cache clear --force
 
 # Create systemd service file for rocketchat server
 NODE_PATH=`n bin 8.9.3`
 APP_PATH="/app/bundle"
+
+cd ~
 
 cat > goalifychat.service <<EOF
 [Unit]
@@ -89,9 +109,9 @@ Environment=ROOT_URL=https://$SUBDOMAIN.goalify.chat
 Environment=SUBDOMAIN=$SUBDOMAIN
 Environment=SITE_NAME=$SITE_NAME
 Environment=PORT=3000
-Environment=ADMIN_USERNAME=admin
-Environment=ADMIN_PASS=supersecret
-Environment=ADMIN_EMAIL=admin@goalify.plus
+Environment=ADMIN_USERNAME=$ADMIN_USER
+Environment=ADMIN_PASS=$ADMIN_PASS
+Environment=ADMIN_EMAIL=$ADMIN_EMAIL
 
 [Install]
 WantedBy=multi-user.target
@@ -136,7 +156,7 @@ server {
 EOF
 
 sudo cp nginx-site.conf /etc/nginx/sites-available/default
-rm nginx-site.service
+rm nginx-site.conf
 
 # Enable web proxies with secured SSL certificate from let's encrypt
 echo NOTE: Mannual, interactive inputs ahead for certbot
@@ -145,8 +165,18 @@ sudo certbot --nginx
 # Restart nginx with new config
 sudo systemctl restart nginx
 
+# Install chatbot
+mkdir -p /app/goalify-chat-bot
+# NOTE: /app is still owned by `whoami`
+
+# Make sure GITLAB_TOKEN & GITLAB_PASS variables are exported
+git clone https://$GITLAB_TOKEN:$GITLAB_PASS@gitlab.com/goalify/chat/goalify-chat-bot.git /app/goalify-chat-bot
+cd /app/goalify-chat-bot
+npm install
+
+# change /app folders to custom user for security sake
+sudo chown -R goalifychat:goalifychat /app
+
 echo "Note: Remember to enable HTTP2 at /etc/nginx/sites-available/default"
-
 echo "Goalifychat server system initialization complete!"
-
 echo "Next steps: initialize Replica Set for MongoDB and start the services."
