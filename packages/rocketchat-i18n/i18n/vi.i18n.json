@@ -746,7 +746,8 @@
 	"error-invalid-urls": "URL không hợp lệ",
 	"error-invalid-user": "Người dùng không hợp lệ",
 	"error-invalid-username": "Tên sử dụng không hợp lệ",
-	"error-invalid-webhook-response": "URL webhook đã phản hồi với trạng thái khác với 200",
+  "error-invalid-webhook-response": "URL webhook đã phản hồi với trạng thái khác với 200",
+  "error-user-limit-exceed": "Vuợt quá giới hạn nguời dùng cho phép",
 	"error-message-deleting-blocked": "Xóa tin nhắn bị chặn",
 	"error-message-editing-blocked": "Chỉnh sửa tin nhắn bị chặn",
 	"error-message-size-exceeded": "Kích thước tin nhắn vượt quá Message_MaxAllowedSize",
@@ -2362,4 +2363,3 @@
 	"Your_password_is_wrong": "Mật khẩu của bạn sai!",
 	"Your_push_was_sent_to_s_devices": "Đã được gửi tới % thiết bị"
 }
-  

@@ -58,4 +58,5 @@ Meteor.startup(function() {
 
 RocketChat.settings.addGroup('General', function() {
 	this.add('Account_Status', 'beta', { type: 'string', hidden: true });
+	this.add('Account_Limit_User', 50, { type: 'number', hidden: true });
 });
