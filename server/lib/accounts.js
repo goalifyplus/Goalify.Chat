@@ -108,6 +108,11 @@ Accounts.emailTemplates.enrollAccount.html = function(user = {}/*, url*/) {
 };
 
 Accounts.onCreateUser(function(options, user = {}) {
+	const userLimit = RocketChat.settings.get('Account_Limit_User');
+	const length = RocketChat.models.Users.find({_id: { $ne: 'goly' }}).count();
+	if (userLimit && userLimit > 0 && length >= userLimit) {
+		throw new Meteor.Error('error-user-limit-exceed', 'User limit exceeded', { method: 'insertOrUpdateUser' });
+	}
 	RocketChat.callbacks.run('beforeCreateUser', options, user);
 
 	user.status = 'offline';
