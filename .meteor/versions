@@ -49,6 +49,7 @@ fastclick@1.0.13
 francocatena:status@1.5.3
 geojson-utils@1.0.10
 github-oauth@1.2.0
+goalifychat:weekly-summary@0.0.1
 google-oauth@1.2.5
 hot-code-push@1.0.4
 html-tools@1.0.11
