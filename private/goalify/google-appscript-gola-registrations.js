@@ -1,3 +1,5 @@
+/*eslint-disable no-var, comma-dangle, guard-for-in, no-use-before-define, no-unused-vars*/
+/*global UrlFetchApp, onSubmit*/
 // Put your Gola webhook here, make sure its connected to the correct channel
 var WEBHOOK_POST_URL = 'https://nau.goalify.chat/hooks/INTEGRATION_TOKEN';
 
@@ -9,6 +11,7 @@ function onSubmit(entry) {
 	// responses
 	var responses = [];
 
+	var i;
 	for (i in items) {
 		//Logger.log("getItem().getTitle()=%s, getResponse()=%s", items[i].getItem().getTitle(), items[i].getResponse());
 		responses.push({
