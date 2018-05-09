@@ -10,15 +10,9 @@ while true; do
     esac
 done
 
-while true; do
-    read -p "IMPORTANT: Have you export GITLAB_TOKEN and GITLAB_PASS env? (y|n)" yn
-    case $yn in
-        [Yy]* ) break;;
-        [Nn]* ) exit;;
-        * ) echo "Please answer (y)es or (n)o.";;
-    esac
-done
-
+# Directly set goalify chat bot gitlab token here or export to ENV
+GITLAB_TOKEN=$GITLAB_TOKEN_ENV
+GITLAB_PASS=$GITLAB_PASS_ENV
 SUBDOMAIN=public
 SITE_NAME="Goalify Chat"
 ADMIN_USER=admin
@@ -50,13 +44,10 @@ sudo npm install --global n
 # Install stable version of Node for Meteor & Goalify Chat
 sudo n 8.9.3
 
+# mongo replica set guide: https://rocket.chat/docs/installation/manual-installation/ubuntu/
 # Enable replication for mongodb for better concurrency
 echo "replication:" | sudo tee -a /etc/mongod.conf
 echo "  replSetName: \"rs0\"" | sudo tee -a /etc/mongod.conf
-
-# TODO: enable mongo replica set (https://rocket.chat/docs/installation/manual-installation/ubuntu/)
-# Still need to access mongo shell and execute:
-# rs.initiate()
 
 # Start mongod service
 sudo systemctl start mongod
@@ -66,17 +57,12 @@ sudo systemctl enable mongod
 # Create app user
 sudo useradd goalifychat
 
-
-# RC_VERSION=".63.0-develop"
-# OR
-# RC_VERSION="latest"
-
-# Download built Rocket Chat server
+# Download prebuilt Goalify Chat server
 # adapted from https://github.com/RocketChat/Rocket.Chat/blob/develop/.docker/Dockerfile
 set -x \
  && curl -SLf "https://s3-ap-southeast-1.amazonaws.com/goalify.chat/downloads/beta/goalify-chat-server.tar.gz" -o goalify.chat.tgz \
  && sudo mkdir -p /app \
- && sudo chown -R `whoami` /app
+ && sudo chown -R `whoami` /app \
  && tar -zxf goalify.chat.tgz -C /app \
  && rm goalify.chat.tgz \
  && cd /app/bundle/programs/server \
@@ -119,9 +105,6 @@ EOF
 
 sudo cp goalifychat.service /etc/systemd/system/goalifychat.service
 rm goalifychat.service
-
-# start rocketchat server and make it run as service (auto start)
-sudo systemctl start goalifychat.service && sudo systemctl enable goalifychat.service
 
 # Create Nginx reversed proxy config:
 cat > nginx-site.conf <<EOF
@@ -177,6 +160,14 @@ npm install
 # change /app folders to custom user for security sake
 sudo chown -R goalifychat:goalifychat /app
 
+# Initiate mongodb replica set feature
+mongo --eval 'rs.initiate()'
+
+# Start goalifychat service
+sudo systemctl start goalifychat.service
+echo "Goalifychat Service STARTED!"
+# Enable auto start
+sudo systemctl enable goalifychat.service
+
 echo "Note: Remember to enable HTTP2 at /etc/nginx/sites-available/default"
-echo "Goalifychat server system initialization complete!"
-echo "Next steps: initialize Replica Set for MongoDB and start the services."
+echo "GOALIFYCHAT SERVER SYSTEM INITIALIZATION COMPLETE!"
