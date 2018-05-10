@@ -304,7 +304,296 @@
 		"sorter": 6,
 		"ts": "2018-03-05T04:26:04.668Z",
 		"type": "boolean",
+		"value": true,
+		"valueSource": "packageValue"
+	},
+	{
+		"_id": "Direct_Reply_Debug",
+		"_updatedAt": "2018-03-26T04:21:12.518Z",
+		"blocked": false,
+		"createdAt": "2018-03-05T04:26:04.671Z",
+		"env": true,
+		"group": "Email",
+		"hidden": false,
+		"i18nDescription": "Direct_Reply_Debug_Description",
+		"i18nLabel": "Direct_Reply_Debug",
+		"packageValue": false,
+		"section": "Direct_Reply",
+		"sorter": 7,
+		"ts": "2018-03-05T04:26:04.672Z",
+		"type": "boolean",
 		"value": false,
+		"valueSource": "packageValue"
+	},
+	{
+		"_id": "Direct_Reply_Protocol",
+		"_updatedAt": "2018-03-26T04:21:12.522Z",
+		"blocked": false,
+		"createdAt": "2018-03-05T04:26:04.675Z",
+		"env": true,
+		"group": "Email",
+		"hidden": false,
+		"i18nDescription": "Direct_Reply_Protocol_Description",
+		"i18nLabel": "Protocol",
+		"packageValue": "IMAP",
+		"section": "Direct_Reply",
+		"sorter": 8,
+		"ts": "2018-03-05T04:26:04.676Z",
+		"type": "select",
+		"value": "IMAP",
+		"valueSource": "packageValue",
+		"values": [
+			{
+				"key": "IMAP",
+				"i18nLabel": "IMAP"
+			},
+			{
+				"key": "POP",
+				"i18nLabel": "POP"
+			}
+		]
+	},
+	{
+		"_id": "Direct_Reply_Host",
+		"_updatedAt": "2018-03-26T04:21:12.533Z",
+		"blocked": false,
+		"createdAt": "2018-03-05T04:26:04.679Z",
+		"env": true,
+		"group": "Email",
+		"hidden": false,
+		"i18nDescription": "Direct_Reply_Host_Description",
+		"i18nLabel": "Host",
+		"packageValue": "",
+		"section": "Direct_Reply",
+		"sorter": 9,
+		"ts": "2018-03-05T04:26:04.680Z",
+		"type": "string",
+		"value": "imap.gmail.com",
+		"valueSource": "packageValue"
+	},
+	{
+		"_id": "Direct_Reply_Port",
+		"_updatedAt": "2018-03-26T04:21:12.540Z",
+		"blocked": false,
+		"createdAt": "2018-03-05T04:26:04.683Z",
+		"env": true,
+		"group": "Email",
+		"hidden": false,
+		"i18nDescription": "Direct_Reply_Port_Description",
+		"i18nLabel": "Port",
+		"packageValue": "143",
+		"section": "Direct_Reply",
+		"sorter": 10,
+		"ts": "2018-03-05T04:26:04.684Z",
+		"type": "select",
+		"value": "993",
+		"valueSource": "packageValue",
+		"values": [
+			{
+				"key": "143",
+				"i18nLabel": "143"
+			},
+			{
+				"key": "993",
+				"i18nLabel": "993"
+			},
+			{
+				"key": "110",
+				"i18nLabel": "110"
+			},
+			{
+				"key": "995",
+				"i18nLabel": "995"
+			}
+		]
+	},
+	{
+		"_id": "Direct_Reply_IgnoreTLS",
+		"_updatedAt": "2018-03-26T04:21:12.548Z",
+		"blocked": false,
+		"createdAt": "2018-03-05T04:26:04.698Z",
+		"env": true,
+		"group": "Email",
+		"hidden": false,
+		"i18nDescription": "Direct_Reply_IgnoreTLS_Description",
+		"i18nLabel": "IgnoreTLS",
+		"packageValue": false,
+		"section": "Direct_Reply",
+		"sorter": 11,
+		"ts": "2018-03-05T04:26:04.699Z",
+		"type": "boolean",
+		"value": false,
+		"valueSource": "packageValue"
+	},
+	{
+		"_id": "Direct_Reply_Frequency",
+		"_updatedAt": "2018-03-26T04:21:12.557Z",
+		"blocked": false,
+		"createdAt": "2018-03-05T04:26:04.703Z",
+		"enableQuery": "{\"_id\":\"Direct_Reply_Protocol\",\"value\":\"POP\"}",
+		"env": true,
+		"group": "Email",
+		"hidden": false,
+		"i18nDescription": "Direct_Reply_Frequency_Description",
+		"i18nLabel": "Direct_Reply_Frequency",
+		"packageValue": 5,
+		"section": "Direct_Reply",
+		"sorter": 12,
+		"ts": "2018-03-05T04:26:04.707Z",
+		"type": "int",
+		"value": 5,
+		"valueSource": "packageValue"
+	},
+	{
+		"_id": "Direct_Reply_Delete",
+		"_updatedAt": "2018-03-26T04:21:12.567Z",
+		"blocked": false,
+		"createdAt": "2018-03-05T04:26:04.710Z",
+		"enableQuery": "{\"_id\":\"Direct_Reply_Protocol\",\"value\":\"IMAP\"}",
+		"env": true,
+		"group": "Email",
+		"hidden": false,
+		"i18nDescription": "Direct_Reply_Delete_Description",
+		"i18nLabel": "Direct_Reply_Delete",
+		"packageValue": true,
+		"section": "Direct_Reply",
+		"sorter": 13,
+		"ts": "2018-03-05T04:26:04.713Z",
+		"type": "boolean",
+		"value": true,
+		"valueSource": "packageValue"
+	},
+	{
+		"_id": "Direct_Reply_Separator",
+		"_updatedAt": "2018-03-26T04:21:12.577Z",
+		"blocked": false,
+		"createdAt": "2018-03-05T04:26:04.716Z",
+		"env": true,
+		"group": "Email",
+		"hidden": false,
+		"i18nDescription": "Direct_Reply_Separator_Description",
+		"i18nLabel": "Direct_Reply_Separator",
+		"packageValue": "+",
+		"section": "Direct_Reply",
+		"sorter": 14,
+		"ts": "2018-03-05T04:26:04.717Z",
+		"type": "select",
+		"value": "+",
+		"valueSource": "packageValue",
+		"values": [
+			{
+				"key": "!",
+				"i18nLabel": "!"
+			},
+			{
+				"key": "#",
+				"i18nLabel": "#"
+			},
+			{
+				"key": "$",
+				"i18nLabel": "$"
+			},
+			{
+				"key": "%",
+				"i18nLabel": "%"
+			},
+			{
+				"key": "\u0026",
+				"i18nLabel": "\u0026"
+			},
+			{
+				"key": "'",
+				"i18nLabel": "'"
+			},
+			{
+				"key": "*",
+				"i18nLabel": "*"
+			},
+			{
+				"key": "+",
+				"i18nLabel": "+"
+			},
+			{
+				"key": "-",
+				"i18nLabel": "-"
+			},
+			{
+				"key": "/",
+				"i18nLabel": "/"
+			},
+			{
+				"key": "=",
+				"i18nLabel": "="
+			},
+			{
+				"key": "?",
+				"i18nLabel": "?"
+			},
+			{
+				"key": "^",
+				"i18nLabel": "^"
+			},
+			{
+				"key": "_",
+				"i18nLabel": "_"
+			},
+			{
+				"key": "`",
+				"i18nLabel": "`"
+			},
+			{
+				"key": "{",
+				"i18nLabel": "{"
+			},
+			{
+				"key": "|",
+				"i18nLabel": "|"
+			},
+			{
+				"key": "}",
+				"i18nLabel": "}"
+			},
+			{
+				"key": "~",
+				"i18nLabel": "~"
+			}
+		]
+	},
+	{
+		"_id": "Direct_Reply_Username",
+		"_updatedAt": "2018-03-26T04:21:12.590Z",
+		"blocked": false,
+		"createdAt": "2018-03-05T04:26:04.721Z",
+		"env": true,
+		"group": "Email",
+		"hidden": false,
+		"i18nDescription": "Direct_Reply_Username_Description",
+		"i18nLabel": "Username",
+		"packageValue": "",
+		"placeholder": "email@domain",
+		"section": "Direct_Reply",
+		"sorter": 15,
+		"ts": "2018-03-05T04:26:04.721Z",
+		"type": "string",
+		"value": "reply@goalify.chat",
+		"valueSource": "packageValue"
+	},
+	{
+		"_id": "Direct_Reply_Password",
+		"_updatedAt": "2018-03-26T04:21:12.600Z",
+		"blocked": false,
+		"createdAt": "2018-03-05T04:26:04.724Z",
+		"env": true,
+		"group": "Email",
+		"hidden": false,
+		"i18nDescription": "Direct_Reply_Password_Description",
+		"i18nLabel": "Password",
+		"packageValue": "",
+		"section": "Direct_Reply",
+		"sorter": 16,
+		"ts": "2018-03-05T04:26:04.725Z",
+		"type": "password",
+		"value": "Share@123",
 		"valueSource": "packageValue"
 	},
 	{
