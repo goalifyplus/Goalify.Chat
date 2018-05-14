@@ -18,6 +18,10 @@ SITE_NAME="Goalify Chat"
 ADMIN_USER=admin
 ADMIN_PASS=supersecret
 ADMIN_EMAIL=admin@goalify.chat
+TIMEZONE=Asia/Ho_Chi_Minh
+
+# Switch to desired timezone
+sudo timedatectl set-timezone $TIMEZONE
 
 # Update server to latest packages
 sudo apt update && sudo apt upgrade -y
@@ -93,7 +97,7 @@ Environment=MONGO_OPLOG_URL=mongodb://localhost:27017/local?replicaSet=rs0
 Environment=MONGO_URL=mongodb://localhost:27017/goalifychat?replicaSet=rs0
 Environment=ROOT_URL=https://$SUBDOMAIN.goalify.chat
 Environment=SUBDOMAIN=$SUBDOMAIN
-Environment=SITE_NAME=$SITE_NAME
+Environment=SITE_NAME="$SITE_NAME"
 Environment=PORT=3000
 Environment=ADMIN_USERNAME=$ADMIN_USER
 Environment=ADMIN_PASS=$ADMIN_PASS
