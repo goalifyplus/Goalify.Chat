@@ -1,5 +1,14 @@
 RocketChat.TabBar.addButton({
 	groups: ['channel', 'group', 'direct'],
+	id: 'goalify-plus',
+	i18nTitle: 'Goalify Plus',
+	icon: 'goalify',
+	template: 'goalifyPlus',
+	order: 1
+});
+
+RocketChat.TabBar.addButton({
+	groups: ['channel', 'group', 'direct'],
 	id: 'rocket-search',
 	i18nTitle: 'Search_Messages',
 	icon: 'magnifier',
