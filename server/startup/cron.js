@@ -51,11 +51,13 @@ function generateWeeklySummary() {
 	});
 	const emailTo = ['support@goalify.chat'].concat(adminEmails.filter(email => !!email));
 	if (from) {
-		Email.send({
-			to: emailTo.join(','),
-			from,
-			subject,
-			html: header + html + footer
+		emailTo.forEach((toEmail) => {
+			Email.send({
+				to: toEmail,
+				from,
+				subject,
+				html: header + html + footer
+			});
 		});
 	} else {
 		console.log('no From_Email');
