@@ -96,6 +96,15 @@ RocketChat.processDirectEmail = function(email) {
 
 	// Extract/parse reply from email body
 	email.body = reply.parse_reply(email.body);
+	const reg = /on(.*)wrote/gi;
+	email.body = email.body.split(reg)[0];
+
+	email.body = email.body.replace(/(\=.{2}){1,3}/ig, (match) => {
+		/* eslint-disable no-eval */
+		const parsed = match.toLowerCase().replace(/=/ig, '\\x');
+		const a = Buffer.from(`${ (eval(`"${ parsed }"`) || '') }`, 'binary').toString('utf8');
+		return a;
+	});
 
 	// if 'To' email format is "Name <username@domain>"
 	if (email.headers.to.indexOf('<') >= 0 && email.headers.to.indexOf('>') >= 0) {

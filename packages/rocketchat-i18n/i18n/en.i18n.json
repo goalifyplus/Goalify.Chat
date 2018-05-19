@@ -1025,7 +1025,7 @@
   "Integrations_Outgoing_Type_RoomLeft": "User Left Room",
   "Integrations_Outgoing_Type_SendMessage": "Message Sent",
   "Integrations_Outgoing_Type_UserCreated": "User Created",
-  "InternalHubot": "Internal Hubot",
+  "InternalHubot": "Internal Chatbot",
   "InternalHubot_PathToLoadCustomScripts": "Folder to Load the Scripts",
   "InternalHubot_reload": "Reload the scripts",
   "InternalHubot_ScriptsToLoad": "Scripts to Load",
