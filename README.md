@@ -128,7 +128,7 @@ Host your own Rocket.Chat server in a few seconds.
 
 Easiest way to install a ready-to-run Rocket.Chat server on a Linux machine, VM, or VPS.
 
-[![DP deploy](https://raw.githubusercontent.com/DFabric/DPlatform-ShellCore/gh-pages/img/deploy.png)](https://dfabric.github.io/DPlatform-ShellCore)
+[![DP deploy](https://raw.githubusercontent.com/DFabric/DPlatform-ShellCore/images/logo.png)](https://dfabric.github.io/DPlatform-ShellCore)
 
 ## IndieHosters
 Get your Rocket.Chat instance hosted in a "as a Service" style. You register and we manage it for you! (updates, backup...).
@@ -215,7 +215,7 @@ Follow their [deployment instructions](https://rocket.chat/docs/installation/paa
 ## WeDeploy
 Install Rocket.Chat on [WeDeploy](https://wedeploy.com):
 
-[![Install](https://avatars3.githubusercontent.com/u/10002920?v=4&s=100)](https://rocket.chat/docs/installation/paas-deployments/wedeploy/)
+[![Deploy](https://cdn.wedeploy.com/images/deploy.svg)](https://console.wedeploy.com/deploy?repo=https://github.com/wedeploy-examples/rocketchat-example)
 
 ## D2C.io
 Deploy Rocket.Chat stack to your server with [D2C](https://d2c.io/). Scale with a single click, check live logs and metrics:
@@ -350,7 +350,7 @@ Read about [how it all started](https://blog.blackducksoftware.com/rocket-chat-e
 
 ## Feature Requests
 
-[Feature Request Forums](https://forums.rocket.chat/c/feature-requests) are used to suggest, discuss and upvote feature suggestions. 
+[Feature Request Forums](https://forums.rocket.chat/c/feature-requests) are used to suggest, discuss and upvote feature suggestions.
 
 ### Stack Overflow
 
