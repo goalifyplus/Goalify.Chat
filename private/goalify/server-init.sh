@@ -42,6 +42,10 @@ sudo add-apt-repository -y ppa:certbot/certbot
 # Install needed software
 sudo apt update && sudo apt install -y python-certbot-nginx mongodb-org nodejs
 
+# Fix permission issue at ~/.config/ later
+mkdir -p ~/.config/configstore
+touch ~/.config/configstore/update-notifier-npm.json
+
 # Install this package to allow switching Node version
 sudo npm install --global n
 
@@ -97,7 +101,7 @@ Environment=MONGO_OPLOG_URL=mongodb://localhost:27017/local?replicaSet=rs0
 Environment=MONGO_URL=mongodb://localhost:27017/goalifychat?replicaSet=rs0
 Environment=ROOT_URL=https://$SUBDOMAIN.goalify.chat
 Environment=SUBDOMAIN=$SUBDOMAIN
-Environment=SITE_NAME="$SITE_NAME"
+Environment='SITE_NAME=$SITE_NAME'
 Environment=PORT=3000
 Environment=ADMIN_USERNAME=$ADMIN_USER
 Environment=ADMIN_PASS=$ADMIN_PASS
@@ -147,7 +151,7 @@ rm nginx-site.conf
 
 # Enable web proxies with secured SSL certificate from let's encrypt
 echo NOTE: Mannual, interactive inputs ahead for certbot
-sudo certbot --nginx
+sudo certbot --nginx --agree-tos --no-eff-email -m support@goalify.chat
 
 # Restart nginx with new config
 sudo systemctl restart nginx
@@ -166,6 +170,12 @@ sudo chown -R goalifychat:goalifychat /app
 
 # Initiate mongodb replica set feature
 mongo --eval 'rs.initiate()'
+
+# Update nginx config to enable HTTP2 (Optional)
+sudo sed -i -e "s/443 ssl/443 ssl http2/g" /etc/nginx/sites-available/default
+
+# Restart nginx after config update above (Optional)
+sudo systemctl restart nginx
 
 # Start goalifychat service
 sudo systemctl start goalifychat.service
