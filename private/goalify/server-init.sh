@@ -151,7 +151,7 @@ rm nginx-site.conf
 
 # Enable web proxies with secured SSL certificate from let's encrypt
 echo NOTE: Mannual, interactive inputs ahead for certbot
-sudo certbot --nginx --agree-tos -m support@goalify.chat
+sudo certbot --nginx --agree-tos --no-eff-email -m support@goalify.chat
 
 # Restart nginx with new config
 sudo systemctl restart nginx
@@ -170,6 +170,12 @@ sudo chown -R goalifychat:goalifychat /app
 
 # Initiate mongodb replica set feature
 mongo --eval 'rs.initiate()'
+
+# Update nginx config to enable HTTP2 (Optional)
+sudo sed -i -e "s/443 ssl/443 ssl http2/g" /etc/nginx/sites-available/default
+
+# Restart nginx after config update above (Optional)
+sudo systemctl restart nginx
 
 # Start goalifychat service
 sudo systemctl start goalifychat.service
